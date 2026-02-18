@@ -1,7 +1,7 @@
 <section id="treatment" data-component="Treatment">
     <h1>Pole Treatment Protocol</h1>
 
-    <p>The 5-step process is <strong>identical across all designs</strong> and is absolutely non-negotiable. Untreated eucalyptus fails in 5-10 years. Properly treated timber lasts 30-40 years above ground.</p>
+    <p>The 6-step process is <strong>identical across all designs</strong> and is absolutely non-negotiable. Untreated eucalyptus fails in 5-10 years. Properly treated timber lasts 30-40 years above ground, and this sequence keeps poles flexible for bending into arch frames.</p>
 
     <CalloutBox variant="tip" title="Eucalyptus Species Selection">
         <p>For structural poles, select <strong>E. globulus</strong> (blue gum) or <strong>E. grandis</strong> (flooded gum). These species have characteristic bending strength of 25+ MPa. Avoid E. camaldulensis for primary rafters—its strength is more variable. Source poles 15-18cm diameter at the butt end for main rafters.</p>
@@ -15,7 +15,31 @@
         <p>Remove bark immediately after felling while wood is fresh. Use a drawknife or scraper. Bark traps moisture and prevents preservative penetration.</p>
     </ProcessStep>
 
-    <ProcessStep number={2} title="Borax Soak (72+ Hours)">
+    <ProcessStep number={2} title="Char Bottom 50cm (Deep Char Method)">
+        <p>Torch the lower 50cm of each pole until the char layer reaches <strong>8-10mm depth</strong>. You should see alligator-scale cracking in the char layer. After charring, brush off loose char with a stiff wire brush.</p>
+        <CalloutBox variant="warning" title="Why Char When Poles Sit on Gabion?">
+            <p>All BioDome designs place poles on gabion foundations with HDPE wrapping—no direct soil contact. However, 8-10mm charring remains valuable as a <strong>redundancy layer</strong>:</p>
+            <ul>
+                <li>HDPE wrapping has a 15-25 year service life; char protection is indefinite</li>
+                <li>If HDPE gets damaged during construction or maintenance, char layer provides backup</li>
+                <li>Charred surfaces don't absorb splash moisture from rain hitting the gabion</li>
+                <li>Conservative design: protects against installation errors, unforeseen settling, or drainage failures</li>
+            </ul>
+            <p>The char depth isn't because poles touch ground—they don't. It's because a single moisture barrier (HDPE alone) isn't sufficient for a 30-40 year structure. Test depth by scraping with a knife.</p>
+
+            <figure class="figure">
+                <img src="/assets/render-shared-ch3-char-depth.svg" alt="Side-by-side comparison of pole cross-sections showing cosmetic 3-5mm char (smooth surface, inadequate) versus structural 8-10mm char (alligator-scale cracking, target depth)">
+                <figcaption>Target 8-10mm char depth with visible alligator-scale cracking</figcaption>
+            </figure>
+
+            <figure class="figure">
+                <img src="/assets/render-shared-ch3-pole-gabion-connection.svg" alt="Vertical cross-section showing pole embedded in gabion with four protection layers: borax-treated core, 8-10mm char layer, HDPE wrap, and gravel packing within gabion stone">
+                <figcaption>Four protection layers at pole-gabion connection</figcaption>
+            </figure>
+        </CalloutBox>
+    </ProcessStep>
+
+    <ProcessStep number={3} title="Borax Soak (72+ Hours)">
         <p>Submerge poles completely in borax solution. They float, so weight them down with stones or a weighted board. Minimum 72 hours; longer (up to 2 weeks) is better for deep penetration.</p>
     </ProcessStep>
 
@@ -104,7 +128,7 @@
         <li><strong>Submerge:</strong> Weight down with stones or a board weighted with concrete blocks</li>
         <li><strong>Cover:</strong> Lay tarp or corrugated sheets over trough to reduce evaporation</li>
         <li><strong>Soak 72+ hours:</strong> Flip poles halfway through if any surfaces exposed</li>
-        <li><strong>Remove and stack:</strong> Slide poles out, stack on raised rails to dry</li>
+        <li><strong>Remove and bend:</strong> Slide poles out and assemble into arch frames immediately while saturated and flexible</li>
         <li><strong>Repeat:</strong> Solution remains effective for 6-8 batches before needing refresh</li>
     </ol>
 
@@ -116,35 +140,18 @@
         <p>The trough can be repurposed: fill with gravel for a French drain, convert to a raised bed, or simply fill in. The dilute borax solution is not hazardous—borax is used in garden soil as a trace mineral (boron).</p>
     </CalloutBox>
 
-    <ProcessStep number={3} title="Dry 2-3 Weeks Under Cover">
-        <p>Stack treated poles on raised supports in a shaded, well-ventilated area. Protect from rain. Stack with spacers between layers for air circulation.</p>
-    </ProcessStep>
-
-    <ProcessStep number={4} title="Char Bottom 50cm (Deep Char Method)">
-        <p>Torch the lower 50cm of each pole until the char layer reaches <strong>8-10mm depth</strong>. You should see alligator-scale cracking in the char layer. After charring, brush off loose char with a stiff wire brush.</p>
-        <CalloutBox variant="warning" title="Why Char When Poles Sit on Gabion?">
-            <p>All BioDome designs place poles on gabion foundations with HDPE wrapping—no direct soil contact. However, 8-10mm charring remains valuable as a <strong>redundancy layer</strong>:</p>
-            <ul>
-                <li>HDPE wrapping has a 15-25 year service life; char protection is indefinite</li>
-                <li>If HDPE gets damaged during construction or maintenance, char layer provides backup</li>
-                <li>Charred surfaces don't absorb splash moisture from rain hitting the gabion</li>
-                <li>Conservative design: protects against installation errors, unforeseen settling, or drainage failures</li>
-            </ul>
-            <p>The char depth isn't because poles touch ground—they don't. It's because a single moisture barrier (HDPE alone) isn't sufficient for a 30-40 year structure. Test depth by scraping with a knife.</p>
-
-            <figure class="figure">
-                <img src="/assets/render-shared-ch3-char-depth.svg" alt="Side-by-side comparison of pole cross-sections showing cosmetic 3-5mm char (smooth surface, inadequate) versus structural 8-10mm char (alligator-scale cracking, target depth)">
-                <figcaption>Target 8-10mm char depth with visible alligator-scale cracking</figcaption>
-            </figure>
-
-            <figure class="figure">
-                <img src="/assets/render-shared-ch3-pole-gabion-connection.svg" alt="Vertical cross-section showing pole embedded in gabion with four protection layers: borax-treated core, 8-10mm char layer, HDPE wrap, and gravel packing within gabion stone">
-                <figcaption>Four protection layers at pole-gabion connection</figcaption>
-            </figure>
+    <ProcessStep number={4} title="Bend into Arch Frame While Wet">
+        <p>Poles coming out of the borax soak are saturated and at peak flexibility. Assemble the arch frame immediately—clamp, lash, or bolt poles into their curved positions while they bend easily.</p>
+        <CalloutBox variant="warning" title="Joint Shrinkage">
+            <p>Wet eucalyptus shrinks 4-8% radially as it dries. Connections made on wet poles <strong>will loosen</strong>. Use wedged connections that can be cinched after drying, or plan to re-tighten all lashings once the frame has set.</p>
         </CalloutBox>
     </ProcessStep>
 
-    <ProcessStep number={5} title="Seal with Hot Linseed Oil">
+    <ProcessStep number={5} title="Dry in Place (2-3 Weeks)">
+        <p>With the arch frame assembled, allow the structure to dry in position. Wood fibers lock into the curved shape as moisture content drops. Protect from rain with tarps if no roof is in place yet. Check joints and re-tighten lashings as the wood shrinks. Use a moisture meter—target below 15% before sealing.</p>
+    </ProcessStep>
+
+    <ProcessStep number={6} title="Seal with Hot Linseed Oil">
         <p>Heat linseed oil to 60-70°C. Brush on all pole surfaces. The oil hardens over 2-3 days and waterproofs the wood while remaining breathable. Reapply every 5-10 years.</p>
     </ProcessStep>
 </section>

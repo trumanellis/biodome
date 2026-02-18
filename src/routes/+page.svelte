@@ -78,7 +78,7 @@
       { id: 'tools-checklist', label: 'Tools Checklist' },
     ]},
     { id: 'treatment', label: 'Treatment', children: [
-      { id: 'treatment', label: '5-Step Protocol' },
+      { id: 'treatment', label: '6-Step Protocol' },
       { id: 'soaking-trough', label: 'Soaking Trough' },
     ]},
     { id: 'structural', label: 'Structural', children: [

@@ -408,7 +408,7 @@
 
     <CalloutBox variant="danger" title="Weave Green — Same Day as Harvest">
       <p>All wattle poles — rings and infill — must be woven while still green and pliable. Harvest them the same day you weave, or at most the day before. Eucalyptus dries fast: a 4cm pole left in Portuguese summer sun will stiffen within 24-48 hours and snap rather than bend.</p>
-      <p>Wattle poles do <strong>not</strong> go through the 5-step treatment protocol. That process (borax soak + 2-3 weeks drying) would leave them too stiff to weave. Instead, they are protected by encasement — straw-clay on the outside, lime plaster on the inside — which seals them from moisture and insects once the shell is complete.</p>
+      <p>Wattle poles do <strong>not</strong> go through the 6-step treatment protocol. That process (charring, borax soak, arch bending, and weeks of drying) would leave them too stiff to weave. Instead, they are protected by encasement — straw-clay on the outside, lime plaster on the inside — which seals them from moisture and insects once the shell is complete.</p>
     </CalloutBox>
 
     <h3 id="horizontal-rings">Horizontal Rings</h3>
