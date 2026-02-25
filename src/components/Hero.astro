@@ -1,0 +1,273 @@
+---
+import { Image } from 'astro:assets';
+
+const { data } = Astro.locals.starlightRoute.entry;
+const { title = data.title, tagline, image, actions = [] } = data.hero || {};
+
+let darkImage: ImageMetadata | undefined;
+let lightImage: ImageMetadata | undefined;
+let rawHtml: string | undefined;
+if (image) {
+	if ('file' in image) {
+		darkImage = image.file;
+	} else if ('dark' in image) {
+		darkImage = image.dark;
+		lightImage = image.light;
+	} else {
+		rawHtml = image.html;
+	}
+}
+---
+
+<div class="hero">
+	{darkImage && (
+		<div class="hero-bg">
+			<Image
+				src={darkImage}
+				alt={image?.alt || ''}
+				loading="eager"
+				decoding="async"
+				widths={[640, 1024, 1600, 2400]}
+				sizes="100vw"
+				class:list={['hero-img', { 'sl-hidden-light': Boolean(lightImage) }]}
+			/>
+		</div>
+	)}
+	{lightImage && (
+		<div class="hero-bg">
+			<Image
+				src={lightImage}
+				alt={image?.alt || ''}
+				loading="eager"
+				decoding="async"
+				widths={[640, 1024, 1600, 2400]}
+				sizes="100vw"
+				class="hero-img sl-hidden-dark"
+			/>
+		</div>
+	)}
+	{rawHtml && (
+		<div class="hero-bg hero-bg--raw" set:html={rawHtml} />
+	)}
+	{!image && <div class="hero-bg hero-bg--fallback" />}
+
+	<div class="scrim" aria-hidden="true"></div>
+
+	<div class="hero-content">
+		<div class="hero-text">
+			{title && (
+				<h1 id="_top" data-page-title class="hero-title" set:html={title} />
+			)}
+			{tagline && (
+				<p class="hero-tagline" set:html={tagline} />
+			)}
+			{actions.length > 0 && (
+				<div class="hero-actions">
+					{actions.map(({ link: href, text, variant }) => (
+						<a href={href} class:list={['hero-cta', variant || 'primary']}>
+							{text}
+						</a>
+					))}
+				</div>
+			)}
+		</div>
+	</div>
+</div>
+
+<style>
+	/* Slow zoom keyframe */
+	@keyframes slowZoom {
+		0%   { transform: scale(1); }
+		50%  { transform: scale(1.08); }
+		100% { transform: scale(1); }
+	}
+
+	.hero {
+		position: relative;
+		width: 100%;
+		height: min(85vh, 640px);
+		overflow: hidden;
+		display: flex;
+		align-items: flex-end;
+	}
+
+	/* Background image container */
+	.hero-bg {
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+	}
+
+	.hero-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center center;
+		display: block;
+		animation: slowZoom 30s ease-in-out infinite;
+		transform-origin: center center;
+	}
+
+	/* Fallback background when no image provided */
+	.hero-bg--fallback {
+		background: linear-gradient(135deg, #0A0F0A 0%, #1A2A1A 50%, #0F170F 100%);
+	}
+
+	/* Raw HTML background (e.g. inline SVG) */
+	.hero-bg--raw {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.hero-bg--raw > :global(*) {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	/* Gradient scrim — deep and atmospheric */
+	.scrim {
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+		background:
+			linear-gradient(
+				to right,
+				rgba(10, 15, 10, 0.82) 0%,
+				rgba(10, 15, 10, 0.50) 55%,
+				rgba(10, 15, 10, 0.18) 100%
+			),
+			linear-gradient(
+				to top,
+				rgba(10, 15, 10, 0.75) 0%,
+				rgba(10, 15, 10, 0.20) 45%,
+				rgba(10, 15, 10, 0.0) 70%
+			);
+	}
+
+	/* Content layer sits above scrim */
+	.hero-content {
+		position: relative;
+		z-index: 2;
+		width: 100%;
+		padding: 2rem 1.5rem 3.5rem;
+		display: flex;
+		align-items: flex-end;
+	}
+
+	.hero-text {
+		max-width: 38rem;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.hero-title {
+		font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+		font-size: clamp(2.25rem, 6vw, 4rem);
+		font-weight: 700;
+		line-height: 1.1;
+		letter-spacing: -0.03em;
+		margin: 0 0 1rem;
+		/* Gradient text: light → sage */
+		background: linear-gradient(135deg, #E8EDE8 0%, #7A9A7A 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		/* Fallback for no-gradient support */
+		color: #E8EDE8;
+		/* Subtle glow for depth */
+		filter: drop-shadow(0 2px 16px rgba(196, 168, 108, 0.2));
+	}
+
+	.hero-tagline {
+		font-family: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+		font-size: clamp(1rem, 2.5vw, 1.2rem);
+		font-weight: 300;
+		line-height: 1.7;
+		color: rgba(184, 200, 184, 0.92);
+		margin: 0 0 2rem;
+		letter-spacing: 0.01em;
+	}
+
+	.hero-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.875rem;
+		justify-content: center;
+	}
+
+	/* CTA buttons — agualila style */
+	.hero-cta {
+		display: inline-block;
+		padding: 0.7rem 1.75rem;
+		border-radius: 4px;
+		font-family: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+		font-size: 0.95rem;
+		font-weight: 600;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		text-decoration: none;
+		transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+	}
+
+	/* Primary: gold background, dark text */
+	.hero-cta.primary {
+		background-color: #C4A86C;
+		border: 2px solid #C4A86C;
+		color: #0A0F0A;
+	}
+	.hero-cta.primary:hover {
+		background-color: #D4B87C;
+		border-color: #D4B87C;
+		transform: translateY(-1px);
+	}
+
+	/* Secondary: ghost with mist border */
+	.hero-cta.secondary {
+		background-color: transparent;
+		border: 2px solid rgba(184, 200, 184, 0.55);
+		color: #B8C8B8;
+	}
+	.hero-cta.secondary:hover {
+		border-color: #B8C8B8;
+		color: #E8EDE8;
+		background-color: rgba(184, 200, 184, 0.08);
+		transform: translateY(-1px);
+	}
+
+	/* Minimal variant */
+	.hero-cta.minimal {
+		background-color: transparent;
+		border: 2px solid transparent;
+		color: #C4A86C;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.hero-cta.minimal:hover {
+		color: #D4B87C;
+	}
+
+	/* Desktop: left-align text, full content width */
+	@media (min-width: 50rem) {
+		.hero-content {
+			padding: 3rem 5rem 5rem;
+		}
+
+		.hero-text {
+			margin: 0;
+			text-align: left;
+		}
+
+		.hero-actions {
+			justify-content: flex-start;
+		}
+	}
+
+	/* Utility: Starlight dark/light image toggling */
+	:global([data-theme='light']) .sl-hidden-light {
+		display: none;
+	}
+	:global([data-theme='dark']) .sl-hidden-dark {
+		display: none;
+	}
+</style>

@@ -1,0 +1,13 @@
+---
+interface Props {
+  src: string;
+  title: string;
+}
+
+const { src, title } = Astro.props;
+---
+
+<div class="model-viewer">
+  <iframe src={src} loading="lazy" title={title}></iframe>
+  <a href={src} target="_blank">Open Fullscreen</a>
+</div>

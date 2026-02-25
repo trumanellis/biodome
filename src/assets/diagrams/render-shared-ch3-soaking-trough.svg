@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 340">
+  <!-- Title -->
+  <text x="250" y="22" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a2e1a">Modular Sheet Metal Trough — Cross-Section</text>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="500" height="340" fill="#F5F5F0"/>
+
+  <!-- Ground level -->
+  <rect x="0" y="230" width="500" height="110" fill="#D9CBA3"/>
+  <line x1="0" y1="230" x2="500" y2="230" stroke="#8B7355" stroke-width="2"/>
+  <text x="15" y="245" font-family="Arial, sans-serif" font-size="8" fill="#8B7355">GROUND</text>
+
+  <!-- Left sawhorse/trestle -->
+  <g>
+    <!-- Legs -->
+    <line x1="65" y1="155" x2="45" y2="228" stroke="#8B7355" stroke-width="4" stroke-linecap="round"/>
+    <line x1="95" y1="155" x2="115" y2="228" stroke="#8B7355" stroke-width="4" stroke-linecap="round"/>
+    <!-- Cross beam -->
+    <rect x="55" y="150" width="50" height="8" fill="#A0854D" stroke="#8B7355" stroke-width="1" rx="1"/>
+  </g>
+
+  <!-- Right sawhorse/trestle -->
+  <g>
+    <line x1="365" y1="155" x2="345" y2="228" stroke="#8B7355" stroke-width="4" stroke-linecap="round"/>
+    <line x1="395" y1="155" x2="415" y2="228" stroke="#8B7355" stroke-width="4" stroke-linecap="round"/>
+    <rect x="355" y="150" width="50" height="8" fill="#A0854D" stroke="#8B7355" stroke-width="1" rx="1"/>
+  </g>
+
+  <!-- Sheet metal U-channel (outer) -->
+  <path d="M40,70 L40,155 Q40,165 55,165 L405,165 Q420,165 420,155 L420,70"
+        fill="#B0B0B0" stroke="#888" stroke-width="2"/>
+  <!-- Sheet metal inner surface highlight -->
+  <path d="M44,72 L44,153 Q44,161 57,161 L403,161 Q416,161 416,153 L416,72"
+        fill="#C8C8C8" stroke="none"/>
+  <!-- Corrugation lines on metal -->
+  <line x1="40" y1="80" x2="40" y2="150" stroke="#999" stroke-width="0.5" stroke-dasharray="3,5"/>
+  <line x1="420" y1="80" x2="420" y2="150" stroke="#999" stroke-width="0.5" stroke-dasharray="3,5"/>
+
+  <!-- Pond liner (inside the U-channel) -->
+  <path d="M48,72 L48,150 Q48,158 60,158 L400,158 Q412,158 412,150 L412,72"
+        fill="none" stroke="#1a1a1a" stroke-width="2.5" stroke-dasharray="6,3"/>
+  <text x="52" y="145" font-family="Arial, sans-serif" font-size="7" fill="#333" transform="rotate(-90,52,145)">Pond liner</text>
+
+  <!-- Water fill -->
+  <rect x="52" y="85" width="356" height="70" fill="#A8D4E6" opacity="0.5" rx="2"/>
+  <text x="230" y="100" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#4A7C8C">Water level</text>
+
+  <!-- Poles submerged (cross-section view) -->
+  <ellipse cx="110" cy="130" rx="12" ry="8" fill="#8B7355" stroke="#6B5340" stroke-width="1"/>
+  <ellipse cx="155" cy="128" rx="14" ry="9" fill="#9A8365" stroke="#7A6548" stroke-width="1"/>
+  <ellipse cx="200" cy="132" rx="11" ry="7" fill="#8B7355" stroke="#6B5340" stroke-width="1"/>
+  <ellipse cx="240" cy="129" rx="13" ry="8" fill="#9A8365" stroke="#7A6548" stroke-width="1"/>
+  <ellipse cx="280" cy="131" rx="12" ry="9" fill="#8B7355" stroke="#6B5340" stroke-width="1"/>
+  <ellipse cx="320" cy="128" rx="14" ry="8" fill="#9A8365" stroke="#7A6548" stroke-width="1"/>
+  <ellipse cx="360" cy="132" rx="11" ry="7" fill="#8B7355" stroke="#6B5340" stroke-width="1"/>
+
+  <!-- Weighted board on top of poles -->
+  <rect x="90" y="106" width="280" height="6" fill="#6B5340" stroke="#4A3C2A" stroke-width="1"/>
+  <!-- Stones on board -->
+  <ellipse cx="150" cy="104" rx="14" ry="7" fill="#7A7A7A" stroke="#666" stroke-width="1"/>
+  <ellipse cx="230" cy="104" rx="16" ry="8" fill="#6E6E6E" stroke="#5E5E5E" stroke-width="1"/>
+  <ellipse cx="310" cy="104" rx="15" ry="7" fill="#757575" stroke="#656565" stroke-width="1"/>
+  <text x="230" y="90" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#555">Weighted board with stones</text>
+
+  <!-- Ratchet strap (left) -->
+  <path d="M30,60 L30,170 Q30,180 50,180 L55,165"
+        fill="none" stroke="#E67E22" stroke-width="3" stroke-linecap="round"/>
+  <path d="M430,60 L430,170 Q430,180 410,180 L405,165"
+        fill="none" stroke="#E67E22" stroke-width="3" stroke-linecap="round"/>
+  <!-- Strap over top -->
+  <line x1="30" y1="60" x2="430" y2="60" stroke="#E67E22" stroke-width="3"/>
+  <!-- Ratchet buckle -->
+  <rect x="220" y="54" width="20" height="12" fill="#D4760A" stroke="#B8650A" stroke-width="1" rx="2"/>
+  <text x="230" y="50" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#B8650A">Ratchet strap</text>
+
+  <!-- Sheet metal label -->
+  <line x1="425" y1="120" x2="455" y2="105" stroke="#666" stroke-width="0.5"/>
+  <text x="458" y="108" font-family="Arial, sans-serif" font-size="8" fill="#666">Sheet metal</text>
+  <text x="458" y="118" font-family="Arial, sans-serif" font-size="8" fill="#666">U-channel</text>
+
+  <!-- Dimension lines -->
+  <!-- Width (60-80cm) -->
+  <line x1="40" y1="195" x2="420" y2="195" stroke="#333" stroke-width="1"/>
+  <line x1="40" y1="190" x2="40" y2="200" stroke="#333" stroke-width="1"/>
+  <line x1="420" y1="190" x2="420" y2="200" stroke="#333" stroke-width="1"/>
+  <polygon points="40,195 48,192 48,198" fill="#333"/>
+  <polygon points="420,195 412,192 412,198" fill="#333"/>
+  <text x="230" y="210" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#333">60–80 cm width</text>
+
+  <!-- Depth (30-40cm) -->
+  <line x1="455" y1="70" x2="455" y2="165" stroke="#333" stroke-width="1"/>
+  <line x1="450" y1="70" x2="460" y2="70" stroke="#333" stroke-width="1"/>
+  <line x1="450" y1="165" x2="460" y2="165" stroke="#333" stroke-width="1"/>
+  <polygon points="455,70 452,78 458,78" fill="#333"/>
+  <polygon points="455,165 452,157 458,157" fill="#333"/>
+  <text x="470" y="115" font-family="Arial, sans-serif" font-size="9" text-anchor="start" fill="#333">30–40 cm</text>
+  <text x="470" y="126" font-family="Arial, sans-serif" font-size="9" text-anchor="start" fill="#333">depth</text>
+
+  <!-- Legend -->
+  <g transform="translate(20, 270)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#1a2e1a">Above ground — no excavation required</text>
+    <text x="0" y="14" font-family="Arial, sans-serif" font-size="8" fill="#555">Sections overlap end-to-end; pond liner seals all joints</text>
+    <text x="0" y="28" font-family="Arial, sans-serif" font-size="8" fill="#555">Supports at ~1.5m spacing (sawhorses, trestles, or blocks)</text>
+  </g>
+
+  <!-- Capacity indicator -->
+  <rect x="340" y="262" width="140" height="40" fill="#e8f5e9" stroke="#4caf50" stroke-width="1" rx="4"/>
+  <text x="410" y="279" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#2d4a2d" font-weight="bold">Soak 72+ hours</text>
+  <text x="410" y="292" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#555">Flip poles halfway</text>
+</svg>

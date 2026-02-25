@@ -1,0 +1,640 @@
+/* ============================================================
+   BioDome Design System — custom.css
+   Astro Starlight override layer
+   Sacred Ecology aesthetic — dark, immersive, temple-like
+   ============================================================ */
+
+/* ---- Google Fonts ---- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap');
+
+/* ---- Smooth scroll ---- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---- BioDome custom tokens — Sacred Ecology palette ---- */
+:root {
+  --bd-night:   #0A0F0A;
+  --bd-forest:  #1A2A1A;
+  --bd-moss:    #3D5A3D;
+  --bd-sage:    #7A9A7A;
+  --bd-mist:    #B8C8B8;
+  --bd-light:   #E8EDE8;
+  --bd-glow:    #C4A86C;
+  --bd-water:   #5A7A8A;
+}
+
+/* ---- Starlight colour overrides — dark is primary ---- */
+:root {
+  --sl-color-accent-low:  #1A2A1A;
+  --sl-color-accent:      #3D5A3D;
+  --sl-color-accent-high: #B8C8B8;
+  --sl-color-white:       #E8EDE8;
+  --sl-color-gray-1:      #1A2A1A;
+  --sl-color-gray-2:      #2A3A2A;
+  --sl-color-gray-3:      #3D5A3D;
+  --sl-color-gray-4:      #7A9A7A;
+  --sl-color-gray-5:      #B8C8B8;
+  --sl-color-gray-6:      #0F170F;
+  --sl-color-black:       #0A0F0A;
+}
+
+/* Dark theme — primary experience */
+[data-theme='dark'] {
+  --sl-color-accent-low:  #1A2A1A;
+  --sl-color-accent:      #7A9A7A;
+  --sl-color-accent-high: #E8EDE8;
+  --sl-color-bg:          #0A0F0A;
+  --sl-color-bg-nav:      #0F170F;
+  --sl-color-bg-sidebar:  #0F170F;
+  --sl-color-hairline:    #2A3A2A;
+  --sl-color-text:        #B8C8B8;
+  --sl-color-text-accent: #C4A86C;
+}
+
+/* Light theme — muted earthy, not bright white */
+[data-theme='light'] {
+  --sl-color-accent-low:  #dce8dc;
+  --sl-color-accent:      #3D5A3D;
+  --sl-color-accent-high: #1A2A1A;
+  --sl-color-bg:          #E8EDE8;
+  --sl-color-bg-nav:      #dce8dc;
+  --sl-color-bg-sidebar:  #dce8dc;
+  --sl-color-hairline:    #B8C8B8;
+  --sl-color-text:        #1A2A1A;
+  --sl-color-text-accent: #8A6030;
+}
+
+/* ---- Base typography ---- */
+:root {
+  --sl-text-body:   1.125rem;
+  --sl-line-height: 1.8;
+  --sl-font-system: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  font-family: var(--sl-font-system);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, var(--bd-light) 0%, var(--bd-sage) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--bd-moss);
+  background: linear-gradient(135deg, var(--bd-glow) 0%, #E8C88C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h3 {
+  font-size: 1.3rem;
+  color: var(--bd-mist);
+}
+
+h4 {
+  font-size: 1.1rem;
+  color: var(--bd-sage);
+}
+
+/* Light mode heading overrides — gradient on dark bg won't work, use solid */
+[data-theme='light'] h1 {
+  background: linear-gradient(135deg, #1A2A1A 0%, #3D5A3D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme='light'] h2 {
+  background: linear-gradient(135deg, #8A6030 0%, #C4A86C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-top-color: var(--bd-mist);
+}
+
+[data-theme='light'] h3 {
+  color: #1A2A1A;
+}
+
+[data-theme='light'] h4 {
+  color: #3D5A3D;
+}
+
+/* Editorial first paragraph */
+.sl-markdown-content > p:first-of-type {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: var(--bd-mist);
+  font-weight: 300;
+}
+
+[data-theme='light'] .sl-markdown-content > p:first-of-type {
+  color: #3D5A3D;
+}
+
+/* Generous content spacing */
+[data-theme='dark'] .main-frame {
+  background: var(--bd-night);
+}
+
+[data-theme='light'] .main-frame {
+  background: var(--bd-light);
+}
+
+/* ---- Content fade-in animation ---- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sl-markdown-content {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* ---- Link colors — gold ---- */
+.sl-markdown-content a,
+.sl-markdown-content a:visited {
+  color: var(--bd-glow);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.sl-markdown-content a:hover {
+  border-bottom-color: var(--bd-glow);
+}
+
+[data-theme='light'] .sl-markdown-content a,
+[data-theme='light'] .sl-markdown-content a:visited {
+  color: #8A6030;
+}
+
+[data-theme='light'] .sl-markdown-content a:hover {
+  border-bottom-color: #8A6030;
+}
+
+/* Section padding — generous spacing */
+.content-panel {
+  padding-block: 4rem 6rem;
+}
+
+/* ============================================================
+   VISION GRID
+   4-col → 2-col → 1-col responsive with ghost numbers
+   ============================================================ */
+.vision-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.vision-item {
+  position: relative;
+  padding: 1.5rem 1.25rem 1.25rem;
+  border-left: 3px solid var(--bd-moss);
+  background: var(--bd-forest);
+  border-radius: 0 6px 6px 0;
+  overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.vision-item:hover {
+  border-left-color: var(--bd-glow);
+  box-shadow: 0 4px 24px rgba(196, 168, 108, 0.15);
+}
+
+.vision-number {
+  position: absolute;
+  top: -0.15rem;
+  right: 0.5rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--bd-moss);
+  opacity: 0.4;
+  pointer-events: none;
+  user-select: none;
+}
+
+.vision-item h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: var(--bd-sage);
+  -webkit-text-fill-color: var(--bd-sage);
+  background: none;
+}
+
+.vision-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--bd-mist);
+}
+
+/* Tablet */
+@media (max-width: 960px) {
+  .vision-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  .vision-grid { grid-template-columns: 1fr; }
+}
+
+/* Light mode vision */
+[data-theme='light'] .vision-item {
+  background: #dce8dc;
+  border-left-color: var(--bd-moss);
+}
+
+[data-theme='light'] .vision-item:hover {
+  border-left-color: #8A6030;
+  box-shadow: 0 4px 24px rgba(138, 96, 48, 0.12);
+}
+
+[data-theme='light'] .vision-number {
+  color: var(--bd-sage);
+  opacity: 0.3;
+}
+
+[data-theme='light'] .vision-item h3 {
+  color: #1A2A1A;
+  -webkit-text-fill-color: #1A2A1A;
+}
+
+[data-theme='light'] .vision-item p {
+  color: #2A3A2A;
+}
+
+/* ============================================================
+   STORY PAIR — side-by-side figures
+   ============================================================ */
+.story-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.story-pair figure {
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .story-pair { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   SECTION LABEL — eyebrow text above h2
+   ============================================================ */
+.section-label {
+  display: block;
+  margin-bottom: -0.75rem;
+  margin-top: 4rem;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--bd-glow);
+  -webkit-text-fill-color: var(--bd-glow);
+}
+
+[data-theme='light'] .section-label {
+  color: #8A6030;
+  -webkit-text-fill-color: #8A6030;
+}
+
+/* Remove duplicate border when section-label precedes h2 */
+.section-label + h2 {
+  border-top: none;
+  margin-top: 0.5rem;
+  padding-top: 0;
+}
+
+/* ============================================================
+   SECTION CTA — bordered wrapper for card sections
+   ============================================================ */
+.section-cta {
+  border: 1px solid var(--bd-moss);
+  border-radius: 8px;
+  padding: 2.5rem;
+  margin: 3rem 0;
+  background: var(--bd-forest);
+}
+
+[data-theme='light'] .section-cta {
+  background: #dce8dc;
+  border-color: var(--bd-sage);
+}
+
+/* ============================================================
+   FULL-BLEED FIGURE — edge-to-edge image
+   ============================================================ */
+.full-bleed {
+  margin-left: calc(-1 * var(--sl-content-pad-x, 1.5rem));
+  margin-right: calc(-1 * var(--sl-content-pad-x, 1.5rem));
+}
+
+.full-bleed img {
+  width: 100%;
+  border-radius: 0;
+}
+
+/* ============================================================
+   CALLOUT RECOLORING — themed callout palette
+   ============================================================ */
+
+/* Danger → deep ember */
+.starlight-aside--danger {
+  --sl-color-asides-text-accent: #C4604A;
+  border-color: #9E3B2D;
+  background: rgba(158, 59, 45, 0.10);
+}
+
+[data-theme='light'] .starlight-aside--danger {
+  --sl-color-asides-text-accent: #9e3b2d;
+  border-color: #c25a42;
+  background: #fdf0ec;
+}
+
+/* Note → forest-green */
+.starlight-aside--note {
+  --sl-color-asides-text-accent: var(--bd-sage);
+  border-color: var(--bd-moss);
+  background: rgba(26, 42, 26, 0.6);
+}
+
+[data-theme='light'] .starlight-aside--note {
+  --sl-color-asides-text-accent: var(--bd-moss);
+  border-color: var(--bd-sage);
+  background: rgba(61, 90, 61, 0.08);
+}
+
+/* Caution → warm gold */
+.starlight-aside--caution {
+  --sl-color-asides-text-accent: var(--bd-glow);
+  border-color: #8A6030;
+  background: rgba(196, 168, 108, 0.08);
+}
+
+[data-theme='light'] .starlight-aside--caution {
+  --sl-color-asides-text-accent: #8a6520;
+  border-color: #8A6030;
+  background: rgba(196, 168, 108, 0.12);
+}
+
+/* Tip → water blue */
+.starlight-aside--tip {
+  --sl-color-asides-text-accent: var(--bd-water);
+  border-color: var(--bd-water);
+  background: rgba(90, 122, 138, 0.10);
+}
+
+[data-theme='light'] .starlight-aside--tip {
+  --sl-color-asides-text-accent: #3A5A6A;
+  border-color: var(--bd-water);
+  background: rgba(90, 122, 138, 0.08);
+}
+
+/* ============================================================
+   CARD OVERRIDES — left-border accent pattern
+   ============================================================ */
+.card {
+  border-left: 3px solid var(--bd-moss);
+  background: var(--bd-forest);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  border-left-color: var(--bd-glow);
+  box-shadow: 0 4px 24px rgba(196, 168, 108, 0.12);
+}
+
+[data-theme='light'] .card {
+  background: #dce8dc;
+  border-left-color: var(--bd-moss);
+}
+
+[data-theme='light'] .card:hover {
+  border-left-color: #8A6030;
+}
+
+/* ============================================================
+   TABLE STYLING
+   ============================================================ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.9rem;
+}
+
+th {
+  background: var(--bd-forest);
+  color: var(--bd-glow);
+  padding: 0.85rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-family: 'Source Sans 3', sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  border-bottom: 2px solid var(--bd-moss);
+}
+
+td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--bd-forest);
+  color: var(--bd-mist);
+}
+
+tr:hover td {
+  background: var(--bd-forest);
+}
+
+[data-theme='light'] th {
+  background: #dce8dc;
+  color: #3D5A3D;
+  border-bottom-color: var(--bd-moss);
+}
+
+[data-theme='light'] td {
+  color: #1A2A1A;
+  border-bottom-color: #B8C8B8;
+}
+
+[data-theme='light'] tr:hover td {
+  background: rgba(184, 200, 184, 0.3);
+}
+
+/* ============================================================
+   FIGURE STYLING
+   ============================================================ */
+figure {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--bd-sage);
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+/* ============================================================
+   MODEL VIEWER
+   ============================================================ */
+.model-viewer {
+  position: relative;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.model-viewer iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
+  border-radius: 8px;
+  background: var(--bd-forest);
+}
+
+.model-viewer a {
+  display: block;
+  text-align: right;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  color: var(--bd-glow);
+}
+
+/* ============================================================
+   STATS GRID
+   ============================================================ */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: var(--bd-forest);
+  border-radius: 8px;
+  border: 1px solid var(--bd-moss);
+  transition: border-color 0.25s ease;
+}
+
+.stat-card:hover {
+  border-color: var(--bd-glow);
+}
+
+.stat-card .value {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 700;
+  font-family: 'Playfair Display', Georgia, serif;
+  color: var(--bd-glow);
+}
+
+.stat-card .label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--bd-sage);
+  margin-top: 0.35rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+[data-theme='light'] .stat-card {
+  background: #dce8dc;
+  border-color: var(--bd-sage);
+}
+
+[data-theme='light'] .stat-card .value {
+  color: #8A6030;
+}
+
+[data-theme='light'] .stat-card .label {
+  color: #3D5A3D;
+}
+
+/* ============================================================
+   SIDEBAR & NAV — dark earthy feel
+   ============================================================ */
+[data-theme='dark'] :is(.sidebar, nav.sidebar) {
+  background: var(--bd-night);
+  border-right: 1px solid var(--bd-forest);
+}
+
+[data-theme='dark'] .sidebar-content a {
+  color: var(--bd-mist);
+}
+
+[data-theme='dark'] .sidebar-content a:hover,
+[data-theme='dark'] .sidebar-content a[aria-current='page'] {
+  color: var(--bd-glow);
+}
+
+/* ============================================================
+   INLINE CODE & CODE BLOCKS
+   ============================================================ */
+code:not(pre code) {
+  background: var(--bd-forest);
+  color: var(--bd-glow);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+
+[data-theme='light'] code:not(pre code) {
+  background: rgba(61, 90, 61, 0.12);
+  color: #3D5A3D;
+}
+
+pre {
+  background: var(--bd-forest) !important;
+  border: 1px solid var(--bd-moss);
+  border-radius: 8px;
+}
+
+[data-theme='light'] pre {
+  background: rgba(61, 90, 61, 0.06) !important;
+  border-color: var(--bd-sage);
+}
