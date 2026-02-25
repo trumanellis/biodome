@@ -8,7 +8,6 @@
   import Harvesting from '$lib/components/techniques/Harvesting.svelte';
   import Materials from '$lib/components/techniques/Materials.svelte';
   import Treatment from '$lib/components/techniques/Treatment.svelte';
-  import Structural from '$lib/components/techniques/Structural.svelte';
   import LivingRoof from '$lib/components/techniques/LivingRoof.svelte';
   import FireSafety from '$lib/components/techniques/FireSafety.svelte';
   import Finishing from '$lib/components/techniques/Finishing.svelte';
@@ -27,10 +26,6 @@
     ]},
     { id: 'treatment', label: 'Treatment', children: [
       { id: 'soaking-trough', label: 'Soaking Trough' },
-    ]},
-    { id: 'structural', label: 'Structural', children: [
-      { id: 'design-loads', label: 'Design Loads' },
-      { id: 'connection-notes', label: 'Connections' },
     ]},
     { id: 'excavation', label: 'Excavation' },
     { id: 'foundation', label: 'Foundation' },
@@ -104,7 +99,6 @@
   <Harvesting />
   <Materials />
   <Treatment />
-  <Structural />
 
   <!-- Section 1: Design Overview -->
   <section id="overview">

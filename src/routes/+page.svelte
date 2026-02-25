@@ -4,7 +4,6 @@
   import Harvesting from '$lib/components/techniques/Harvesting.svelte';
   import Materials from '$lib/components/techniques/Materials.svelte';
   import Treatment from '$lib/components/techniques/Treatment.svelte';
-  import Structural from '$lib/components/techniques/Structural.svelte';
   import WallsStrawClay from '$lib/components/techniques/WallsStrawClay.svelte';
   import FireSafety from '$lib/components/techniques/FireSafety.svelte';
   import LivingRoof from '$lib/components/techniques/LivingRoof.svelte';
@@ -13,21 +12,11 @@
 
   const galleryImages = [
     { src: '/assets/Colony.png', alt: 'BioDome Colony', featured: true },
-    { src: '/assets/LiveRoom.png', alt: 'Living Room Interior' },
-    { src: '/assets/LiveEdge.png', alt: 'Live Edge Design' },
     { src: '/assets/LifePod.png', alt: 'Life Pod Concept', featured: true },
-    { src: '/assets/SolarCap.png', alt: 'Solar Cap Design' },
     { src: '/assets/hobbiton.png', alt: 'Hobbiton-style Dome' },
-    { src: '/assets/stonegloo.png', alt: 'Stone Igloo Design' },
-    { src: '/assets/DeepLiving.png', alt: 'Deep Living Space' },
     { src: '/assets/Integrated.png', alt: 'Integrated Design' },
-    { src: '/assets/EarthDome.png', alt: 'Earth Dome' },
-    { src: '/assets/LazyLiving.png', alt: 'Lazy Living Design' },
     { src: '/assets/MountainTop.png', alt: 'Mountain Top Location' },
-    { src: '/assets/MultiGenerational.png', alt: 'Multi-Generational Home' },
-    { src: '/assets/ReadingNook.png', alt: 'Reading Nook' },
-    { src: '/assets/RemoteLife.png', alt: 'Remote Living' },
-    { src: '/assets/SeparateAlcoves.png', alt: 'Separate Alcoves Design' },
+    { src: '/assets/EarthDome.png', alt: 'Earth Dome' },
   ];
 
   let lightboxOpen = $state(false);
@@ -80,10 +69,6 @@
     { id: 'treatment', label: 'Treatment', children: [
       { id: 'treatment', label: '6-Step Protocol' },
       { id: 'soaking-trough', label: 'Soaking Trough' },
-    ]},
-    { id: 'structural', label: 'Structural', children: [
-      { id: 'design-loads', label: 'Design Loads' },
-      { id: 'connection-notes', label: 'Connections' },
     ]},
     { id: 'walls', label: 'Walls', children: [
       { id: 'why-straw-clay', label: 'Why Straw-Clay?' },
@@ -206,6 +191,11 @@
   </div>
 </section>
 
+<figure class="section-rendering">
+  <img src="/assets/LiveRoom.png" alt="Living Room Interior" loading="lazy">
+  <figcaption>Interior spaces designed around natural light and living materials</figcaption>
+</figure>
+
 <!-- Open Source Architecture -->
 <section class="story" id="open-source" style="padding-bottom: 0;">
   <div class="story-content">
@@ -296,26 +286,76 @@
   </div>
 </section>
 
+<figure class="section-rendering">
+  <img src="/assets/SolarCap.png" alt="Solar Cap Design" loading="lazy">
+  <figcaption>From concept to construction — every dome starts with harvested poles</figcaption>
+</figure>
+
 <!-- Build Chapters: Technique Components -->
 <section class="story">
   <div class="story-content">
     <hr class="story-divider">
     <Harvesting />
+  </div>
+</section>
+
+<figure class="section-rendering">
+  <img src="/assets/LiveEdge.png" alt="Live Edge Design" loading="lazy">
+  <figcaption>Live edge design celebrates the natural character of eucalyptus</figcaption>
+</figure>
+
+<section class="story" style="padding-top: 0;">
+  <div class="story-content">
     <hr class="story-divider">
     <Materials />
     <hr class="story-divider">
     <Treatment />
+  </div>
+</section>
+
+<figure class="section-rendering">
+  <img src="/assets/DeepLiving.png" alt="Deep Living Space" loading="lazy">
+  <figcaption>Deep living spaces that breathe with the landscape</figcaption>
+</figure>
+
+<section class="story" style="padding-top: 0;">
+  <div class="story-content">
     <hr class="story-divider">
-    <Structural />
+  </div>
+</section>
+
+<figure class="section-rendering">
+  <img src="/assets/stonegloo.png" alt="Stone Igloo Design" loading="lazy">
+  <figcaption>Stone and timber — ancient materials, modern comfort</figcaption>
+</figure>
+
+<section class="story" style="padding-top: 0;">
+  <div class="story-content">
     <hr class="story-divider">
     <WallsStrawClay />
+  </div>
+</section>
 
+<figure class="section-rendering">
+  <img src="/assets/LazyLiving.png" alt="Lazy Living Design" loading="lazy">
+  <figcaption>Walls become landscape, landscape becomes home</figcaption>
+</figure>
+
+<section class="story" style="padding-top: 0;">
+  <div class="story-content">
     <hr class="story-divider">
-
     <LivingRoof />
+  </div>
+</section>
 
+<figure class="section-rendering">
+  <img src="/assets/ReadingNook.png" alt="Reading Nook" loading="lazy">
+  <figcaption>Every nook shaped by the curves of the dome</figcaption>
+</figure>
+
+<section class="story" style="padding-top: 0;">
+  <div class="story-content">
     <hr class="story-divider">
-
     <Finishing />
 
     <h3>Water System</h3>
@@ -326,9 +366,17 @@
       <li><strong>Treatment:</strong> First-flush diverter, filtration, UV sterilization</li>
       <li><strong>Backup sources:</strong> Spring, well, or trucked delivery for dry periods</li>
     </ul>
+  </div>
+</section>
 
+<figure class="section-rendering">
+  <img src="/assets/SeparateAlcoves.png" alt="Separate Alcoves Design" loading="lazy">
+  <figcaption>Alcoves and privacy within an open plan</figcaption>
+</figure>
+
+<section class="story" style="padding-top: 0;">
+  <div class="story-content">
     <MoistureManagement />
-
   </div>
 </section>
 
@@ -403,6 +451,11 @@
   </div>
 </section>
 
+<figure class="section-rendering">
+  <img src="/assets/MultiGenerational.png" alt="Multi-Generational Home" loading="lazy">
+  <figcaption>Homes that grow with families across generations</figcaption>
+</figure>
+
 <!-- Fire Safety (technique component) -->
 <section class="story">
   <div class="story-content">
@@ -433,8 +486,16 @@
       <figcaption>The long-term vision: BioDomes disappearing into restored native forest</figcaption>
     </figure>
 
-    <hr class="story-divider">
+  </div>
+</section>
 
+<figure class="section-rendering">
+  <img src="/assets/RemoteLife.png" alt="Remote Living" loading="lazy">
+  <figcaption>Remote living, deeply connected to the land</figcaption>
+</figure>
+
+<section class="story" style="padding-top: 0;">
+  <div class="story-content">
     <!-- Maintenance Schedule (landing-page-specific) -->
     <h2 id="maintenance">Maintenance Schedule</h2>
 
@@ -643,7 +704,7 @@
   .lightbox-next { right: 1.5rem; }
 
   /* Story Section */
-  .story { background: var(--cream); padding: 80px 30px; }
+  .story { background: var(--cream); padding: 40px 30px; }
   .story-content { max-width: 760px; margin: 0 auto; }
   .story-content > p { font-size: 1.1rem; line-height: 1.8; color: var(--text-dark); margin-bottom: 1.5rem; }
   .story-content h2 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); color: var(--forest-dark); margin-top: 3rem; margin-bottom: 1rem; line-height: 1.3; }
@@ -683,15 +744,33 @@
 
   .story-divider { border: none; border-top: 2px solid var(--forest-mid); margin: 4rem 0 3rem; }
 
+  /* Section Rendering Breakers */
+  .section-rendering {
+    margin: 0;
+    text-align: center;
+    background: var(--cream);
+  }
+  .section-rendering img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+  }
+  .section-rendering figcaption {
+    padding: 0.75rem 30px;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--text-mid);
+  }
   @media (max-width: 768px) {
-    .story { padding: 60px 20px; }
+    .story { padding: 30px 20px; }
     .story-pair { grid-template-columns: 1fr; }
     .story-content table { font-size: 0.85rem; }
     .story-content th, .story-content td { padding: 8px 10px; }
   }
 
   /* Design Selection */
-  .designs { background: var(--cream-dark); padding: 80px 30px; }
+  .designs { background: var(--cream-dark); padding: 40px 30px; }
   .designs-header { text-align: center; max-width: 700px; margin: 0 auto 60px; }
   .section-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: var(--earth-rust); margin-bottom: 12px; }
   .section-title { font-size: clamp(2rem, 4vw, 2.8rem); color: var(--forest-dark); margin-bottom: 16px; }
@@ -718,7 +797,7 @@
   .design-link.secondary:hover { background: #e8e3db; }
 
   /* The Vision */
-  .vision { background: var(--cream); padding: 80px 30px; }
+  .vision { background: var(--cream); padding: 40px 30px; }
   .vision-content { max-width: 900px; margin: 0 auto; }
   .vision-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-top: 50px; }
   .vision-item { position: relative; padding-left: 50px; }
@@ -742,7 +821,7 @@
   /* Mobile */
   @media (max-width: 768px) {
     .hero { padding: 60px 20px 50px; min-height: 70vh; }
-    .story, .designs, .vision, .cta { padding: 60px 20px; }
+    .story, .designs, .vision, .cta { padding: 30px 20px; }
     .design-grid { grid-template-columns: 1fr; }
     .design-stats { gap: 16px; }
     .design-links { flex-direction: column; }

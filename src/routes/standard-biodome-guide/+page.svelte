@@ -9,7 +9,6 @@
   import Harvesting from '$lib/components/techniques/Harvesting.svelte';
   import Materials from '$lib/components/techniques/Materials.svelte';
   import Treatment from '$lib/components/techniques/Treatment.svelte';
-  import Structural from '$lib/components/techniques/Structural.svelte';
   import WallsStrawClay from '$lib/components/techniques/WallsStrawClay.svelte';
   import LivingRoof from '$lib/components/techniques/LivingRoof.svelte';
   import Finishing from '$lib/components/techniques/Finishing.svelte';
@@ -35,10 +34,6 @@
     ]},
     { id: 'treatment', label: 'Treatment', children: [
       { id: 'soaking-trough', label: 'Soaking Trough' },
-    ]},
-    { id: 'structural', label: 'Structural', children: [
-      { id: 'design-loads', label: 'Design Loads' },
-      { id: 'connection-notes', label: 'Connections' },
     ]},
     {
       id: 'foundation', label: 'Foundation',
@@ -179,7 +174,6 @@
   <Harvesting />
   <Materials />
   <Treatment />
-  <Structural />
 
   <!-- Overview -->
   <section id="overview">
@@ -391,6 +385,11 @@
 
     <ProcessStep number={7} title="Lock Pole Bases">
       <p>Pack each foundation socket tightly with gravel around the pole base. Then wire-lash each pole to the gabion mesh below it for uplift resistance in high winds.</p>
+
+      <figure class="figure">
+        <img src="/assets/render-shared-ch3-pole-gabion-connection.svg" alt="Vertical cross-section showing pole embedded in gabion with four protection layers: borax-treated core, 8-10mm char layer, HDPE wrap, and gravel packing within gabion stone" loading="lazy">
+        <figcaption>Four protection layers at pole-gabion connection: borax-treated core, char layer, HDPE wrap, and gravel packing</figcaption>
+      </figure>
     </ProcessStep>
 
     <CalloutBox variant="warning" title="Check the Shape">

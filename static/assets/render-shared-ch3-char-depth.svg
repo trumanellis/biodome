@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 345">
   <!-- Title -->
   <text x="200" y="22" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a2e1a">Char Depth Comparison</text>
 
   <!-- Background -->
-  <rect x="0" y="0" width="400" height="300" fill="#F5F5F0"/>
+  <rect x="0" y="0" width="400" height="345" fill="#F5F5F0"/>
 
   <!-- Divider line -->
   <line x1="200" y1="40" x2="200" y2="280" stroke="#ddd" stroke-width="1" stroke-dasharray="4,4"/>
@@ -97,6 +97,6 @@
   </g>
 
   <!-- Test instruction at bottom -->
-  <rect x="100" y="270" width="200" height="22" fill="#fff8e6" stroke="#e6c200" stroke-width="1" rx="3"/>
-  <text x="200" y="285" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#8B6914">Test depth by scraping with a knife</text>
+  <rect x="100" y="312" width="200" height="22" fill="#fff8e6" stroke="#e6c200" stroke-width="1" rx="3"/>
+  <text x="200" y="327" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#8B6914">Test depth by scraping with a knife</text>
 </svg>

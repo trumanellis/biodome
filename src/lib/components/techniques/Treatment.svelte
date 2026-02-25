@@ -1,14 +1,14 @@
 <section id="treatment" data-component="Treatment">
     <h1>Pole Treatment Protocol</h1>
 
-    <p>The 6-step process is <strong>identical across all designs</strong> and is absolutely non-negotiable. Untreated eucalyptus fails in 5-10 years. Properly treated timber lasts 30-40 years above ground, and this sequence keeps poles flexible for bending into arch frames.</p>
+    <p>The 6-step process is <strong>identical across all designs</strong> and is absolutely non-negotiable. Untreated eucalyptus in Portugal fails in 5-10 years — attacked by subterranean termites, wood-boring beetles, and fungal rot long before it wears out structurally. Properly treated timber lasts 30-40 years above ground, and this sequence keeps poles flexible for bending into arch frames.</p>
 
     <CalloutBox variant="tip" title="Eucalyptus Species Selection">
         <p>For structural poles, select <strong>E. globulus</strong> (blue gum) or <strong>E. grandis</strong> (flooded gum). These species have characteristic bending strength of 25+ MPa. Avoid E. camaldulensis for primary rafters—its strength is more variable. Source poles 15-18cm diameter at the butt end for main rafters.</p>
     </CalloutBox>
 
     <CalloutBox variant="danger" title="This is not optional">
-        <p>Skip pole treatment and your building will be colonized by carpenter ants within 3 years. Follow this protocol and your timber will last 30-40 years.</p>
+        <p>In southern Europe, untreated eucalyptus faces three concurrent threats: <strong>subterranean termites</strong> (<em>Reticulitermes grassei</em> — widespread in Portugal from the Algarve to the Tejo valley), <strong>wood-boring beetles</strong> (house longhorn and furniture beetles that lay eggs in untreated sapwood), and <strong>fungal decay</strong> (brown and white rot fungi that thrive in the wet winters). Skip treatment and you'll see the first damage within 2-3 years. Follow this protocol and your timber will last 30-40 years.</p>
     </CalloutBox>
 
     <ProcessStep number={1} title="Debark Within 48 Hours">
@@ -31,11 +31,6 @@
                 <img src="/assets/render-shared-ch3-char-depth.svg" alt="Side-by-side comparison of pole cross-sections showing cosmetic 3-5mm char (smooth surface, inadequate) versus structural 8-10mm char (alligator-scale cracking, target depth)">
                 <figcaption>Target 8-10mm char depth with visible alligator-scale cracking</figcaption>
             </figure>
-
-            <figure class="figure">
-                <img src="/assets/render-shared-ch3-pole-gabion-connection.svg" alt="Vertical cross-section showing pole embedded in gabion with four protection layers: borax-treated core, 8-10mm char layer, HDPE wrap, and gravel packing within gabion stone">
-                <figcaption>Four protection layers at pole-gabion connection</figcaption>
-            </figure>
         </CalloutBox>
     </ProcessStep>
 
@@ -43,9 +38,9 @@
         <p>Submerge poles completely in borax solution. They float, so weight them down with stones or a weighted board. Minimum 72 hours; longer (up to 2 weeks) is better for deep penetration.</p>
     </ProcessStep>
 
-    <h3 id="soaking-trough">Building a Soaking Trough (Trenched Pond Liner)</h3>
+    <h3 id="soaking-trough">Building a Soaking Trough (Modular Sheet Metal)</h3>
 
-    <p>For batch processing 200+ poles, build a permanent trough sized for your longest rafters:</p>
+    <p>For batch processing 200+ poles, build a portable above-ground trough from sheet metal sections lined with pond liner. No excavation required — the trough sits on simple supports, can be assembled in an hour, and disassembles flat for transport or storage. Size it to fit the longest poles in your design with clearance:</p>
 
     <table>
       <thead>
@@ -58,34 +53,35 @@
       <tbody>
         <tr>
             <td>Length</td>
-            <td>6m</td>
-            <td>Accommodates 5.5m rafters with clearance</td>
+            <td>Longest pole + 0.5m</td>
+            <td>Must fit your longest poles with clearance (e.g. 12m for 11.6m arch poles)</td>
         </tr>
         <tr>
             <td>Width</td>
-            <td>80cm</td>
-            <td>Fits 4-5 poles side-by-side per layer</td>
+            <td>60-80cm</td>
+            <td>Depends on sheet size; fits 4-5 poles side-by-side per layer</td>
         </tr>
         <tr>
             <td>Depth</td>
-            <td>50cm</td>
-            <td>Allows 2-3 layers of stacked poles</td>
+            <td>30-40cm</td>
+            <td>Shallower than a trench — above-ground so no depth lost to ground level</td>
         </tr>
         <tr>
             <td>Capacity</td>
-            <td>~2,400 liters</td>
-            <td>Treats 15-20 poles per batch</td>
+            <td>Length × 0.7m × 0.35m × 1000</td>
+            <td>e.g. 12m trough ≈ 2,940L; treats 15-20 poles per batch</td>
         </tr>
       </tbody>
     </table>
 
     <h4>Construction Steps</h4>
     <ol>
-        <li><strong>Excavate trench:</strong> 6m × 0.8m × 0.5m deep, with flat bottom and squared sides</li>
-        <li><strong>Remove sharp stones:</strong> Line bottom with 5cm sand or old carpet scraps</li>
-        <li><strong>Install liner:</strong> EPDM pond liner (1mm) or heavy polyethylene (200+ micron). Allow 30cm excess on all sides.</li>
-        <li><strong>Secure edges:</strong> Weight liner edges with stones or timber. Don't puncture.</li>
-        <li><strong>Add loading ramps:</strong> Place timber rails at each end—poles slide in/out without damaging liner</li>
+        <li><strong>Source sheet metal:</strong> Corrugated roofing sheets, flat galvanized sheet, old signage, or salvaged panels — anything rigid enough to bend into a U and hold water when lined.</li>
+        <li><strong>Bend into U-channels:</strong> Bend each sheet into a broad U shape (~60-80cm wide, ~30-40cm deep). Use a brake or fence post for flat sheet; corrugated sheets fold by hand along the ridges.</li>
+        <li><strong>Set up frame:</strong> Place supports (sawhorses, timber trestles, or stacked blocks) along the run at ~1.5m spacing. Level them carefully — water finds every low spot.</li>
+        <li><strong>Line up sections:</strong> Lay U-channels end-to-end on the frame, overlapping edges by 10-15cm at each joint.</li>
+        <li><strong>Install pond liner:</strong> Drape EPDM (1mm) or heavy polyethylene (200+ micron) along the full length inside the channel run. The liner seals all joints between sections — no need for waterproof connections in the metalwork.</li>
+        <li><strong>Strap it down:</strong> Run ratchet straps around the frame and channels every ~1m to hold everything tight and prevent the sides from splaying under water weight.</li>
     </ol>
 
     <h4>Borax Solution Recipe</h4>
@@ -93,33 +89,33 @@
       <thead>
         <tr>
             <th>Ingredient</th>
-            <th>Amount for 2,400L</th>
+            <th>Amount per 1,000L</th>
             <th>Cost (approx)</th>
         </tr>
       </thead>
       <tbody>
         <tr>
             <td>Water</td>
-            <td>2,400 liters</td>
+            <td>1,000 liters</td>
             <td>—</td>
         </tr>
         <tr>
             <td>Borax (sodium borate)</td>
-            <td>30kg</td>
-            <td>€45-60</td>
+            <td>12.5kg</td>
+            <td>€19-25</td>
         </tr>
         <tr>
             <td>Boric acid</td>
-            <td>20kg</td>
-            <td>€30-50</td>
+            <td>8.3kg</td>
+            <td>€12-21</td>
         </tr>
       </tbody>
     </table>
-    <p>This creates approximately a 2% solution—sufficient for insect and fungal protection. Dissolve borax and boric acid in hot water first, then add to trough.</p>
+    <p>This creates approximately a 2% solution—sufficient for insect and fungal protection. Scale proportionally to your trough volume. Dissolve borax and boric acid in hot water first, then add to trough.</p>
 
     <figure class="figure">
-        <img src="/assets/render-shared-ch3-soaking-trough.svg" alt="Cross-section of soaking trough showing 6m length, 80cm width, 50cm depth, EPDM liner, sand padding, submerged poles with weighted board, and loading ramps">
-        <figcaption>Soaking trough cross-section: EPDM-lined trench with loading ramps at each end</figcaption>
+        <img src="/assets/render-shared-ch3-soaking-trough.svg" alt="Above-ground soaking trough made from sheet metal U-channels on a sawhorse frame, lined with pond liner, with ratchet straps holding the sections together">
+        <figcaption>Modular sheet metal trough: U-channel sections on a frame, sealed by a continuous pond liner</figcaption>
     </figure>
 
     <h4>Batch Processing Workflow</h4>
@@ -137,7 +133,7 @@
     </CalloutBox>
 
     <CalloutBox variant="warning" title="After the Build">
-        <p>The trough can be repurposed: fill with gravel for a French drain, convert to a raised bed, or simply fill in. The dilute borax solution is not hazardous—borax is used in garden soil as a trace mineral (boron).</p>
+        <p>Disassemble the trough, stack the sheet metal sections flat, and roll up the liner — store for the next build or loan to a neighbor. The dilute borax solution is not hazardous—borax is used in garden soil as a trace mineral (boron). Drain it onto open ground or a garden bed.</p>
     </CalloutBox>
 
     <ProcessStep number={4} title="Bend into Arch Frame While Wet">

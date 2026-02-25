@@ -8,7 +8,6 @@
   import Treatment from '$lib/components/techniques/Treatment.svelte';
   import WallsStrawClay from '$lib/components/techniques/WallsStrawClay.svelte';
   import FireSafety from '$lib/components/techniques/FireSafety.svelte';
-  import Structural from '$lib/components/techniques/Structural.svelte';
   import LivingRoof from '$lib/components/techniques/LivingRoof.svelte';
   import Finishing from '$lib/components/techniques/Finishing.svelte';
   import MoistureManagement from '$lib/components/techniques/MoistureManagement.svelte';
@@ -47,10 +46,6 @@
     { id: 'moisture', label: 'Moisture Management', children: [
       { id: 'ventilation-requirements', label: 'Ventilation' },
       { id: 'humidity-targets', label: 'Humidity Targets' },
-    ]},
-    { id: 'structural', label: 'Structural', children: [
-      { id: 'design-loads', label: 'Design Loads' },
-      { id: 'connection-notes', label: 'Connections' },
     ]},
   ];
 </script>
@@ -95,7 +90,6 @@
   <LivingRoof />
   <Finishing />
   <MoistureManagement />
-  <Structural />
 
   <CrossLinks
     title="Now Choose Your Design"
