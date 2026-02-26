@@ -34,21 +34,21 @@ We find a way to construct quick, easy, and cheap structures from young flexible
 
 The idea came to me in the wake of a visit from my in-laws during which they taught us how to build a wattle fence around our garden to keep the wild boars away.
 
-![Wattle fence that we built entirely from locally sourced invasive tree poles](asset://localhost/%2FUsers%2Ftruman%2FDocuments%2FMythsForANewAEon%2FBioDome%2Fbiodome%2FBiodomes%2F20250928_111124.jpg)
+![Wattle fence that we built entirely from locally sourced invasive tree poles](asset://localhost/%2FUsers%2Ftruman%2FDocuments%2FMythsForANewAEon%2FBioDome%2Fbiodome%2FBiodomes%2Fwattle-fence-eucalyptus-sunlight.jpg)
 
 Wattle fence that we built for free entirely from locally sourced invasive tree poles
 
-![We then interplanted the fence with wisteria and passion fruit vines to replace it when it rots away in 5 years.](asset://localhost/%2FUsers%2Ftruman%2FDocuments%2FMythsForANewAEon%2FBioDome%2Fbiodome%2FBiodomes%2F20250928_111212.jpg)
+![We then interplanted the fence with wisteria and passion fruit vines to replace it when it rots away in 5 years.](asset://localhost/%2FUsers%2Ftruman%2FDocuments%2FMythsForANewAEon%2FBioDome%2Fbiodome%2FBiodomes%2Fwattle-fence-interplanted-vines.jpg)
 
 We then interplanted the fence with wisteria and passion fruit vines to replace it when it rots away in 5 years.
 
 I started to play with the design by directing the poles at 45 degrees instead of 90.
 
-![20250928_111450.jpg](asset://localhost/%2FUsers%2Ftruman%2FDocuments%2FMythsForANewAEon%2FBioDome%2Fbiodome%2FBiodomes%2F20250928_111450.jpg)
+![Stone wall water channel](asset://localhost/%2FUsers%2Ftruman%2FDocuments%2FMythsForANewAEon%2FBioDome%2Fbiodome%2FBiodomes%2Fstone-wall-water-channel.jpg)
 
 From here, it was a small step to imagine this trellis wrapping back on itself to create a giant inverted wicker basket dome. And when you weave a basket, you want the young flexible ones: 1-5 years old because they will bend easily into place and then dry in mutually supported tension. That dome will shift over time as each euc dries and twists individually but there’s a ton of flex to the whole structure, so no big deal.
 
-![e4b2ae113a7819bda93b51ff4e46c09ca263a141c079e0c3e5ed203ad3901f11.png](asset://localhost/%2FUsers%2Ftruman%2FDocuments%2FMythsForANewAEon%2FBioDome%2Fbiodome%2FBiodomes%2Fe4b2ae113a7819bda93b51ff4e46c09ca263a141c079e0c3e5ed203ad3901f11.png)
+![Eucalyptus lattice dome framework](asset://localhost/%2FUsers%2Ftruman%2FDocuments%2FMythsForANewAEon%2FBioDome%2Fbiodome%2FBiodomes%2FEucalyptusLatticeFramework.png)
 
 But how do we make this more useful than a shade pergola?
 
@@ -56,7 +56,7 @@ Wouldn’t it be cool if we could let the light in but keep rain out?
 
 Wrap the whole thing in greenhouse plastic and lash it down with rope. That’ll keep it dry on the inside, the first step towards living off-grid. Add a simple door cut in one of the arches, and we’ve got a greenhouse that will keep things dry.
 
-![bd0d844da6ab2a0a1a79fe38c9ecc90501200680f28f16d5c6d9c5764c1ae518.png](asset://localhost/%2FUsers%2Ftruman%2FDocuments%2FMythsForANewAEon%2FBioDome%2Fbiodome%2FBiodomes%2Fbd0d844da6ab2a0a1a79fe38c9ecc90501200680f28f16d5c6d9c5764c1ae518.png)
+![Wattle dome frame with transparent cover](asset://localhost/%2FUsers%2Ftruman%2FDocuments%2FMythsForANewAEon%2FBioDome%2Fbiodome%2FBiodomes%2FWattleDomeFrame.png)
 
 Let’s progressively make a few longevity improvements using widely available and cheap materials.
 
@@ -72,6 +72,6 @@ Simply anchoring the pole ends the middle of this cage will significantly improv
 
 Furthermore, covering the whole structure with the greenhouse plastic will add years of life to the poles. And as they dry and shift, the rope lashings (made from recycled PET rope) can be adjusted. You’d also want to wrap any sharp edges of the poles that contact the greenhouse plastic with some sort of cushioning fabric.
 
-![968a9feb6148a6cae86d779534dc57f4b1fbb2daeda2fe2aea00712133ec39a5.png](asset://localhost/%2FUsers%2Ftruman%2FDocuments%2FMythsForANewAEon%2FBioDome%2Fbiodome%2FBiodomes%2F968a9feb6148a6cae86d779534dc57f4b1fbb2daeda2fe2aea00712133ec39a5.png)
+![Completed BioDome with gabion foundation](asset://localhost/%2FUsers%2Ftruman%2FDocuments%2FMythsForANewAEon%2FBioDome%2Fbiodome%2FBiodomes%2FCompletedBioDome.png)
 
 These AI renderings are not entirely correct, but you get the idea. I couldn’t get ChatGPT to draw both the eucalyptus wattle dome and rope lashings at the same time. And obviously it’s going to need a door. Ventilation flaps could be installed around the upper dome to allow hot air to escape in the summer. This is starting to look pretty feasible as a greenhouse/warm dry room.
