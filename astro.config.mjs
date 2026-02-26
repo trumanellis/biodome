@@ -11,16 +11,24 @@ export default defineConfig({
         { icon: 'github', label: 'GitHub', href: 'https://github.com/truman369/biodome' },
       ],
       customCss: ['./src/styles/custom.css'],
+      tableOfContents: false,
       plugins: [starlightImageZoom()],
       components: {
         Hero: './src/components/Hero.astro',
       },
       sidebar: [
         {
-          label: 'Start Here',
+          label: 'The Story',
           items: [
-            'start-here/03-choose-your-design',
+            { label: 'The Silent Invasion', link: '/#the-silent-invasion' },
+            { label: 'Two Problems, One Dome', link: '/#two-problems-one-dome' },
+            { label: 'What If Removal Created Value?', link: '/#what-if-removal-created-value' },
+            { label: 'How This Design Was Born', link: '/#how-this-design-was-born' },
           ],
+        },
+        {
+          label: 'Fundamentals',
+          autogenerate: { directory: 'fundamentals' },
         },
         {
           label: 'Standard BioDome (28m²)',

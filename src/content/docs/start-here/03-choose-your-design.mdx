@@ -1,46 +1,334 @@
 ---
 title: Choose Your Design
 description: Compare the Standard BioDome and Earth Sheltered SolarPod — two open-source designs for building with eucalyptus in Portugal.
+tableOfContents: false
 ---
 
 import ModelViewer from '../../../components/ModelViewer.astro';
 
-## Every Design Heals the Land
+Every build starts here. Both designs remove invasive eucalyptus and return the land to fire-resilient habitat. Choose based on your site, your hands, and how deep you want to go.
 
-Each design removes invasive eucalyptus and creates fire-resistant housing. Choose based on your site, budget, and needs.
+<div class="design-grid">
 
----
+  <div class="design-card">
+    <div class="design-card__image-wrap">
+      <img src="/assets/StandardBioDomeRendering1.png" alt="Standard BioDome exterior rendering" />
+    </div>
+    <div class="design-card__body">
+      <span class="design-card__eyebrow">Design 01</span>
+      <h2 class="design-card__title">Standard BioDome</h2>
+      <p class="design-card__desc">
+        A wattle-and-cob dome built by two people with hand tools. Curved walls, a living roof, and 28m² of warm, breathable interior — rooted in a tradition older than concrete.
+      </p>
+      <div class="design-card__stats">
+        <div class="design-stat">
+          <span class="design-stat__value">28m²</span>
+          <span class="design-stat__label">Floor Area</span>
+        </div>
+        <div class="design-stat">
+          <span class="design-stat__value">€3–5k</span>
+          <span class="design-stat__label">Materials Budget</span>
+        </div>
+        <div class="design-stat">
+          <span class="design-stat__value">50–100</span>
+          <span class="design-stat__label">Trees Removed</span>
+        </div>
+      </div>
+      <div class="design-card__ctas">
+        <a href="/standard-biodome/01-overview/" class="design-cta design-cta--primary">Build Guide →</a>
+        <a href="#biodome-viewer" class="design-cta design-cta--secondary">3D Model →</a>
+      </div>
+    </div>
+  </div>
 
-### Standard BioDome
+  <div class="design-card">
+    <div class="design-card__image-wrap">
+      <img src="/assets/EarthShelteredRendering1.png" alt="Earth Sheltered SolarPod built into hillside" />
+    </div>
+    <div class="design-card__body">
+      <span class="design-card__eyebrow">Design 02</span>
+      <h2 class="design-card__title">Earth Sheltered SolarPod</h2>
+      <p class="design-card__desc">
+        Cut 3 metres into a south-facing slope. Da Vinci bridge rafters span the opening without metal fasteners. Passive cooling in summer, thermal mass through winter — 30m² that barely exists above ground.
+      </p>
+      <div class="design-card__stats">
+        <div class="design-stat">
+          <span class="design-stat__value">30m²</span>
+          <span class="design-stat__label">Sheltered Area</span>
+        </div>
+        <div class="design-stat">
+          <span class="design-stat__value">5 × 6m</span>
+          <span class="design-stat__label">Footprint</span>
+        </div>
+        <div class="design-stat">
+          <span class="design-stat__value">3m</span>
+          <span class="design-stat__label">Cut Depth</span>
+        </div>
+      </div>
+      <div class="design-card__ctas">
+        <a href="/earth-sheltered/01-overview/" class="design-cta design-cta--primary">Build Guide →</a>
+        <a href="#solarpod-viewer" class="design-cta design-cta--secondary">3D Model →</a>
+      </div>
+    </div>
+  </div>
 
-<img src="/assets/StandardBioDomeRendering1.png" alt="Standard BioDome exterior rendering" />
+</div>
 
-**28m² wattle dome — two-person build**
-
-| Stat | Value |
-|------|-------|
-| Floor Area | 28m² |
-| Budget | €3–5k |
-| Trees Removed | 50–100 |
-
-[Build Guide →](/standard-biodome/01-overview/) &nbsp; [3D Model →](#biodome-viewer)
+## Standard BioDome — 3D Model
 
 <ModelViewer src="/viewers/biodome.html" title="Standard BioDome 3D Model" />
 
----
-
-### Earth Sheltered SolarPod
-
-<img src="/assets/EarthShelteredRendering1.png" alt="Earth Sheltered SolarPod built into hillside" />
-
-**30m² earth-sheltered structure — Da Vinci bridge rafters, passive cooling**
-
-| Stat | Value |
-|------|-------|
-| Sheltered Area | 30m² |
-| Footprint | 5 × 6m |
-| Cut Depth | 3m |
-
-[Build Guide →](/earth-sheltered/01-overview/) &nbsp; [3D Model →](#solarpod-viewer)
+## Earth Sheltered SolarPod — 3D Model
 
 <ModelViewer src="/viewers/earth-sheltered.html" title="Earth Sheltered SolarPod 3D Model" />
+
+<style>{`
+  /* ---- Design comparison grid ---- */
+  .design-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 3rem 0;
+    align-items: start;
+  }
+
+  @media (max-width: 720px) {
+    .design-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ---- Card shell ---- */
+  .design-card {
+    display: flex;
+    flex-direction: column;
+    border-left: 3px solid var(--bd-moss, #3D5A3D);
+    background: var(--bd-forest, #1A2A1A);
+    border-radius: 0 8px 8px 0;
+    overflow: hidden;
+    transition: border-left-color 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .design-card:hover {
+    border-left-color: var(--bd-glow, #C4A86C);
+    box-shadow: 0 6px 32px rgba(196, 168, 108, 0.14);
+  }
+
+  [data-theme='light'] .design-card {
+    background: #dce8dc;
+    border-left-color: var(--bd-moss, #3D5A3D);
+  }
+
+  [data-theme='light'] .design-card:hover {
+    border-left-color: #8A6030;
+    box-shadow: 0 6px 32px rgba(138, 96, 48, 0.12);
+  }
+
+  /* ---- Image ---- */
+  .design-card__image-wrap {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+
+  .design-card__image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 0;
+    margin: 0;
+    transition: transform 0.4s ease;
+  }
+
+  .design-card:hover .design-card__image-wrap img {
+    transform: scale(1.03);
+  }
+
+  /* ---- Body ---- */
+  .design-card__body {
+    padding: 1.75rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 1;
+  }
+
+  /* ---- Eyebrow ---- */
+  .design-card__eyebrow {
+    display: block;
+    font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--bd-glow, #C4A86C);
+  }
+
+  [data-theme='light'] .design-card__eyebrow {
+    color: #8A6030;
+  }
+
+  /* ---- Title — override global h2 gradient ---- */
+  .design-card__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.65rem);
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: linear-gradient(135deg, var(--bd-mist, #B8C8B8) 0%, var(--bd-sage, #7A9A7A) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  [data-theme='light'] .design-card__title {
+    background: linear-gradient(135deg, #1A2A1A 0%, #3D5A3D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ---- Description ---- */
+  .design-card__desc {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: var(--bd-mist, #B8C8B8);
+    margin: 0;
+  }
+
+  [data-theme='light'] .design-card__desc {
+    color: #2A3A2A;
+  }
+
+  /* ---- Stats row ---- */
+  .design-card__stats {
+    display: flex;
+    gap: 0;
+    margin-top: 0.5rem;
+    border-top: 1px solid var(--bd-moss, #3D5A3D);
+    border-bottom: 1px solid var(--bd-moss, #3D5A3D);
+  }
+
+  [data-theme='light'] .design-card__stats {
+    border-top-color: var(--bd-sage, #7A9A7A);
+    border-bottom-color: var(--bd-sage, #7A9A7A);
+  }
+
+  .design-stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.9rem 0.5rem;
+    text-align: center;
+  }
+
+  .design-stat + .design-stat {
+    border-left: 1px solid var(--bd-moss, #3D5A3D);
+  }
+
+  [data-theme='light'] .design-stat + .design-stat {
+    border-left-color: var(--bd-sage, #7A9A7A);
+  }
+
+  .design-stat__value {
+    display: block;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--bd-glow, #C4A86C);
+    line-height: 1.1;
+  }
+
+  [data-theme='light'] .design-stat__value {
+    color: #8A6030;
+  }
+
+  .design-stat__label {
+    display: block;
+    font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--bd-sage, #7A9A7A);
+    margin-top: 0.2rem;
+  }
+
+  [data-theme='light'] .design-stat__label {
+    color: #3D5A3D;
+  }
+
+  /* ---- CTA links ---- */
+  .design-card__ctas {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .design-cta {
+    display: inline-block;
+    font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 0.55rem 1.1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    border-bottom: none;
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .design-cta--primary {
+    background: var(--bd-glow, #C4A86C);
+    color: var(--bd-night, #0A0F0A);
+    -webkit-text-fill-color: var(--bd-night, #0A0F0A);
+  }
+
+  .design-cta--primary:hover {
+    background: #d4b87c;
+    box-shadow: 0 2px 12px rgba(196, 168, 108, 0.35);
+    border-bottom: none;
+  }
+
+  .design-cta--secondary {
+    background: transparent;
+    color: var(--bd-sage, #7A9A7A);
+    -webkit-text-fill-color: var(--bd-sage, #7A9A7A);
+    border: 1px solid var(--bd-moss, #3D5A3D);
+  }
+
+  .design-cta--secondary:hover {
+    border-color: var(--bd-glow, #C4A86C);
+    color: var(--bd-glow, #C4A86C);
+    -webkit-text-fill-color: var(--bd-glow, #C4A86C);
+    border-bottom: none;
+  }
+
+  [data-theme='light'] .design-cta--primary {
+    background: #8A6030;
+    color: #E8EDE8;
+    -webkit-text-fill-color: #E8EDE8;
+  }
+
+  [data-theme='light'] .design-cta--primary:hover {
+    background: #9A7040;
+  }
+
+  [data-theme='light'] .design-cta--secondary {
+    color: #3D5A3D;
+    -webkit-text-fill-color: #3D5A3D;
+    border-color: var(--bd-sage, #7A9A7A);
+  }
+
+  [data-theme='light'] .design-cta--secondary:hover {
+    border-color: #8A6030;
+    color: #8A6030;
+    -webkit-text-fill-color: #8A6030;
+  }
+`}</style>
