@@ -121,7 +121,7 @@
     <line x1="145" y1="132" x2="275" y2="132" stroke="#7A6548" stroke-width="0.5"/>
     <rect x="140" y="120" width="5" height="18" fill="#7A6548" stroke="#6B5340" stroke-width="0.5"/>
     <ellipse cx="142.5" cy="129" rx="1.5" ry="6" fill="#6B5340" opacity="0.5"/>
-    <text x="210" y="115" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#444">EUCALYPTUS RING BEAM</text>
+    <text x="210" y="115" font-family="Arial, sans-serif" font-size="7" text-anchor="middle" fill="#444">EUCALYPTUS TOP PLATE</text>
   </g>
 
   <g id="threadedRods">

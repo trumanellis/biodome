@@ -29,7 +29,7 @@
   <rect x="20" y="40" width="350" height="240" rx="6" fill="white" stroke="#ddd" stroke-width="1"/>
   <circle cx="40" cy="60" r="12" fill="#1a2e1a"/>
   <text x="40" y="64" text-anchor="middle" class="step-num">1</text>
-  <text x="58" y="64" class="panel-title">First Arch + Center Post</text>
+  <text x="58" y="64" class="panel-title">First Arch (two-person raise)</text>
 
   <!-- Ground -->
   <rect x="30" y="240" width="330" height="30" class="ground-fill"/>
@@ -44,15 +44,11 @@
   <path d="M80,240 C86,219 92,208 98,193 C104,179 109,164 115,154 C121,144 127,135 133,128 C139,122 144,116 150,112 C156,108 162,105 168,103 C174,101 179,100 185,100" class="arch1"/>
   <path d="M290,240 C284,219 278,208 272,193 C266,179 261,164 255,154 C249,144 243,135 237,128 C231,122 226,116 220,112 C214,108 208,105 202,103 C196,101 191,100 185,100" class="arch1"/>
 
-  <!-- Temporary center post -->
-  <line x1="185" y1="240" x2="185" y2="100" class="support"/>
-  <text x="195" y="170" class="label-sm" style="fill:#8b6914;">temp post</text>
-
-  <!-- Wire lash to temp post at crown -->
+  <!-- Wire lash at crown -->
   <line x1="178" y1="97" x2="192" y2="97" stroke="#c9a227" stroke-width="2"/>
   <line x1="178" y1="103" x2="192" y2="103" stroke="#c9a227" stroke-width="2"/>
   <text x="210" y="94" class="label-sm" style="fill:#c9a227;">wire lash</text>
-  <text x="210" y="106" class="label-sm" style="fill:#c9a227;">to post</text>
+  <text x="210" y="106" class="label-sm" style="fill:#c9a227;">at crown</text>
 
   <!-- ===== PANEL 2: Second Arch (plan view, top-down) ===== -->
   <!-- Panel bounds: x=390-740, y=40-280 -->
@@ -76,9 +72,8 @@
   <circle cx="565" cy="170" r="6" fill="#c9a227"/>
   <text x="580" y="158" class="label-sm" style="fill:#c9a227;">crown</text>
 
-  <!-- Remove center post note -->
   <text x="565" y="260" text-anchor="middle" class="label-sm" style="font-style:italic;">Two arches stabilize</text>
-  <text x="565" y="272" text-anchor="middle" class="label-sm" style="font-style:italic;">each other — remove post</text>
+  <text x="565" y="272" text-anchor="middle" class="label-sm" style="font-style:italic;">each other — structure is freestanding</text>
 
   <!-- ===== PANEL 3: All 8 Arches (side view) ===== -->
   <!-- Panel bounds: x=20-370, y=300-540 -->

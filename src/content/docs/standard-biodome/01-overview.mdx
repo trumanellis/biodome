@@ -4,10 +4,16 @@ description: Standard BioDome key specifications, catenary dome shape, and headr
 ---
 
 import { LinkCard } from '@astrojs/starlight/components';
+import ModelViewer from '../../../components/ModelViewer.astro';
+
+<figure>
+  <img src="/assets/StandardBioDomeRendering1.png" alt="Standard BioDome exterior rendering showing eucalyptus dome with living roof and stone skirt" />
+  <figcaption>Standard BioDome — wattle-and-cob dome with living roof, stone skirt, and arched windows</figcaption>
+</figure>
 
 The Standard BioDome is a 6-meter wattle dome. Sixteen full-length eucalyptus poles, paired into eight arches, span the full dome diameter and cross at the apex. Seven pairs cross straight across; the eighth pair fans from two sockets opposite the door to frame the entrance. Wattle weave fills the gaps. Straw-clay insulates the outside. EPDM keeps the rain out. Two or three people can build the whole thing.
 
-There is no ring beam, no complex rafter assembly. The dome is one continuous structure from foundation to apex. The shape approximates a catenary — the natural curve a hanging chain makes, inverted. The poles are not forced into a mathematically precise shape; they find their own curve under gravity. This keeps the structure predominantly in compression, which is what timber does best.
+There is no complex rafter assembly. The dome is one continuous structure from foundation to apex. The shape approximates a catenary — the natural curve a hanging chain makes, inverted. The poles are not forced into a mathematically precise shape; they find their own curve under gravity. This keeps the structure predominantly in compression, which is what timber does best.
 
 <div class="stats-grid">
   <div class="stat-card"><span class="value">6m</span><span class="label">Outer Diameter</span></div>
@@ -17,18 +23,8 @@ There is no ring beam, no complex rafter assembly. The dome is one continuous st
 </div>
 
 <figure>
-  <img src="/assets/CompletedBioDome.png" alt="Completed Standard BioDome with eucalyptus lattice frame and gabion foundation" loading="lazy" />
-  <figcaption>The completed Standard BioDome — eucalyptus lattice, gabion foundation, living roof</figcaption>
-</figure>
-
-<figure>
   <img src="/assets/fig-dome-cross-section.svg" alt="Cross-section of the dome showing 6m diameter, 4m apex height, wall thickness, and headroom zones." />
   <figcaption>Fig. 1 — Dome cross-section with headroom zones and key dimensions</figcaption>
-</figure>
-
-<figure>
-  <img src="/assets/BioDome.png" alt="3D model of Standard BioDome frame structure" loading="lazy" />
-  <figcaption>3D model: the 16-pole arch frame with horizontal rings and wattle infill</figcaption>
 </figure>
 
 ## Key Specifications
@@ -53,5 +49,7 @@ A dome is not a box. Headroom varies from center to edge. This is a feature, not
 | 1-2m | 2.5-3.8m | Standing, kitchen, workspace |
 | 2-2.5m | 1.8-2.5m | Standing (edge), shelving |
 | 2.5-3m | 0.8-1.8m | Sleeping platforms, seating, storage |
+
+<ModelViewer src="/viewers/biodome.html" title="Standard BioDome 3D Model" />
 
 <LinkCard title="Next: Foundation" href="/standard-biodome/02-foundation/" description="Gabion ring foundation with integrated French drain" />

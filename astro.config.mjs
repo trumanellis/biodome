@@ -31,12 +31,19 @@ export default defineConfig({
           autogenerate: { directory: 'fundamentals' },
         },
         {
+          label: 'Designs',
+          items: [
+            { label: 'Choose Your Design', link: '/start-here/03-choose-your-design/' },
+            { label: 'Design Variants', link: '/start-here/04-design-variants/' },
+          ],
+        },
+        {
           label: 'Standard BioDome (28m²)',
           collapsed: true,
           autogenerate: { directory: 'standard-biodome' },
         },
         {
-          label: 'Earth Sheltered SolarPod (30m²)',
+          label: 'Earth Sheltered SolarPod (35m²)',
           collapsed: true,
           badge: { text: 'WIP', variant: 'caution' },
           autogenerate: { directory: 'earth-sheltered' },

@@ -212,18 +212,13 @@ export class BioDomeViewer {
                 description: 'Clay-coated straw infill'
             },
             {
-                name: 'Ring Beam',
-                components: ['ground', 'foundation', 'verticalPoles', 'horizontalPoles', 'walls', 'floor', 'ringBeam'],
-                description: 'Ring beam locks wall tops together'
-            },
-            {
                 name: 'Roof Structure',
-                components: ['ground', 'foundation', 'verticalPoles', 'horizontalPoles', 'walls', 'floor', 'ringBeam', 'rafters', 'purlins'],
+                components: ['ground', 'foundation', 'verticalPoles', 'horizontalPoles', 'walls', 'floor', 'rafters', 'purlins'],
                 description: 'Roof frame and purlins'
             },
             {
                 name: 'Living Roof & Finishing',
-                components: ['ground', 'foundation', 'verticalPoles', 'horizontalPoles', 'walls', 'floor', 'ringBeam', 'rafters', 'purlins', 'roof', 'cupola', 'windows', 'door'],
+                components: ['ground', 'foundation', 'verticalPoles', 'horizontalPoles', 'walls', 'floor', 'rafters', 'purlins', 'roof', 'cupola', 'windows', 'door'],
                 description: 'Living roof, cupola, windows, and door'
             },
             {
@@ -252,13 +247,6 @@ export class BioDomeViewer {
                 title: 'Light Straw-Clay Walls',
                 description: 'Clay-coated straw provides excellent insulation and accommodates frame movement without cracking.',
                 specs: 'Clay slip + loose straw • 40cm thick'
-            },
-            {
-                component: 'ringBeam',
-                position: { x: 4.0, y: 3.0, z: 0 },
-                title: 'Ring Beam',
-                description: 'Interlocking poles lock wall tops together under load.',
-                specs: '24 poles × ~1.8m each × ⌀12-14cm'
             },
             {
                 component: 'rafters',
