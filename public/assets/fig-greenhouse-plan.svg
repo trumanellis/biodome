@@ -1,0 +1,210 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 660">
+  <defs>
+    <style>
+      .label { font-family: -apple-system, system-ui, sans-serif; fill: #1a2e1a; font-size: 12px; }
+      .label-sm { font-family: -apple-system, system-ui, sans-serif; fill: #555; font-size: 11px; }
+      .dim { font-family: -apple-system, system-ui, sans-serif; fill: #c9a227; font-size: 12px; font-weight: 600; }
+      .dim-line { stroke: #c9a227; stroke-width: 1; fill: none; }
+      .center-mark { stroke: #c9a227; stroke-width: 1; }
+      .compass { font-family: -apple-system, system-ui, sans-serif; fill: #2d4a2d; font-size: 13px; font-weight: 700; }
+    </style>
+    <!-- Arrow markers for dimension lines -->
+    <marker id="arr-s" markerWidth="8" markerHeight="6" refX="0" refY="3" orient="auto">
+      <path d="M8,0 L0,3 L8,6" stroke="#c9a227" fill="none" stroke-width="1"/>
+    </marker>
+    <marker id="arr-e" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" stroke="#c9a227" fill="none" stroke-width="1"/>
+    </marker>
+    <marker id="arr-n" markerWidth="6" markerHeight="8" refX="3" refY="8" orient="auto">
+      <path d="M0,8 L3,0 L6,8" stroke="#2d4a2d" fill="none" stroke-width="1.5"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="380" y="26" text-anchor="middle" class="label" style="font-size:15px; font-weight:700;">Foundation Plan View — 15 Postholes with Door Opening</text>
+
+  <!-- Ground fill circle (dome footprint) -->
+  <!-- Center: 380, 330. Radius: 240px (80px/m, 3m radius = 6m diameter) -->
+  <circle cx="380" cy="330" r="240" fill="#f0ebe3" stroke="#1a2e1a" stroke-width="2"/>
+
+  <!-- Door opening zone highlight (around 0°/east, between -12° and +12°) -->
+  <!-- 0° east = angle 0 in standard math, but SVG y-axis is flipped -->
+  <!-- Door at east: skip position at 0° (right side) -->
+  <!-- Arc from -12° to +12° around east = SVG angles -12 to +12 from right -->
+  <!-- In SVG coords: x=cx+r*cos(a), y=cy+r*sin(a) where 0°=right, angles CW -->
+  <!-- -12°: cos(-12°)=0.978, sin(-12°)=-0.208 → x=380+234.7=614.7, y=330-49.9=280.1 -->
+  <!-- +12°: cos(12°)=0.978, sin(12°)=0.208 → x=380+234.7=614.7, y=330+49.9=379.9 -->
+  <path d="M380,330 L615,280 A240,240 0 0,1 615,380 Z" fill="#c9a227" opacity="0.12"/>
+  <!-- Dashed arc outline for door opening -->
+  <path d="M615,280 A240,240 0 0,1 615,380" fill="none" stroke="#c9a227" stroke-width="2" stroke-dasharray="5,4"/>
+
+  <!--
+    15 postholes at every 24°, starting at 24° (skipping 0° for door).
+    SVG angle convention: 0°=right(east), angles increase clockwise.
+    Angles: 24, 48, 72, 96, 120, 144, 168, 192, 216, 240, 264, 288, 312, 336, 360(=0 skip)
+    Posthole radius r=240, stake radius r=256 (20cm = 16px extra)
+    cx=380, cy=330
+    Posthole coords (rounded):
+      24°:  x=380+240*cos(24°)=380+219.2=599, y=330+240*sin(24°)=330+97.6=428
+      48°:  x=380+240*cos(48°)=380+160.5=541, y=330+240*sin(48°)=330+178.4=508
+      72°:  x=380+240*cos(72°)=380+74.1=454,  y=330+240*sin(72°)=330+228.3=558
+      96°:  x=380+240*cos(96°)=380-25.1=355,  y=330+240*sin(96°)=330+238.6=569
+     120°:  x=380+240*cos(120°)=380-120=260,  y=330+240*sin(120°)=330+207.8=538
+     144°:  x=380+240*cos(144°)=380-194.2=186,y=330+240*sin(144°)=330+141.0=471
+     168°:  x=380+240*cos(168°)=380-234.7=145,y=330+240*sin(168°)=330+49.9=380
+     192°:  x=380+240*cos(192°)=380-234.7=145,y=330+240*sin(192°)=330-49.9=280
+     216°:  x=380+240*cos(216°)=380-194.2=186,y=330+240*sin(216°)=330-141.0=189
+     240°:  x=380+240*cos(240°)=380-120=260,  y=330+240*sin(240°)=330-207.8=122
+     264°:  x=380+240*cos(264°)=380-25.1=355, y=330+240*sin(264°)=330-238.6=91
+     288°:  x=380+240*cos(288°)=380+74.1=454, y=330+240*sin(288°)=330-228.3=102
+     312°:  x=380+240*cos(312°)=380+160.5=541,y=330+240*sin(312°)=330-178.4=152
+     336°:  x=380+240*cos(336°)=380+219.2=599,y=330+240*sin(336°)=330-97.6=232
+    (0° = door gap, no posthole)
+
+    Stake coords (r=256):
+      24°:  x=380+256*cos(24°)=380+233.8=614, y=330+256*sin(24°)=330+104.2=434
+      48°:  x=380+256*cos(48°)=380+171.2=551, y=330+256*sin(48°)=330+190.3=520
+      72°:  x=380+256*cos(72°)=380+79.1=459,  y=330+256*sin(72°)=330+243.5=574
+      96°:  x=380+256*cos(96°)=380-26.8=353,  y=330+256*sin(96°)=330+254.5=585
+     120°:  x=380+256*cos(120°)=380-128=252,  y=330+256*sin(120°)=330+221.7=552
+     144°:  x=380+256*cos(144°)=380-207.2=173,y=330+256*sin(144°)=330+150.4=480
+     168°:  x=380+256*cos(168°)=380-250.4=130,y=330+256*sin(168°)=330+53.2=383
+     192°:  x=380+256*cos(192°)=380-250.4=130,y=330+256*sin(192°)=330-53.2=277
+     216°:  x=380+256*cos(216°)=380-207.2=173,y=330+256*sin(216°)=330-150.4=180
+     240°:  x=380+256*cos(240°)=380-128=252,  y=330+256*sin(240°)=330-221.7=108
+     264°:  x=380+256*cos(264°)=380-26.8=353, y=330+256*sin(264°)=330-254.5=76
+     288°:  x=380+256*cos(288°)=380+79.1=459, y=330+256*sin(288°)=330-243.5=87
+     312°:  x=380+256*cos(312°)=380+171.2=551,y=330+256*sin(312°)=330-190.3=140
+     336°:  x=380+256*cos(336°)=380+233.8=614,y=330+256*sin(336°)=330-104.2=226
+  -->
+
+  <!-- Ground stakes (small dots, 20cm outside each posthole) -->
+  <circle cx="614" cy="434" r="3" fill="#1a2e1a" opacity="0.5"/>
+  <circle cx="551" cy="520" r="3" fill="#1a2e1a" opacity="0.5"/>
+  <circle cx="459" cy="574" r="3" fill="#1a2e1a" opacity="0.5"/>
+  <circle cx="353" cy="585" r="3" fill="#1a2e1a" opacity="0.5"/>
+  <circle cx="252" cy="552" r="3" fill="#1a2e1a" opacity="0.5"/>
+  <circle cx="173" cy="480" r="3" fill="#1a2e1a" opacity="0.5"/>
+  <circle cx="130" cy="383" r="3" fill="#1a2e1a" opacity="0.5"/>
+  <circle cx="130" cy="277" r="3" fill="#1a2e1a" opacity="0.5"/>
+  <circle cx="173" cy="180" r="3" fill="#1a2e1a" opacity="0.5"/>
+  <circle cx="252" cy="108" r="3" fill="#1a2e1a" opacity="0.5"/>
+  <circle cx="353" cy="76"  r="3" fill="#1a2e1a" opacity="0.5"/>
+  <circle cx="459" cy="87"  r="3" fill="#1a2e1a" opacity="0.5"/>
+  <circle cx="551" cy="140" r="3" fill="#1a2e1a" opacity="0.5"/>
+  <circle cx="614" cy="226" r="3" fill="#1a2e1a" opacity="0.5"/>
+
+  <!-- Postholes (filled circles) -->
+  <!-- 24° -->
+  <circle cx="599" cy="428" r="8" fill="#1a2e1a"/>
+  <!-- 48° -->
+  <circle cx="541" cy="508" r="8" fill="#1a2e1a"/>
+  <!-- 72° -->
+  <circle cx="454" cy="558" r="8" fill="#1a2e1a"/>
+  <!-- 96° -->
+  <circle cx="355" cy="569" r="8" fill="#1a2e1a"/>
+  <!-- 120° -->
+  <circle cx="260" cy="538" r="8" fill="#1a2e1a"/>
+  <!-- 144° -->
+  <circle cx="186" cy="471" r="8" fill="#1a2e1a"/>
+  <!-- 168° -->
+  <circle cx="145" cy="380" r="8" fill="#1a2e1a"/>
+  <!-- 192° -->
+  <circle cx="145" cy="280" r="8" fill="#1a2e1a"/>
+  <!-- 216° -->
+  <circle cx="186" cy="189" r="8" fill="#1a2e1a"/>
+  <!-- 240° -->
+  <circle cx="260" cy="122" r="8" fill="#1a2e1a"/>
+  <!-- 264° -->
+  <circle cx="355" cy="91"  r="8" fill="#1a2e1a"/>
+  <!-- 288° -->
+  <circle cx="454" cy="102" r="8" fill="#1a2e1a"/>
+  <!-- 312° -->
+  <circle cx="541" cy="152" r="8" fill="#1a2e1a"/>
+  <!-- 336° -->
+  <circle cx="599" cy="232" r="8" fill="#1a2e1a"/>
+
+  <!-- Door frame posts (squares) at ~-12° and ~+12° flanking the gap -->
+  <!-- At 348° (≈-12°): cos(348°)=0.978, sin(348°)=-0.208 → x=615, y=280 (on circle) -->
+  <!-- At 12°: cos(12°)=0.978, sin(12°)=0.208 → x=615, y=380 (on circle) -->
+  <rect x="609" y="274" width="12" height="12" rx="1" fill="#d5cfc5" stroke="#1a2e1a" stroke-width="2"/>
+  <rect x="609" y="374" width="12" height="12" rx="1" fill="#d5cfc5" stroke="#1a2e1a" stroke-width="2"/>
+
+  <!-- Door label -->
+  <text x="680" y="320" text-anchor="middle" class="label" style="font-weight:700; font-size:13px;">Door</text>
+  <text x="680" y="336" text-anchor="middle" class="label-sm">Opening</text>
+  <line x1="650" y1="328" x2="634" y2="328" stroke="#1a2e1a" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Center mark (crosshair) -->
+  <line x1="368" y1="330" x2="392" y2="330" class="center-mark"/>
+  <line x1="380" y1="318" x2="380" y2="342" class="center-mark"/>
+  <circle cx="380" cy="330" r="3" fill="none" stroke="#c9a227" stroke-width="1"/>
+
+  <!-- Compass N arrow -->
+  <text x="380" y="57" text-anchor="middle" class="compass">N</text>
+  <line x1="380" y1="60" x2="380" y2="75" stroke="#2d4a2d" stroke-width="1.5" marker-end="url(#arr-n)"/>
+
+  <!-- ===== DIMENSION LINES ===== -->
+
+  <!-- 1. Diameter (6m): horizontal line across center -->
+  <!-- Extension lines from circle edge to dimension line at y=648 -->
+  <line x1="140" y1="330" x2="140" y2="648" stroke="#c9a227" stroke-width="0.5" stroke-dasharray="2,3"/>
+  <line x1="620" y1="330" x2="620" y2="648" stroke="#c9a227" stroke-width="0.5" stroke-dasharray="2,3"/>
+  <line x1="140" y1="645" x2="620" y2="645" class="dim-line" marker-start="url(#arr-s)" marker-end="url(#arr-e)"/>
+  <rect x="331" y="636" width="98" height="16" rx="2" fill="white" opacity="0.9"/>
+  <text x="380" y="648" text-anchor="middle" class="dim">6m diameter</text>
+
+  <!-- 2. Posthole spacing (~1.26m): arc/chord between postholes at 264° and 288° (top, near north) -->
+  <!-- 264°: (355, 91)  288°: (454, 102) -->
+  <!-- Extension lines up, dim line at y=55 -->
+  <line x1="355" y1="91" x2="355" y2="58" stroke="#c9a227" stroke-width="0.5" stroke-dasharray="2,3"/>
+  <line x1="454" y1="102" x2="454" y2="58" stroke="#c9a227" stroke-width="0.5" stroke-dasharray="2,3"/>
+  <line x1="355" y1="61" x2="454" y2="61" class="dim-line" marker-start="url(#arr-s)" marker-end="url(#arr-e)"/>
+  <rect x="358" y="52" width="92" height="14" rx="2" fill="white" opacity="0.9"/>
+  <text x="404" y="63" text-anchor="middle" class="dim" style="font-size:11px;">~1.26m</text>
+
+  <!-- 3. Ground stake offset (20cm): from posthole at 288° to its stake -->
+  <!-- Posthole 288°: (454, 102)  Stake 288°: (459, 87) -->
+  <!-- These are close together; show a small dim line to the right -->
+  <!-- Extension lines rightward from both, dim at x=510 -->
+  <line x1="454" y1="102" x2="510" y2="102" stroke="#c9a227" stroke-width="0.5" stroke-dasharray="2,3"/>
+  <line x1="459" y1="87"  x2="510" y2="87"  stroke="#c9a227" stroke-width="0.5" stroke-dasharray="2,3"/>
+  <line x1="507" y1="87"  x2="507" y2="102" class="dim-line" marker-start="url(#arr-s)" marker-end="url(#arr-e)"/>
+  <rect x="512" y="88" width="42" height="14" rx="2" fill="white" opacity="0.9"/>
+  <text x="514" y="99" class="dim" style="font-size:10px;">20cm</text>
+
+  <!-- ===== LABELS ===== -->
+
+  <!-- "15 postholes" label with leader line to west side of circle -->
+  <text x="65" y="285" class="label" style="font-weight:600;">15 postholes</text>
+  <text x="65" y="299" class="label-sm">evenly spaced</text>
+  <line x1="128" y1="292" x2="145" y2="308" stroke="#1a2e1a" stroke-width="0.7" opacity="0.5"/>
+
+  <!-- Ground stake label -->
+  <text x="30" y="345" class="label-sm" style="font-style:italic;">ground</text>
+  <text x="30" y="357" class="label-sm" style="font-style:italic;">stake</text>
+  <line x1="108" y1="352" x2="130" y2="370" stroke="#555" stroke-width="0.6" opacity="0.5"/>
+
+  <!-- Door frame posts label -->
+  <text x="670" y="256" class="label-sm">frame</text>
+  <text x="670" y="268" class="label-sm">posts</text>
+  <line x1="668" y1="272" x2="630" y2="280" stroke="#555" stroke-width="0.6" opacity="0.5"/>
+
+  <!-- ===== LEGEND ===== -->
+  <rect x="30" y="612" width="700" height="38" rx="4" fill="white" opacity="0.85" stroke="#d5cfc5" stroke-width="1"/>
+  <!-- Posthole -->
+  <circle cx="56" cy="631" r="7" fill="#1a2e1a"/>
+  <text x="70" y="635" class="label-sm">Posthole (×14 active)</text>
+  <!-- Door frame post -->
+  <rect x="185" y="624" width="12" height="12" rx="1" fill="#d5cfc5" stroke="#1a2e1a" stroke-width="2"/>
+  <text x="203" y="635" class="label-sm">Door frame post (×2)</text>
+  <!-- Door gap arc -->
+  <line x1="335" y1="631" x2="365" y2="631" stroke="#c9a227" stroke-width="2" stroke-dasharray="5,4"/>
+  <text x="372" y="635" class="label-sm">Door opening gap</text>
+  <!-- Ground stake -->
+  <circle cx="490" cy="631" r="3" fill="#1a2e1a" opacity="0.5"/>
+  <text x="499" y="635" class="label-sm">Ground stake (×14)</text>
+  <!-- Scale -->
+  <text x="625" y="628" class="label-sm" style="font-weight:600;">Scale</text>
+  <text x="625" y="640" class="label-sm">80px = 1m</text>
+</svg>

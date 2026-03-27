@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 450">
+  <defs>
+    <style>
+      .label     { font-family: -apple-system, system-ui, sans-serif; fill: #1a2e1a; font-size: 12px; }
+      .label-sm  { font-family: -apple-system, system-ui, sans-serif; fill: #555;    font-size: 11px; }
+      .label-hot { font-family: -apple-system, system-ui, sans-serif; fill: #cc4444; font-size: 11px; font-weight: 600; }
+      .label-cool{ font-family: -apple-system, system-ui, sans-serif; fill: #4488cc; font-size: 11px; font-weight: 600; }
+      .dim       { font-family: -apple-system, system-ui, sans-serif; fill: #c9a227; font-size: 11px; font-weight: 600; }
+      .title     { font-family: -apple-system, system-ui, sans-serif; fill: #1a2e1a; font-size: 15px; font-weight: 700; }
+      .subtitle  { font-family: -apple-system, system-ui, sans-serif; fill: #555;    font-size: 11px; font-style: italic; }
+      .struct    { stroke: #1a2e1a; stroke-width: 2.5; fill: none; }
+      .plastic   { stroke: #4488cc; stroke-width: 1.5; fill: none; opacity: 0.7; }
+      .ground-fill { fill: #f0ebe3; }
+      .dim-line  { stroke: #c9a227; stroke-width: 1; fill: none; }
+    </style>
+    <!-- Blue arrowhead for cool air -->
+    <marker id="cool-arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#4488cc"/>
+    </marker>
+    <!-- Red arrowhead for hot air -->
+    <marker id="hot-arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#cc4444"/>
+    </marker>
+    <!-- Red arrowhead upward for apex -->
+    <marker id="hot-arr-up" markerWidth="6" markerHeight="8" refX="3" refY="0" orient="auto">
+      <path d="M0,8 L3,0 L6,8" fill="#cc4444"/>
+    </marker>
+  </defs>
+
+  <!-- ===== TITLE ===== -->
+  <text x="350" y="22" text-anchor="middle" class="title">Ventilation — Cross-Section</text>
+  <text x="350" y="38" text-anchor="middle" class="subtitle">Natural convection · cool air enters low · hot air exits high · no fans needed</text>
+
+  <!-- ===== GROUND ===== -->
+  <!-- Earth fill below ground line -->
+  <rect x="50" y="370" width="600" height="75" class="ground-fill"/>
+  <!-- Ground line -->
+  <line x1="50" y1="370" x2="650" y2="370" stroke="#1a2e1a" stroke-width="1.2"/>
+
+  <!-- ===== DOME FRAME — catenary arch (6m span, 4m apex, 70px/m, centre x=350, ground y=370) =====
+       Using same catenary proportions as fig-dome-cross-section, rescaled:
+       Original: 500px span (130→630), 334px height (460→126). Scale factor: 420/500 = 0.84 horiz, 280/334 = 0.838 vert ≈ 70px/m.
+       Recentred at x=350 (was 380), ground at y=370 (was 460).
+       Left base: 350-210=140, Right base: 350+210=560.
+       Apex: y = 370-280 = 90.
+
+       Catenary points (y = 4 - 1.52*(cosh(x/1.52)-1), scale 70px/m):
+       x_m: -3.0 → -2.5 → -2.0 → -1.5 → -1.0 → -0.5 → 0 → 0.5 → 1.0 → 1.5 → 2.0 → 2.5 → 3.0
+       y_m:  0     0.88   1.75   2.48   3.06   3.47  4.0   3.47  3.06   2.48  1.75  0.88   0
+       y_px (from ground): 0, 62, 122, 174, 214, 243, 280, 243, 214, 174, 122, 62, 0
+       SVG y: 370, 308, 248, 196, 156, 127, 90, 127, 156, 196, 248, 308, 370
+       SVG x: 140, 175, 210, 245, 280, 315, 350, 385, 420, 455, 490, 525, 560
+  -->
+  <path d="M140,370 L153,327 L167,287 L183,251 L200,219 L220,192 L245,165 L280,131 L315,107 L350,90 L385,107 L420,131 L455,165 L480,192 L500,219 L517,251 L533,287 L547,327 L560,370" class="struct"/>
+
+  <!-- Plastic covering — offset ~7px outward from dome arch.
+       Dome arch points and their outward offsets (left side: x-7, right side: x+7, near apex: y-7):
+       Roll-up top starts at left arch ~y=300 (between dome pts 153,327 and 167,287, interpolated ~x=161,y=300), offset left → x=154,y=300
+       Then each subsequent dome point offset outward:
+         167,287 → 160,287   183,251 → 176,251   200,219 → 193,219   220,192 → 213,192
+         245,165 → 238,165   280,131 → 273,131    315,107 → 308,107   350,90  → 350,83
+         385,107 → 392,107   420,131 → 427,131    455,165 → 462,165   480,192 → 487,192
+         500,219 → 507,219   517,251 → 524,251    (door gap starts here ~y=228 on arch)
+  -->
+  <path d="M154,300 L160,287 L176,251 L193,219 L213,192 L238,165 L273,131 L308,107 L350,83 L392,107 L427,131 L462,165 L487,192 L507,219 L524,228" class="plastic"/>
+
+  <!-- ===== ROLL-UP VENT — left base (small roll shown as nested arcs at wattle ring level) ===== -->
+  <!-- Roll cylinder shown as stacked ellipses at x≈140-160, y≈300 -->
+  <ellipse cx="148" cy="302" rx="10" ry="4" fill="#d5cfc5" stroke="#1a2e1a" stroke-width="1.2"/>
+  <ellipse cx="148" cy="298" rx="9"  ry="3.5" fill="#d5cfc5" stroke="#1a2e1a" stroke-width="1"/>
+  <ellipse cx="148" cy="294" rx="7"  ry="3"   fill="#d5cfc5" stroke="#1a2e1a" stroke-width="0.8"/>
+  <!-- Vertical plastic strip from roll down to ground -->
+  <line x1="140" y1="302" x2="140" y2="370" stroke="#4488cc" stroke-width="1.5" opacity="0.5" stroke-dasharray="4,3"/>
+
+  <!-- ===== DOOR OPENING — right side, gap in plastic ~2m high ===== -->
+  <!-- Door frame lines on right side of arch -->
+  <line x1="527" y1="228" x2="527" y2="370" stroke="#1a2e1a" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
+
+  <!-- Door flap tied open — shown as a rolled-up curl at top of door opening -->
+  <path d="M527,228 Q545,218 553,228 Q548,238 535,235 Q528,232 527,228 Z" fill="#d5cfc5" stroke="#1a2e1a" stroke-width="1"/>
+  <!-- Tie string -->
+  <line x1="540" y1="228" x2="540" y2="218" stroke="#1a2e1a" stroke-width="0.8"/>
+  <line x1="540" y1="218" x2="548" y2="212" stroke="#1a2e1a" stroke-width="0.8"/>
+
+  <!-- ===== INTERIOR PLANTS ===== -->
+  <!-- Plant 1 — left of centre -->
+  <line x1="230" y1="370" x2="230" y2="330" stroke="#2d6a2d" stroke-width="1.5"/>
+  <ellipse cx="222" cy="338" rx="10" ry="6"  fill="#3d8a3d" opacity="0.75"/>
+  <ellipse cx="238" cy="332" rx="9"  ry="5"  fill="#3d8a3d" opacity="0.75"/>
+  <ellipse cx="230" cy="326" rx="8"  ry="5"  fill="#4a9a4a" opacity="0.80"/>
+
+  <!-- Plant 2 — centre -->
+  <line x1="350" y1="370" x2="350" y2="325" stroke="#2d6a2d" stroke-width="1.5"/>
+  <ellipse cx="340" cy="333" rx="12" ry="7"  fill="#3d8a3d" opacity="0.75"/>
+  <ellipse cx="360" cy="327" rx="11" ry="6"  fill="#3d8a3d" opacity="0.75"/>
+  <ellipse cx="350" cy="321" rx="10" ry="6"  fill="#4a9a4a" opacity="0.80"/>
+  <!-- Taller stem with leaf cluster -->
+  <line x1="355" y1="370" x2="355" y2="305" stroke="#2d6a2d" stroke-width="1"/>
+  <ellipse cx="355" cy="301" rx="7" ry="5" fill="#5aaa5a" opacity="0.80"/>
+
+  <!-- Plant 3 — right of centre -->
+  <line x1="450" y1="370" x2="450" y2="332" stroke="#2d6a2d" stroke-width="1.5"/>
+  <ellipse cx="442" cy="340" rx="10" ry="6"  fill="#3d8a3d" opacity="0.75"/>
+  <ellipse cx="458" cy="334" rx="9"  ry="5"  fill="#3d8a3d" opacity="0.75"/>
+  <ellipse cx="450" cy="328" rx="8"  ry="5"  fill="#4a9a4a" opacity="0.80"/>
+
+  <!-- ===== APEX VENT (optional) ===== -->
+  <!-- Small opening at apex -->
+  <rect x="342" y="86" width="16" height="10" fill="#faf8f5" stroke="#1a2e1a" stroke-width="1.2" rx="1"/>
+  <!-- Short post -->
+  <rect x="348" y="68" width="4" height="18" fill="#555" stroke="#333" stroke-width="0.8" rx="1"/>
+  <!-- Rain cap (small cone) -->
+  <path d="M335,70 L350,50 L365,70 Z" fill="#555" stroke="#333" stroke-width="1"/>
+  <!-- Hot air arrow from apex — rises from vent opening, exits above rain cap -->
+  <path d="M350,93 L350,74" stroke="#cc4444" stroke-width="1.5" fill="none" marker-end="url(#hot-arr-up)"/>
+  <!-- Second arrow continuing above cap -->
+  <path d="M350,46 L350,34" stroke="#cc4444" stroke-width="1.5" fill="none" marker-end="url(#hot-arr-up)"/>
+
+  <!-- ===== COOL AIR ARROWS — entering left roll-up base, curving inward =====
+       Blue arrows entering from left side, curving right and slightly down at ground level
+  -->
+  <!-- Arrow 1 — low, sweeping inward -->
+  <path d="M60,358 L100,352 L150,350 L200,352" stroke="#4488cc" stroke-width="2" fill="none" marker-end="url(#cool-arr)" stroke-linecap="round"/>
+  <!-- Arrow 2 — slightly higher -->
+  <path d="M60,345 L100,338 L155,335 L205,338" stroke="#4488cc" stroke-width="2" fill="none" marker-end="url(#cool-arr)" stroke-linecap="round"/>
+  <!-- Arrow 3 — angle downward along floor -->
+  <path d="M60,368 L105,366 L160,365 L215,366" stroke="#4488cc" stroke-width="1.5" fill="none" marker-end="url(#cool-arr)" stroke-linecap="round"/>
+
+  <!-- ===== HOT AIR ARROWS — rising from centre, curving toward door =====
+       Red arrows rising from plant zone, arcing toward the door opening on the right
+  -->
+  <!-- Arrow 1 — rises from centre-left, curves right and up toward door -->
+  <path d="M290,320 Q310,270 360,220 Q420,175 490,215" stroke="#cc4444" stroke-width="2" fill="none" marker-end="url(#hot-arr)" stroke-linecap="round"/>
+  <!-- Arrow 2 — rises more steeply from centre -->
+  <path d="M340,300 Q360,240 390,190 Q430,155 490,235" stroke="#cc4444" stroke-width="2" fill="none" marker-end="url(#hot-arr)" stroke-linecap="round"/>
+  <!-- Arrow 3 — exits closer to door top -->
+  <path d="M370,280 Q390,230 420,195 Q460,165 500,215" stroke="#cc4444" stroke-width="1.5" fill="none" marker-end="url(#hot-arr)" stroke-linecap="round"/>
+  <!-- Arrow 4 — wide arc from right of centre -->
+  <path d="M410,310 Q440,265 470,235 Q500,220 520,240" stroke="#cc4444" stroke-width="1.5" fill="none" marker-end="url(#hot-arr)" stroke-linecap="round"/>
+
+  <!-- ===== LABELS ===== -->
+
+  <!-- "cool air in" — left side, near blue arrows -->
+  <text x="55" y="330" class="label-cool">cool air in</text>
+  <line x1="88" y1="332" x2="110" y2="340" stroke="#4488cc" stroke-width="0.6" opacity="0.6"/>
+
+  <!-- "roll-up vent" — callout to the left base roll -->
+  <text x="40" y="300" class="label-sm" style="fill:#1a2e1a; font-weight:600;">roll-up vent</text>
+  <line x1="115" y1="298" x2="138" y2="299" stroke="#555" stroke-width="0.6"/>
+
+  <!-- "hot air out" — near door opening -->
+  <text x="545" y="215" class="label-hot">hot air out</text>
+  <line x1="543" y1="218" x2="527" y2="228" stroke="#cc4444" stroke-width="0.6" opacity="0.7"/>
+
+  <!-- "door (open)" — right side door -->
+  <text x="545" y="310" class="label-sm" style="fill:#1a2e1a; font-weight:600;">door</text>
+  <text x="545" y="323" class="label-sm" style="fill:#1a2e1a;">(open)</text>
+
+  <!-- "apex vent (optional)" — top right callout -->
+  <text x="382" y="52" class="label-sm" style="fill:#1a2e1a; font-weight:600;">apex vent</text>
+  <text x="382" y="65" class="label-sm">(optional)</text>
+  <line x1="376" y1="58" x2="366" y2="62" stroke="#555" stroke-width="0.6"/>
+
+  <!-- "cross-ventilation" annotation — bottom centre inside dome -->
+  <rect x="250" y="385" width="200" height="28" rx="3" fill="#e8f2e8" stroke="#2d6a2d" stroke-width="0.8" opacity="0.85"/>
+  <text x="350" y="397" text-anchor="middle" class="label" style="font-size:10px; font-weight:600; fill:#1a2e1a;">cross-ventilation</text>
+  <text x="350" y="409" text-anchor="middle" class="label-sm" style="font-size:9px;">convective stack effect · passive cooling</text>
+
+  <!-- Ground label -->
+  <text x="648" y="374" class="label-sm" style="font-size:9px; fill:#555;">grade</text>
+
+</svg>

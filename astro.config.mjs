@@ -38,6 +38,11 @@ export default defineConfig({
           ],
         },
         {
+          label: 'Greenhouse BioDome (28m²)',
+          badge: { text: 'Start Here', variant: 'success' },
+          autogenerate: { directory: 'greenhouse' },
+        },
+        {
           label: 'Standard BioDome (28m²)',
           collapsed: true,
           autogenerate: { directory: 'standard-biodome' },

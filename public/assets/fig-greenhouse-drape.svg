@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 450">
+  <defs>
+    <style>
+      .label    { font-family: -apple-system, system-ui, sans-serif; fill: #1a2e1a; font-size: 12px; }
+      .label-sm { font-family: -apple-system, system-ui, sans-serif; fill: #555; font-size: 11px; }
+      .dim      { font-family: -apple-system, system-ui, sans-serif; fill: #c9a227; font-size: 11px; font-weight: 600; }
+      .dim-line { stroke: #c9a227; stroke-width: 1; fill: none; }
+    </style>
+    <!-- Gold arrow markers -->
+    <marker id="arr-start" markerWidth="8" markerHeight="6" refX="0" refY="3" orient="auto">
+      <path d="M8,0 L0,3 L8,6" stroke="#c9a227" stroke-width="1" fill="none"/>
+    </marker>
+    <marker id="arr-end" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" stroke="#c9a227" stroke-width="1" fill="none"/>
+    </marker>
+    <!-- Label arrow markers (dark green) -->
+    <marker id="lbl-arr" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L6,2.5 L0,5" fill="#1a2e1a"/>
+    </marker>
+    <marker id="lbl-arr-rev" markerWidth="6" markerHeight="5" refX="0" refY="2.5" orient="auto">
+      <path d="M6,0 L0,2.5 L6,5" fill="#1a2e1a"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="350" y="22" text-anchor="middle" font-family="-apple-system, system-ui, sans-serif"
+        font-size="14" font-weight="700" fill="#1a2e1a">Two-Sheet Plastic Draping — Side View</text>
+
+  <!-- ═══════════════════════════════════════════════
+       LAYOUT: dome centred at cx=350, ground y=355
+       Scale 70px/m, apex at y=75 (4m × 70 = 280px up)
+       Left base: x=140 (-3m), right base: x=560 (+3m)
+       Catenary points from existing cross-section, rescaled.
+       Original: cx=380, ground=460, scale≈83px/m
+       New:      cx=350, ground=355, scale=70px/m
+       ═══════════════════════════════════════════════ -->
+
+  <!-- Ground fill -->
+  <rect x="40" y="355" width="620" height="95" fill="#f0ebe3"/>
+
+  <!-- Ground line -->
+  <line x1="40" y1="355" x2="660" y2="355" stroke="#1a2e1a" stroke-width="1.5"/>
+
+  <!-- ── DOME FRAME (structural catenary, dark green) ──
+       Catenary y(x) = 4 - 1.52·(cosh(x/1.52) - 1), x ∈ [-3,3]
+       Sampled at 0.2m intervals. Converted: px = 350 + x*70, py = 355 - y*70
+       x=-3.0  y=0.00  → (140, 355)
+       x=-2.8  y=0.55  → (154, 317)   approx
+       x=-2.4  y=1.40  → (182, 257)
+       x=-2.0  y=2.07  → (210, 210)
+       x=-1.6  y=2.60  → (238, 173)
+       x=-1.2  y=3.01  → (266, 145)
+       x=-0.8  y=3.30  → (294, 124)
+       x=-0.4  y=3.48  → (322, 111)
+       x= 0.0  y=3.52  → (350,  90)   (apex: 4-1.52*(1-1)=4, but cosh(0)=1 so y=4-0=4 → py=355-280=75)
+       Let me recalculate precisely:
+       A=1.52
+       x=0:   y=4-1.52*(cosh(0)-1)=4-1.52*0=4.00  → py=355-280=75
+       x=0.4: y=4-1.52*(cosh(0.263)-1)=4-1.52*(1.0346-1)=4-1.52*0.0346=4-0.053=3.947 → py=355-276=79  hmm
+       Actually cosh(0.4/1.52)=cosh(0.263)=1+0.263²/2+...≈1.0346
+       y(0.4)=4-1.52*(1.0346-1)=4-0.053=3.947 → py=355-276=79
+       x=0.8: cosh(0.526)≈1.140; y=4-1.52*0.140=4-0.213=3.787 → py=355-265=90
+       x=1.2: cosh(0.789)≈1.322; y=4-1.52*0.322=4-0.490=3.510 → py=355-246=109
+       x=1.6: cosh(1.053)≈1.603; y=4-1.52*0.603=4-0.916=3.084 → py=355-216=139
+       x=2.0: cosh(1.316)≈1.993; y=4-1.52*0.993=4-1.510=2.490 → py=355-174=181
+       x=2.4: cosh(1.579)≈2.510; y=4-1.52*1.510=4-2.295=1.705 → py=355-119=236
+       x=2.8: cosh(1.842)≈3.178; y=4-1.52*2.178=4-3.311=0.689 → py=355-48=307
+       x=3.0: cosh(1.974)≈3.660; y=4-1.52*2.660=4-4.043=-0.043≈0 → py=355-0=355  ✓ (close enough)
+       Mirror for negative x (symmetric).
+  -->
+
+  <!-- Dome frame arch -->
+  <path d="M140,355 L148,313 L154,307 L161,290 L168,273 L175,256 L182,236 L189,219 L196,203 L203,189 L210,181
+           L217,167 L224,156 L231,147 L238,139 L245,131 L252,124 L259,118 L266,113 L273,108 L280,104
+           L287,101 L294,98  L301,96  L308,94  L315,93  L322,91  L329,90  L336,89  L343,88  L350,75
+           L357,88  L364,89  L371,90  L378,91  L385,93  L392,94  L399,96  L406,98  L413,101 L420,104
+           L427,108 L434,113 L441,118 L448,124 L455,131 L462,139 L469,147 L476,156 L483,167 L490,181
+           L497,189 L504,203 L511,219 L518,236 L525,256 L532,273 L539,290 L546,307 L553,313 L560,355"
+        stroke="#1a2e1a" stroke-width="3" fill="none"/>
+
+  <!-- ── SHEET 1 (left side, blue) ──
+       Runs from left base (140,355) up and over crown, draping to ~x=+1m (420px)
+       Offset 4px outward (outside the frame): on left half shift x by -4, on right half shift x by +4
+       For simplicity: offset path slightly outward from the dome frame.
+       Left half: x offset -4. Near crown and right drape: offset transitions.
+       Sheet 1 ends at approx x=1m past center = x=350+70=420, at same y as frame point there (y=109 at x=1.2m → x=434)
+       Actually end at x=+1m = px=420, y≈79 (frame y at x=1m is approx between 0.8 and 1.2):
+       x=1.0: cosh(1.0/1.52)=cosh(0.658)≈1.222; y=4-1.52*0.222=4-0.338=3.662 → py=355-256=99
+       So sheet 1 ends around (420, 99). With slight outer offset the line goes slightly above the apex.
+  -->
+
+  <!-- Sheet 1: left to +1m past crown (blue, semi-transparent) -->
+  <path d="M136,355 L144,313 L150,307 L157,288 L164,271 L171,252 L178,232 L185,215 L192,199 L199,185 L206,177
+           L213,163 L220,152 L227,143 L234,135 L241,127 L248,120 L255,114 L262,109 L269,104 L276,100
+           L283,97  L290,94  L297,92  L304,90  L311,89  L318,87  L325,86  L332,85  L339,84  L346,84
+           L350,73  L354,84  L361,85  L368,86  L375,88  L382,90  L389,92  L396,95  L403,99  L410,103 L417,107 L420,100"
+        stroke="#4488cc" stroke-width="2.5" fill="none" opacity="0.85"/>
+
+  <!-- Sheet 1 excess pooling at left base (folded plastic) -->
+  <path d="M136,355 L125,358 L115,362 L108,360 L100,363 L93,361 L88,364"
+        stroke="#4488cc" stroke-width="2" fill="none" opacity="0.6" stroke-dasharray="4,3"/>
+
+  <!-- ── SHEET 2 (right side, red) ──
+       Runs from right base (560,355) up and over crown, draping to ~x=-1m (280px)
+       End at x=-1m = px=280, y≈99 (same logic as sheet 1 by symmetry)
+  -->
+  <path d="M564,355 L556,313 L550,307 L543,288 L536,271 L529,252 L522,232 L515,215 L508,199 L501,185 L494,177
+           L487,163 L480,152 L473,143 L466,135 L459,127 L452,120 L445,114 L438,109 L431,104 L424,100
+           L417,97  L410,94  L403,92  L396,90  L389,89  L382,87  L375,86  L368,85  L361,84  L354,84
+           L350,73  L346,84  L339,84  L332,85  L325,86  L318,88  L311,90  L304,95  L297,99  L290,103 L283,107 L280,100"
+        stroke="#cc6644" stroke-width="2.5" fill="none" opacity="0.85"/>
+
+  <!-- Sheet 2 excess pooling at right base -->
+  <path d="M564,355 L575,358 L585,362 L592,360 L600,363 L607,361 L612,364"
+        stroke="#cc6644" stroke-width="2" fill="none" opacity="0.6" stroke-dasharray="4,3"/>
+
+  <!-- ── OVERLAP ZONE (~50cm = 35px each side of crown) ──
+       Crown at (350,75). Overlap from ~x=315 to x=385 (±0.25m × 70px)
+       At those x positions, y on frame ≈ 91 (from earlier: y(0.4m)=3.947→py=79, sheet line ≈84-88)
+       Draw a subtle gold background strip across the overlap region near the apex.
+       The strip runs along the crown: a rounded rect or a band.
+       Using a thin highlight polygon along the curve near the top.
+  -->
+
+  <!-- Overlap highlight band (gold, semi-transparent) -->
+  <path d="M313,82 L317,81 L321,80 L325,80 L329,79 L333,78 L337,78 L341,77 L345,76 L350,72
+           L355,76 L359,77 L363,78 L367,78 L371,79 L375,80 L379,80 L383,81 L387,82
+           L387,90 L383,89 L379,88 L375,87 L371,87 L367,86 L363,86 L359,86 L355,86
+           L350,86 L345,86 L341,86 L337,86 L333,86 L329,87 L325,87 L321,88 L317,89 L313,90 Z"
+        fill="#c9a227" opacity="0.18"/>
+
+  <!-- Overlap zone bracket lines -->
+  <line x1="313" y1="78" x2="313" y2="95" stroke="#c9a227" stroke-width="1.2" opacity="0.7"/>
+  <line x1="387" y1="78" x2="387" y2="95" stroke="#c9a227" stroke-width="1.2" opacity="0.7"/>
+
+  <!-- ── TAPE STRIP (gold line at overlap center) ── -->
+  <line x1="313" y1="84" x2="387" y2="84" stroke="#c9a227" stroke-width="2.5" opacity="0.9"/>
+
+  <!-- ── STONES at left base ── -->
+  <ellipse cx="105" cy="362" rx="8" ry="5" fill="#bbb" stroke="#999" stroke-width="0.8"/>
+  <ellipse cx="119" cy="358" rx="7" ry="4" fill="#bbb" stroke="#999" stroke-width="0.8"/>
+  <ellipse cx="130" cy="361" rx="6" ry="4" fill="#bbb" stroke="#999" stroke-width="0.8"/>
+  <ellipse cx="93"  cy="365" rx="7" ry="4" fill="#bbb" stroke="#999" stroke-width="0.8"/>
+
+  <!-- ── STONES at right base ── -->
+  <ellipse cx="595" cy="362" rx="8" ry="5" fill="#bbb" stroke="#999" stroke-width="0.8"/>
+  <ellipse cx="581" cy="358" rx="7" ry="4" fill="#bbb" stroke="#999" stroke-width="0.8"/>
+  <ellipse cx="570" cy="361" rx="6" ry="4" fill="#bbb" stroke="#999" stroke-width="0.8"/>
+  <ellipse cx="607" cy="365" rx="7" ry="4" fill="#bbb" stroke="#999" stroke-width="0.8"/>
+
+  <!-- ═══════════════════════════════════════════════
+       LABELS
+       ═══════════════════════════════════════════════ -->
+
+  <!-- "Sheet 1" label (left, pointing to blue line) -->
+  <text x="72" y="230" text-anchor="end" font-family="-apple-system, system-ui, sans-serif"
+        font-size="12" font-weight="600" fill="#4488cc">Sheet 1</text>
+  <line x1="74" y1="227" x2="190" y2="220" stroke="#4488cc" stroke-width="1"
+        marker-end="url(#lbl-arr)" opacity="0.8"/>
+
+  <!-- "Sheet 2" label (right, pointing to red line) -->
+  <text x="628" y="230" text-anchor="start" font-family="-apple-system, system-ui, sans-serif"
+        font-size="12" font-weight="600" fill="#cc6644">Sheet 2</text>
+  <line x1="626" y1="227" x2="512" y2="220" stroke="#cc6644" stroke-width="1"
+        marker-end="url(#lbl-arr)" opacity="0.8"/>
+
+  <!-- "≥50cm overlap" label above crown -->
+  <text x="350" y="57" text-anchor="middle" font-family="-apple-system, system-ui, sans-serif"
+        font-size="11" font-weight="600" fill="#c9a227">≥50 cm overlap</text>
+  <line x1="313" y1="60" x2="313" y2="75" class="dim-line" opacity="0.7"/>
+  <line x1="387" y1="60" x2="387" y2="75" class="dim-line" opacity="0.7"/>
+  <line x1="313" y1="60" x2="387" y2="60" class="dim-line"
+        marker-start="url(#arr-start)" marker-end="url(#arr-end)"/>
+
+  <!-- "greenhouse repair tape" label for tape strip -->
+  <text x="420" y="80" font-family="-apple-system, system-ui, sans-serif"
+        font-size="10" fill="#c9a227">tape along full join</text>
+  <line x1="418" y1="81" x2="390" y2="84" stroke="#c9a227" stroke-width="0.8"
+        marker-end="url(#arr-end)" opacity="0.8"/>
+
+  <!-- "excess folded under, weighted with stones" — left base -->
+  <text x="58" y="385" text-anchor="start" font-family="-apple-system, system-ui, sans-serif"
+        font-size="10" fill="#555">excess folded under,</text>
+  <text x="58" y="397" text-anchor="start" font-family="-apple-system, system-ui, sans-serif"
+        font-size="10" fill="#555">weighted with stones</text>
+  <line x1="92" y1="375" x2="105" y2="365" stroke="#555" stroke-width="0.8" opacity="0.7"
+        marker-end="url(#lbl-arr)"/>
+
+  <!-- Same label right base -->
+  <text x="570" y="385" font-family="-apple-system, system-ui, sans-serif"
+        font-size="10" fill="#555">excess + stones</text>
+  <line x1="580" y1="365" x2="590" y2="375" stroke="#555" stroke-width="0.8" opacity="0.7"
+        marker-start="url(#lbl-arr-rev)"/>
+
+  <!-- ═══════════════════════════════════════════════
+       DIMENSION LINES
+       ═══════════════════════════════════════════════ -->
+
+  <!-- ~8m sheet length dimension — runs below dome at mid-height -->
+  <line x1="136" y1="340" x2="420" y2="340" class="dim-line"
+        marker-start="url(#arr-start)" marker-end="url(#arr-end)" stroke-dasharray="3,3" opacity="0.6"/>
+  <line x1="136" y1="334" x2="136" y2="346" class="dim-line" opacity="0.5"/>
+  <line x1="420" y1="334" x2="420" y2="346" class="dim-line" opacity="0.5"/>
+  <text x="278" y="337" text-anchor="middle" font-family="-apple-system, system-ui, sans-serif"
+        font-size="10" font-weight="600" fill="#c9a227">~8 m sheet</text>
+
+  <!-- 50cm overlap dimension (already shown above as bracket) -->
+
+  <!-- ═══════════════════════════════════════════════
+       LEGEND
+       ═══════════════════════════════════════════════ -->
+  <line x1="190" y1="430" x2="220" y2="430" stroke="#1a2e1a" stroke-width="3"/>
+  <text x="225" y="434" font-family="-apple-system, system-ui, sans-serif" font-size="10" fill="#555">dome frame</text>
+
+  <line x1="290" y1="430" x2="320" y2="430" stroke="#4488cc" stroke-width="2.5"/>
+  <text x="325" y="434" font-family="-apple-system, system-ui, sans-serif" font-size="10" fill="#555">sheet 1</text>
+
+  <line x1="375" y1="430" x2="405" y2="430" stroke="#cc6644" stroke-width="2.5"/>
+  <text x="410" y="434" font-family="-apple-system, system-ui, sans-serif" font-size="10" fill="#555">sheet 2</text>
+
+  <line x1="455" y1="430" x2="485" y2="430" stroke="#c9a227" stroke-width="2.5"/>
+  <text x="490" y="434" font-family="-apple-system, system-ui, sans-serif" font-size="10" fill="#555">tape / overlap</text>
+
+</svg>

@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 450">
+  <defs>
+    <style>
+      .label     { font-family: -apple-system, system-ui, sans-serif; fill: #1a2e1a; font-size: 12px; }
+      .label-sm  { font-family: -apple-system, system-ui, sans-serif; fill: #555;    font-size: 11px; }
+      .label-xs  { font-family: -apple-system, system-ui, sans-serif; fill: #555;    font-size: 10px; }
+      .title     { font-family: -apple-system, system-ui, sans-serif; fill: #1a2e1a; font-size: 14px; font-weight: 700; }
+      .dim       { font-family: -apple-system, system-ui, sans-serif; fill: #c9a227; font-size: 11px; font-weight: 600; }
+      .dim-line  { stroke: #c9a227; stroke-width: 1; fill: none; }
+      .callout-line { stroke: #555; stroke-width: 0.8; fill: none; }
+      .panel-bg  { fill: #faf8f5; stroke: #ddd; stroke-width: 1; }
+    </style>
+    <marker id="arr-s" markerWidth="6" markerHeight="5" refX="0" refY="2.5" orient="auto">
+      <path d="M6,0 L0,2.5 L6,5" stroke="#c9a227" stroke-width="1" fill="none"/>
+    </marker>
+    <marker id="arr-e" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L6,2.5 L0,5" stroke="#c9a227" stroke-width="1" fill="none"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="325" y="22" text-anchor="middle" class="title">Wattle Ring Weaving — Detail</text>
+
+  <!-- ============================================================ -->
+  <!-- LEFT PANEL: Close-up weave detail                           -->
+  <!-- ============================================================ -->
+  <rect x="18" y="34" width="400" height="378" rx="4" class="panel-bg"/>
+
+  <!-- Panel label -->
+  <text x="218" y="52" text-anchor="middle" class="label" style="font-weight:600; font-size:11px;">Wall section — viewed from outside</text>
+
+  <!-- ── Arch poles (vertical, dark green cylinders) ── -->
+  <!-- Pole 1: x=90, Pole 2: x=218, Pole 3: x=346 -->
+  <!-- Each pole is ~14px wide (≈8cm at this scale), drawn as a rounded rect -->
+  <!-- with a highlight strip to suggest cylinder roundness -->
+
+  <!-- Pole 1 -->
+  <rect x="83"  y="60" width="14" height="340" rx="3" fill="#1a2e1a"/>
+  <rect x="86"  y="60" width="4"  height="340" rx="2" fill="#2d5a2d" opacity="0.5"/>
+
+  <!-- Pole 2 -->
+  <rect x="211" y="60" width="14" height="340" rx="3" fill="#1a2e1a"/>
+  <rect x="214" y="60" width="4"  height="340" rx="2" fill="#2d5a2d" opacity="0.5"/>
+
+  <!-- Pole 3 -->
+  <rect x="339" y="60" width="14" height="340" rx="3" fill="#1a2e1a"/>
+  <rect x="342" y="60" width="4"  height="340" rx="2" fill="#2d5a2d" opacity="0.5"/>
+
+  <!-- ── Ring A (y=160): OUTSIDE pole1, INSIDE pole2, OUTSIDE pole3 ── -->
+  <!-- "Inside" = drawn behind the pole (faded/dashed), "Outside" = drawn in front -->
+  <!-- Draw behind-pole segments first, then in-front segments on top -->
+
+  <!-- Ring A — behind pole 2 (inside) -->
+  <line x1="97"  y1="160" x2="211" y2="160" stroke="#2d4a2d" stroke-width="10" stroke-linecap="butt" opacity="0.28"/>
+  <line x1="97"  y1="160" x2="211" y2="160" stroke="#4a7a4a" stroke-width="6"  stroke-linecap="butt" opacity="0.28"/>
+
+  <!-- Ring A — in front of pole 1 (outside): left edge to pole1 left, and pole1 right onward -->
+  <line x1="18"  y1="160" x2="97"  y2="160" stroke="#2d4a2d" stroke-width="10" stroke-linecap="round"/>
+  <line x1="18"  y1="160" x2="97"  y2="160" stroke="#4a7a4a" stroke-width="6"  stroke-linecap="round"/>
+  <!-- Ring A — in front of pole 3 (outside), from pole2-right through pole3 to panel edge -->
+  <line x1="225" y1="160" x2="418" y2="160" stroke="#2d4a2d" stroke-width="10" stroke-linecap="round"/>
+  <line x1="225" y1="160" x2="418" y2="160" stroke="#4a7a4a" stroke-width="6"  stroke-linecap="round"/>
+
+  <!-- ── Ring B (y=270): INSIDE pole1, OUTSIDE pole2, INSIDE pole3 ── -->
+  <!-- Behind pole 1 and pole 3 -->
+  <line x1="18"  y1="270" x2="97"  y2="270" stroke="#2d4a2d" stroke-width="10" stroke-linecap="round" opacity="0.28"/>
+  <line x1="18"  y1="270" x2="97"  y2="270" stroke="#4a7a4a" stroke-width="6"  stroke-linecap="round" opacity="0.28"/>
+  <line x1="225" y1="270" x2="339" y2="270" stroke="#2d4a2d" stroke-width="10" stroke-linecap="butt"  opacity="0.28"/>
+  <line x1="225" y1="270" x2="339" y2="270" stroke="#4a7a4a" stroke-width="6"  stroke-linecap="butt"  opacity="0.28"/>
+  <!-- behind right edge -->
+  <line x1="353" y1="270" x2="418" y2="270" stroke="#2d4a2d" stroke-width="10" stroke-linecap="round" opacity="0.28"/>
+  <line x1="353" y1="270" x2="418" y2="270" stroke="#4a7a4a" stroke-width="6"  stroke-linecap="round" opacity="0.28"/>
+  <!-- Ring B — in front of pole 2 (outside) -->
+  <line x1="97"  y1="270" x2="225" y2="270" stroke="#2d4a2d" stroke-width="10" stroke-linecap="round"/>
+  <line x1="97"  y1="270" x2="225" y2="270" stroke="#4a7a4a" stroke-width="6"  stroke-linecap="round"/>
+
+  <!-- ── Redraw arch poles on top so weave segments that pass "in front" -->
+  <!--    look correct — we draw just the "inside" overlap area as the pole -->
+  <!--    The poles were already drawn; now redraw only the zone where rings pass BEHIND -->
+
+  <!-- Re-render pole 1 on top (only middle section where Ring B passes behind) -->
+  <rect x="83"  y="255" width="14" height="30" rx="0" fill="#1a2e1a"/>
+  <rect x="86"  y="255" width="4"  height="30" rx="0" fill="#2d5a2d" opacity="0.5"/>
+  <!-- Re-render pole 2 on top (only middle section where Ring A passes behind) -->
+  <rect x="211" y="145" width="14" height="30" rx="0" fill="#1a2e1a"/>
+  <rect x="214" y="145" width="4"  height="30" rx="0" fill="#2d5a2d" opacity="0.5"/>
+  <!-- Re-render pole 3 on top (only middle section where Ring B passes behind) -->
+  <rect x="339" y="255" width="14" height="30" rx="0" fill="#1a2e1a"/>
+  <rect x="342" y="255" width="4"  height="30" rx="0" fill="#2d5a2d" opacity="0.5"/>
+
+  <!-- ── 30cm overlap join on Ring B, at right end ── -->
+  <!-- Overlap zone: two ring-pole ends side by side, x=310 to x=370, y=270 -->
+  <!-- Second ring section drawn slightly offset to show overlap -->
+  <line x1="310" y1="266" x2="390" y2="266" stroke="#2d4a2d" stroke-width="10" stroke-linecap="round" opacity="0.28"/>
+  <line x1="310" y1="266" x2="390" y2="266" stroke="#4a7a4a" stroke-width="6"  stroke-linecap="round" opacity="0.28"/>
+  <line x1="310" y1="274" x2="390" y2="274" stroke="#2d4a2d" stroke-width="10" stroke-linecap="round" opacity="0.18"/>
+  <line x1="310" y1="274" x2="390" y2="274" stroke="#4a7a4a" stroke-width="6"  stroke-linecap="round" opacity="0.18"/>
+  <!-- Wire lash mark at x=350 -->
+  <line x1="350" y1="257" x2="350" y2="283" stroke="#888" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="347" y1="259" x2="353" y2="259" stroke="#888" stroke-width="1.5"/>
+  <line x1="347" y1="281" x2="353" y2="281" stroke="#888" stroke-width="1.5"/>
+  <!-- Winding marks -->
+  <path d="M347,262 Q351,265 347,268 Q353,271 347,274 Q351,277 347,280" stroke="#aaa" stroke-width="1" fill="none"/>
+
+  <!-- ── "inside" / "outside" zone labels between poles ── -->
+  <!-- Between pole 1 and pole 2, ring A is INSIDE (behind), ring B is OUTSIDE (front) -->
+  <text x="154" y="148" text-anchor="middle" class="label-xs" style="fill:#888;">inside</text>
+  <text x="154" y="293" text-anchor="middle" class="label-xs" style="fill:#555; font-weight:600;">outside</text>
+  <!-- Between pole 2 and pole 3, ring A is OUTSIDE, ring B is INSIDE -->
+  <text x="282" y="148" text-anchor="middle" class="label-xs" style="fill:#555; font-weight:600;">outside</text>
+  <text x="282" y="293" text-anchor="middle" class="label-xs" style="fill:#888;">inside</text>
+
+  <!-- ── Ring labels on left edge ── -->
+  <text x="22" y="155" class="label-sm" style="font-weight:600;">Ring A</text>
+  <text x="22" y="265" class="label-sm" style="font-weight:600;">Ring B</text>
+
+  <!-- ── Callout: arch pole ── -->
+  <line x1="90" y1="85" x2="90" y2="75" class="callout-line"/>
+  <line x1="90" y1="75" x2="145" y2="67" class="callout-line"/>
+  <rect x="140" y="58" width="56" height="16" rx="3" fill="white" stroke="#ddd" stroke-width="0.8"/>
+  <text x="168" y="69" text-anchor="middle" class="label-xs" style="font-weight:600;">arch pole</text>
+
+  <!-- ── Callout: wattle ring ── -->
+  <line x1="225" y1="160" x2="260" y2="140" class="callout-line"/>
+  <rect x="255" y="129" width="52" height="16" rx="3" fill="white" stroke="#ddd" stroke-width="0.8"/>
+  <text x="281" y="140" text-anchor="middle" class="label-xs" style="font-weight:600;">wattle ring</text>
+
+  <!-- ── Callout: 30cm overlap ── -->
+  <!-- Dim line -->
+  <line x1="310" y1="295" x2="390" y2="295" class="dim-line" marker-start="url(#arr-s)" marker-end="url(#arr-e)"/>
+  <text x="350" y="308" text-anchor="middle" class="dim">30 cm overlap</text>
+
+  <!-- ── Callout: wire lash ── -->
+  <line x1="353" y1="270" x2="390" y2="318" class="callout-line"/>
+  <text x="385" y="327" class="label-xs" style="font-weight:600;">wire lash</text>
+
+  <!-- ── Legend: in front / behind ── -->
+  <rect x="26" y="358" width="136" height="46" rx="3" fill="white" stroke="#ddd" stroke-width="0.8"/>
+  <line x1="34"  y1="374" x2="60"  y2="374" stroke="#2d4a2d" stroke-width="5"/>
+  <line x1="34"  y1="374" x2="60"  y2="374" stroke="#4a7a4a" stroke-width="3"/>
+  <text x="65" y="378" class="label-xs">= in front (outside)</text>
+  <line x1="34"  y1="393" x2="60"  y2="393" stroke="#2d4a2d" stroke-width="5" opacity="0.28"/>
+  <line x1="34"  y1="393" x2="60"  y2="393" stroke="#4a7a4a" stroke-width="3" opacity="0.28"/>
+  <text x="65" y="397" class="label-xs">= behind (inside)</text>
+
+  <!-- ============================================================ -->
+  <!-- RIGHT PANEL: Side elevation of dome showing ring positions  -->
+  <!-- ============================================================ -->
+  <rect x="430" y="34" width="204" height="378" rx="4" class="panel-bg"/>
+  <text x="532" y="52" text-anchor="middle" class="label" style="font-weight:600; font-size:11px;">Dome — ring positions</text>
+
+  <!-- Ground fill -->
+  <rect x="430" y="360" width="204" height="52" fill="#f0ebe3"/>
+  <line x1="430" y1="360" x2="634" y2="360" stroke="#1a2e1a" stroke-width="1"/>
+  <text x="636" y="364" class="label-xs">grade</text>
+
+  <!-- Dome catenary outline (side view, half-profile shown as full arch) -->
+  <!-- Crown at y=72, base at y=360, half-width ~78px at base -->
+  <!-- Using a simple catenary-ish path: M 454,360 Q 454,72 532,66 Q 610,72 610,360 -->
+  <path d="M454,360 C454,280 490,72 532,68 C574,72 610,280 610,360"
+        fill="none" stroke="#1a2e1a" stroke-width="2.5"/>
+  <!-- Wall thickness suggestion (inner curve, dashed) -->
+  <path d="M462,360 C462,285 492,82 532,78 C572,82 602,285 602,360"
+        fill="none" stroke="#2d4a2d" stroke-width="1" stroke-dasharray="5,4" opacity="0.5"/>
+
+  <!-- Ground line inside dome (gabion hint) -->
+  <rect x="448" y="354" width="20" height="14" rx="1" fill="#d5cfc5" stroke="#1a2e1a" stroke-width="1"/>
+  <rect x="592" y="354" width="20" height="14" rx="1" fill="#d5cfc5" stroke="#1a2e1a" stroke-width="1"/>
+
+  <!-- Crown zone — no ring label -->
+  <text x="532" y="86" text-anchor="middle" class="label-xs" style="fill:#888;">crown</text>
+  <text x="532" y="97" text-anchor="middle" class="label-xs" style="fill:#888;">(no rings)</text>
+
+  <!-- 5 ring lines, spaced ~60cm apart, 1px = ~1.15cm at this scale -->
+  <!-- Scale: dome height ~4m = 292px → 1m = 73px, 60cm = 44px -->
+  <!-- Ring 1: 60cm above ground → y = 360 − 44 = 316 -->
+  <!-- Ring 2: y = 316 − 44 = 272 -->
+  <!-- Ring 3: y = 272 − 44 = 228 -->
+  <!-- Ring 4: y = 228 − 44 = 184 -->
+  <!-- Ring 5: y = 184 − 44 = 140  (top ring, ≥60cm below crown at y≈68) -->
+
+  <!-- Helper: compute x-intercepts of dome curve at each ring y -->
+  <!-- At y=316 (near base), dome is wide: approx x offset ~72px each side → 532±72 = 460..604 -->
+  <!-- At y=272, offset ~68 → 464..600 -->
+  <!-- At y=228, offset ~62 → 470..594 -->
+  <!-- At y=184, offset ~54 → 478..586 -->
+  <!-- At y=140, offset ~44 → 488..576 -->
+
+  <!-- Ring 1 -->
+  <line x1="460" y1="316" x2="604" y2="316" stroke="#2d4a2d" stroke-width="3" stroke-linecap="round"/>
+  <line x1="460" y1="316" x2="604" y2="316" stroke="#4a7a4a" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="434" y="320" text-anchor="start" class="label-xs">1</text>
+
+  <!-- Ring 2 -->
+  <line x1="464" y1="272" x2="600" y2="272" stroke="#2d4a2d" stroke-width="3" stroke-linecap="round"/>
+  <line x1="464" y1="272" x2="600" y2="272" stroke="#4a7a4a" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="434" y="276" text-anchor="start" class="label-xs">2</text>
+
+  <!-- Ring 3 -->
+  <line x1="470" y1="228" x2="594" y2="228" stroke="#2d4a2d" stroke-width="3" stroke-linecap="round"/>
+  <line x1="470" y1="228" x2="594" y2="228" stroke="#4a7a4a" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="434" y="232" text-anchor="start" class="label-xs">3</text>
+
+  <!-- Ring 4 -->
+  <line x1="478" y1="184" x2="586" y2="184" stroke="#2d4a2d" stroke-width="3" stroke-linecap="round"/>
+  <line x1="478" y1="184" x2="586" y2="184" stroke="#4a7a4a" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="434" y="188" text-anchor="start" class="label-xs">4</text>
+
+  <!-- Ring 5 -->
+  <line x1="488" y1="140" x2="576" y2="140" stroke="#2d4a2d" stroke-width="3" stroke-linecap="round"/>
+  <line x1="488" y1="140" x2="576" y2="140" stroke="#4a7a4a" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="434" y="144" text-anchor="start" class="label-xs">5</text>
+
+  <!-- "5 rings" bracket on right side -->
+  <line x1="616" y1="140" x2="616" y2="316" stroke="#c9a227" stroke-width="1"/>
+  <line x1="611" y1="140" x2="621" y2="140" stroke="#c9a227" stroke-width="1"/>
+  <line x1="611" y1="316" x2="621" y2="316" stroke="#c9a227" stroke-width="1"/>
+  <text x="622" y="232" class="dim" style="font-size:10px;">5 rings</text>
+
+  <!-- ~60cm spacing dim between ring 1 and ring 2 -->
+  <line x1="608" y1="272" x2="608" y2="316" class="dim-line" marker-start="url(#arr-s)" marker-end="url(#arr-e)"/>
+  <text x="613" y="298" class="dim" style="font-size:9px;">~60 cm</text>
+
+  <!-- "crown zone" bracket -->
+  <line x1="580" y1="68" x2="580" y2="140" stroke="#888" stroke-width="0.8" stroke-dasharray="3,3"/>
+  <text x="583" y="110" class="label-xs" style="fill:#888;">crown</text>
+  <text x="583" y="121" class="label-xs" style="fill:#888;">zone</text>
+
+</svg>

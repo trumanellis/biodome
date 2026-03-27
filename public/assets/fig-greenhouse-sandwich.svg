@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420">
+  <defs>
+    <style>
+      .label     { font-family: -apple-system, system-ui, sans-serif; fill: #1a2e1a; font-size: 12px; }
+      .label-sm  { font-family: -apple-system, system-ui, sans-serif; fill: #555; font-size: 11px; }
+      .label-bold{ font-family: -apple-system, system-ui, sans-serif; fill: #1a2e1a; font-size: 12px; font-weight: 600; }
+      .dim       { font-family: -apple-system, system-ui, sans-serif; fill: #c9a227; font-size: 11px; font-weight: 600; }
+      .dim-line  { stroke: #c9a227; stroke-width: 1; fill: none; }
+      .callout   { stroke: #1a2e1a; stroke-width: 0.7; opacity: 0.5; fill: none; }
+      .twine-line{ stroke: #c9a227; stroke-width: 2; fill: none; }
+    </style>
+    <!-- Arrow markers -->
+    <marker id="a-s" markerWidth="8" markerHeight="6" refX="0" refY="3" orient="auto">
+      <path d="M8,0 L0,3 L8,6" stroke="#c9a227" fill="none" stroke-width="1"/>
+    </marker>
+    <marker id="a-e" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" stroke="#c9a227" fill="none" stroke-width="1"/>
+    </marker>
+  </defs>
+
+  <!-- ─── TITLE ─── -->
+  <text x="340" y="22" text-anchor="middle" class="label" style="font-size:15px; font-weight:700;">Plastic Sandwich Lashing — Cross-Section Detail</text>
+  <text x="340" y="39" text-anchor="middle" class="label-sm">Cut through dome wall, viewed along the direction of the wattle ring</text>
+
+  <!-- ═══════════════════════════════════════════════════════
+       LEFT PANEL — Cross-section
+       Centre of cross-section at x=220, y=220
+       Arch pole radius 36px (~8cm @4.5px/cm)
+       Wattle ring radius 27px (~6cm) sitting to the outside/right
+  ════════════════════════════════════════════════════════ -->
+
+  <!-- Panel background -->
+  <rect x="20" y="52" width="370" height="350" fill="#fafaf8" stroke="#d5cfc5" stroke-width="1"/>
+
+  <!-- Inside dome zone (left half of panel) -->
+  <rect x="20" y="52" width="185" height="350" fill="#f4f8f4" opacity="0.5"/>
+
+  <!-- Panel divider label areas -->
+  <text x="80" y="72" text-anchor="middle" class="label-sm" style="font-size:10px; fill:#888; font-style:italic;">Inside dome</text>
+  <text x="330" y="72" text-anchor="middle" class="label-sm" style="font-size:10px; fill:#888; font-style:italic;">Outside</text>
+
+  <!-- ── Arch pole (large, centre) ── -->
+  <!-- Centre: x=198, y=220, r=36 -->
+  <circle cx="198" cy="220" r="36" fill="#1a2e1a" stroke="#0f1f0f" stroke-width="1.5"/>
+  <!-- Wood grain ring for depth -->
+  <circle cx="198" cy="220" r="24" fill="none" stroke="#2d4a2d" stroke-width="0.7" opacity="0.4"/>
+  <circle cx="198" cy="220" r="12" fill="none" stroke="#2d4a2d" stroke-width="0.6" opacity="0.3"/>
+
+  <!-- ── Wattle ring pole (sitting to the right/outside of the arch pole) ── -->
+  <!-- Wattle ring: r=27, its left edge touches arch right edge: cx = 198+36+27 = 261 -->
+  <circle cx="261" cy="220" r="27" fill="#2d4a2d" stroke="#1a2e1a" stroke-width="1.5"/>
+  <circle cx="261" cy="220" r="18" fill="none" stroke="#3d5e3d" stroke-width="0.7" opacity="0.4"/>
+  <circle cx="261" cy="220" r="9"  fill="none" stroke="#3d5e3d" stroke-width="0.6" opacity="0.3"/>
+
+  <!-- ── Greenhouse plastic ── -->
+  <!-- Drapes over outside of wattle ring (right side). Thin line conforming to the right arc of the ring. -->
+  <!-- Plastic runs from top of arch pole down and around the wattle ring, then away to the right -->
+  <!-- Coming down the inside face of the arch pole and bending around the wattle ring to outside -->
+  <!-- Approximate path: starts above, curves around wattle ring exterior -->
+  <path d="M198,184 C198,184 204,184 228,188 C248,192 265,195 288,193 C288,193 292,193 295,193"
+        stroke="#4488cc" stroke-width="2.5" fill="none" opacity="0.85"/>
+  <!-- bottom side of plastic -->
+  <path d="M198,256 C198,256 205,256 228,252 C248,248 265,245 288,247 C292,247 295,247 295,247"
+        stroke="#4488cc" stroke-width="2.5" fill="none" opacity="0.85"/>
+  <!-- thin fill between top and bottom plastic lines on the right run-off -->
+  <path d="M295,193 L310,193 L310,247 L295,247"
+        stroke="#4488cc" stroke-width="1.5" fill="#daeeff" opacity="0.4"/>
+
+  <!-- ── Split-pole batten ── -->
+  <!-- D-shape (half circle) pressing from outside against the plastic at the wattle ring -->
+  <!-- Centre x=288+8=300, y=220, flat side facing left (inward), curved side right -->
+  <path d="M296,197 A22,22 0 0 1 296,243 L296,197 Z"
+        fill="#8b6914" stroke="#5a4510" stroke-width="1.5"/>
+  <!-- flat face of batten -->
+  <line x1="296" y1="197" x2="296" y2="243" stroke="#5a4510" stroke-width="1.5"/>
+
+  <!-- ── Twine lashing ── -->
+  <!-- Twine passes: around the outside of the batten (right curve), then crosses to inside of wattle ring (left side) -->
+  <!-- Top twine loop: goes over batten top, crosses left over plastic, goes around left side of wattle ring -->
+  <!-- Represent as a series of arcs/lines showing the wrapping path -->
+
+  <!-- Twine going over top of the batten and wattle-ring assembly -->
+  <path d="M296,197 C296,180 261,175 261,193"
+        class="twine-line" stroke-dasharray="4,2"/>
+  <!-- Twine coming under bottom -->
+  <path d="M296,243 C296,262 261,265 261,247"
+        class="twine-line" stroke-dasharray="4,2"/>
+  <!-- Twine going around left (inside) of wattle ring - upper -->
+  <path d="M261,193 C238,193 234,193 234,220 C234,247 238,247 261,247"
+        class="twine-line" stroke-dasharray="4,2"/>
+  <!-- small twine direction arrows (suggest wrap direction) -->
+  <!-- Arrow at top of wattle ring -->
+  <path d="M261,193 L255,190" stroke="#c9a227" stroke-width="1.5" fill="none"/>
+  <path d="M261,193 L267,190" stroke="#c9a227" stroke-width="1.5" fill="none"/>
+  <!-- Arrow at bottom -->
+  <path d="M261,247 L255,250" stroke="#c9a227" stroke-width="1.5" fill="none"/>
+  <path d="M261,247 L267,250" stroke="#c9a227" stroke-width="1.5" fill="none"/>
+
+  <!-- ── "Inside dome" / "Outside" orientation arrows ── -->
+  <text x="80"  y="390" text-anchor="middle" class="label-sm" style="font-size:11px; font-weight:700; fill:#888;">INSIDE</text>
+  <path d="M44,385 L24,385" stroke="#888" stroke-width="1.5" marker-end="url(#a-e)" transform="scale(-1,1) translate(-68,0)"/>
+  <path d="M100,385 L24,385" stroke="#aaa" stroke-width="1" fill="none"/>
+
+  <text x="335" y="390" text-anchor="middle" class="label-sm" style="font-size:11px; font-weight:700; fill:#888;">OUTSIDE</text>
+  <path d="M358,385 L378,385" stroke="#888" stroke-width="1.5" marker-end="url(#a-e)"/>
+
+  <!-- ── Labels with callout lines ── -->
+
+  <!-- arch pole -->
+  <text x="30"  y="152" class="label-bold" style="fill:#c9a227;">arch pole</text>
+  <text x="30"  y="165" class="label-sm">8cm Ø eucalyptus</text>
+  <line x1="98" y1="158" x2="167" y2="198" class="callout"/>
+
+  <!-- wattle ring -->
+  <text x="30"  y="198" class="label-bold">wattle ring</text>
+  <text x="30"  y="211" class="label-sm">6cm Ø horizontal pole</text>
+  <line x1="110" y1="203" x2="237" y2="212" class="callout"/>
+
+  <!-- greenhouse plastic -->
+  <text x="30"  y="243" class="label-bold" style="fill:#4488cc;">greenhouse plastic</text>
+  <text x="30"  y="256" class="label-sm">200µm UV film</text>
+  <line x1="163" y1="248" x2="286" y2="220" class="callout"/>
+
+  <!-- split-pole batten -->
+  <text x="30"  y="290" class="label-bold" style="fill:#8b6914;">split-pole batten</text>
+  <text x="30"  y="303" class="label-sm">2–3cm half-section</text>
+  <line x1="148" y1="295" x2="293" y2="220" class="callout"/>
+
+  <!-- twine lashing -->
+  <text x="30"  y="338" class="label-bold" style="fill:#c9a227;">twine lashing</text>
+  <text x="30"  y="351" class="label-sm">wraps inside ring +</text>
+  <text x="30"  y="363" class="label-sm">outside batten</text>
+  <line x1="115" y1="344" x2="245" y2="247" class="callout"/>
+
+  <!-- ═══════════════════════════════════════════════════════
+       RIGHT PANEL — Perspective sketch
+  ════════════════════════════════════════════════════════ -->
+
+  <!-- Panel background -->
+  <rect x="408" y="52" width="254" height="350" fill="#fafaf8" stroke="#d5cfc5" stroke-width="1"/>
+  <text x="535" y="74" text-anchor="middle" class="label-sm" style="font-size:10px; fill:#888;">Perspective view</text>
+
+  <!-- Define vanishing-point perspective: VP at ~535,340 (far right centre) -->
+  <!-- Two arch poles: left at x=440 (front), right at x=600 (back) -->
+  <!-- Arch poles are vertical tubes, going from y~90 down to y~310 -->
+
+  <!-- ── Back arch pole (right, smaller) ── -->
+  <rect x="597" y="100" width="16" height="210" rx="4" fill="#1a2e1a" stroke="#0f1f0f" stroke-width="1"/>
+
+  <!-- ── Front arch pole (left, larger) ── -->
+  <rect x="435" y="90" width="20" height="220" rx="4" fill="#1a2e1a" stroke="#0f1f0f" stroke-width="1"/>
+
+  <!-- ── Wattle ring (horizontal, connecting the two poles at mid-height) ── -->
+  <!-- Runs from front-left to back-right at y≈195 (front) to y≈200 (back, with perspective) -->
+  <!-- Wattle ring as a tapered parallelogram (perspective foreshortening) -->
+  <path d="M455,195 L598,200 L598,214 L455,207 Z"
+        fill="#2d4a2d" stroke="#1a2e1a" stroke-width="1.5"/>
+  <!-- Rounded ends for pole-like appearance -->
+  <ellipse cx="455" cy="201" rx="9" ry="6" fill="#2d4a2d" stroke="#1a2e1a" stroke-width="1.5"/>
+  <ellipse cx="598" cy="207" rx="7" ry="5" fill="#2d4a2d" stroke="#1a2e1a" stroke-width="1"/>
+
+  <!-- ── Greenhouse plastic sheet (large face of the dome wall) ── -->
+  <!-- Covers the outside surface between and around the arch poles -->
+  <path d="M415,88 L652,98 L652,312 L415,305 Z"
+        fill="#daeeff" stroke="#4488cc" stroke-width="1.5" opacity="0.55"/>
+
+  <!-- ── Split-pole batten (horizontal strip over plastic at ring level) ── -->
+  <!-- Slightly in front of the plastic, at ring height -->
+  <path d="M418,192 L651,198 L651,210 L418,204 Z"
+        fill="#8b6914" stroke="#5a4510" stroke-width="1.5"/>
+
+  <!-- ── Twine wraps (three visible ties along the batten) ── -->
+  <!-- Each tie: vertical lines (representing cord wrap around ring+batten at arch intervals) -->
+  <!-- Tie 1: near front arch pole -->
+  <path d="M444,183 C444,178 457,175 457,183 L457,213 C457,221 444,218 444,213 Z"
+        fill="none" stroke="#c9a227" stroke-width="2"/>
+  <!-- Tie 2: centre span -->
+  <path d="M524,186 C524,181 537,178 537,186 L537,216 C537,224 524,221 524,216 Z"
+        fill="none" stroke="#c9a227" stroke-width="2"/>
+  <!-- Tie 3: near back arch pole -->
+  <path d="M591,190 C591,185 603,183 603,190 L603,218 C603,225 591,223 591,218 Z"
+        fill="none" stroke="#c9a227" stroke-width="2"/>
+
+  <!-- ── Perspective labels ── -->
+  <text x="418" y="135" class="label-sm" style="font-size:9px; fill:#1a2e1a; font-weight:600;">arch pole</text>
+  <line x1="437" y1="138" x2="443" y2="155" class="callout"/>
+
+  <text x="480" y="175" class="label-sm" style="font-size:9px; fill:#2d4a2d; font-weight:600;">wattle ring</text>
+  <line x1="520" y1="176" x2="530" y2="192" class="callout"/>
+
+  <text x="510" y="88" text-anchor="middle" class="label-sm" style="font-size:9px; fill:#4488cc; font-weight:600;">plastic sheet</text>
+  <line x1="510" y1="91" x2="510" y2="110" class="callout" style="stroke:#4488cc;"/>
+
+  <text x="634" y="170" class="label-sm" style="font-size:9px; fill:#8b6914; font-weight:600;">batten</text>
+  <line x1="640" y1="173" x2="640" y2="190" class="callout" style="stroke:#8b6914;"/>
+
+  <text x="555" y="240" class="label-sm" style="font-size:9px; fill:#c9a227; font-weight:600;">twine</text>
+  <line x1="553" y1="237" x2="538" y2="220" class="callout" style="stroke:#c9a227;"/>
+
+  <!-- ── Detail: exploded call-out circle on cross-section showing layer order ── -->
+  <!-- Small "layer order" legend under the right panel -->
+  <text x="535" y="325" text-anchor="middle" class="label-sm" style="font-size:10px; font-weight:600; fill:#1a2e1a;">Layer order (inside → out):</text>
+  <text x="430" y="342" class="label-sm" style="font-size:9px;">① arch pole</text>
+  <text x="430" y="356" class="label-sm" style="font-size:9px;">② wattle ring</text>
+  <text x="535" y="342" class="label-sm" style="font-size:9px; fill:#4488cc;">③ plastic film</text>
+  <text x="535" y="356" class="label-sm" style="font-size:9px; fill:#8b6914;">④ batten</text>
+  <text x="535" y="370" class="label-sm" style="font-size:9px; fill:#c9a227;">⑤ twine lashing</text>
+
+  <!-- ── Dimension line: batten clamping zone ── -->
+  <line x1="305" y1="197" x2="305" y2="243" class="dim-line" marker-start="url(#a-s)" marker-end="url(#a-e)"/>
+  <text x="312" y="222" class="dim" style="font-size:10px;">~3cm</text>
+  <text x="312" y="233" class="dim" style="font-size:9px;">batten</text>
+
+  <!-- Vertical separator between panels -->
+  <line x1="397" y1="52" x2="397" y2="402" stroke="#d5cfc5" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+</svg>

@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 450">
+  <defs>
+    <style>
+      .label     { font-family: -apple-system, system-ui, sans-serif; fill: #1a2e1a; font-size: 12px; }
+      .label-sm  { font-family: -apple-system, system-ui, sans-serif; fill: #555; font-size: 11px; }
+      .dim       { font-family: -apple-system, system-ui, sans-serif; fill: #c9a227; font-size: 11px; font-weight: 600; }
+      .dim-line  { stroke: #c9a227; stroke-width: 1; fill: none; }
+    </style>
+    <!-- Gold arrow markers for dimension lines -->
+    <marker id="a-s" markerWidth="8" markerHeight="6" refX="0" refY="3" orient="auto">
+      <path d="M8,0 L0,3 L8,6" stroke="#c9a227" fill="none" stroke-width="1"/>
+    </marker>
+    <marker id="a-e" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" stroke="#c9a227" fill="none" stroke-width="1"/>
+    </marker>
+  </defs>
+
+  <!-- ═══════════════════════════════════════════════
+       LAYOUT
+       Ground level: y=210
+       Posthole: 20cm wide = 80px, 30cm deep = 120px
+       Pole: 8–10cm wide = 36px, centered at x=220
+       Scale: 1cm ≈ 4px
+       Posthole left x=182, right x=262 (centered on x=222)
+       Posthole bottom: y=330
+       ═══════════════════════════════════════════════ -->
+
+  <!-- Title -->
+  <text x="250" y="26" text-anchor="middle" class="label" style="font-size:15px; font-weight:700;">Posthole Cross-Section</text>
+
+  <!-- ── Earth / soil background (above and below ground) ── -->
+  <!-- Full earth fill behind everything -->
+  <rect x="0" y="210" width="500" height="220" fill="#f0ebe3"/>
+  <!-- Sky/above-ground background -->
+  <rect x="0" y="36" width="500" height="174" fill="#faf9f7"/>
+
+  <!-- Posthole cavity cutout (lighter interior before gravel) -->
+  <rect x="182" y="210" width="80" height="120" fill="#e8e2d8"/>
+
+  <!-- ── Flat bearing stone at hole bottom ── -->
+  <!-- A natural flat stone shape -->
+  <ellipse cx="222" cy="326" rx="28" ry="7" fill="#888" stroke="#666" stroke-width="1"/>
+  <ellipse cx="222" cy="324" rx="26" ry="5" fill="#999" stroke="none"/>
+
+  <!-- ── Gravel fill — irregular dots filling hole from stone to ground ──
+       Fill column from y=214 down to y=320, x=184 to x=260 -->
+  <!-- Row y≈216 -->
+  <circle cx="192" cy="218" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="202" cy="215" r="3"   fill="#ccc6bc" stroke="#b0aaa0" stroke-width="0.6"/>
+  <circle cx="212" cy="219" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="222" cy="215" r="3"   fill="#cac4ba" stroke="#aea8a0" stroke-width="0.6"/>
+  <circle cx="232" cy="218" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="242" cy="214" r="3"   fill="#ccc6bc" stroke="#b0aaa0" stroke-width="0.6"/>
+  <circle cx="252" cy="218" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <!-- Row y≈228 -->
+  <circle cx="188" cy="229" r="3"   fill="#d0cac0" stroke="#b4aea4" stroke-width="0.6"/>
+  <circle cx="198" cy="226" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="209" cy="230" r="3"   fill="#ccc6bc" stroke="#b0aaa0" stroke-width="0.6"/>
+  <circle cx="219" cy="227" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="229" cy="230" r="3"   fill="#d0cac0" stroke="#b4aea4" stroke-width="0.6"/>
+  <circle cx="239" cy="226" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="249" cy="229" r="3"   fill="#ccc6bc" stroke="#b0aaa0" stroke-width="0.6"/>
+  <circle cx="258" cy="226" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <!-- Row y≈240 -->
+  <circle cx="192" cy="241" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="203" cy="238" r="3"   fill="#cac4ba" stroke="#aea8a0" stroke-width="0.6"/>
+  <circle cx="213" cy="242" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="223" cy="239" r="3"   fill="#d0cac0" stroke="#b4aea4" stroke-width="0.6"/>
+  <circle cx="233" cy="242" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="243" cy="238" r="3"   fill="#ccc6bc" stroke="#b0aaa0" stroke-width="0.6"/>
+  <circle cx="253" cy="241" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <!-- Row y≈252 -->
+  <circle cx="188" cy="252" r="3"   fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="198" cy="255" r="3.5" fill="#d0cac0" stroke="#b4aea4" stroke-width="0.6"/>
+  <circle cx="209" cy="251" r="3"   fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="219" cy="254" r="3.5" fill="#ccc6bc" stroke="#b0aaa0" stroke-width="0.6"/>
+  <circle cx="229" cy="251" r="3"   fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="239" cy="255" r="3.5" fill="#d0cac0" stroke="#b4aea4" stroke-width="0.6"/>
+  <circle cx="249" cy="251" r="3"   fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="258" cy="254" r="3.5" fill="#ccc6bc" stroke="#b0aaa0" stroke-width="0.6"/>
+  <!-- Row y≈264 -->
+  <circle cx="192" cy="265" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="202" cy="262" r="3"   fill="#d0cac0" stroke="#b4aea4" stroke-width="0.6"/>
+  <circle cx="212" cy="266" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="222" cy="263" r="3"   fill="#ccc6bc" stroke="#b0aaa0" stroke-width="0.6"/>
+  <circle cx="232" cy="266" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="242" cy="262" r="3"   fill="#d0cac0" stroke="#b4aea4" stroke-width="0.6"/>
+  <circle cx="252" cy="265" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <!-- Row y≈276 -->
+  <circle cx="188" cy="276" r="3"   fill="#ccc6bc" stroke="#b0aaa0" stroke-width="0.6"/>
+  <circle cx="198" cy="279" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="209" cy="275" r="3"   fill="#d0cac0" stroke="#b4aea4" stroke-width="0.6"/>
+  <circle cx="219" cy="278" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="229" cy="275" r="3"   fill="#ccc6bc" stroke="#b0aaa0" stroke-width="0.6"/>
+  <circle cx="239" cy="279" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="249" cy="275" r="3"   fill="#d0cac0" stroke="#b4aea4" stroke-width="0.6"/>
+  <circle cx="258" cy="278" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <!-- Row y≈288 -->
+  <circle cx="192" cy="289" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="202" cy="286" r="3"   fill="#cac4ba" stroke="#aea8a0" stroke-width="0.6"/>
+  <circle cx="213" cy="290" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="223" cy="287" r="3"   fill="#d0cac0" stroke="#b4aea4" stroke-width="0.6"/>
+  <circle cx="233" cy="290" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="243" cy="286" r="3"   fill="#ccc6bc" stroke="#b0aaa0" stroke-width="0.6"/>
+  <circle cx="253" cy="289" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <!-- Row y≈300 -->
+  <circle cx="188" cy="300" r="3"   fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="198" cy="303" r="3.5" fill="#d0cac0" stroke="#b4aea4" stroke-width="0.6"/>
+  <circle cx="209" cy="299" r="3"   fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="219" cy="302" r="3.5" fill="#ccc6bc" stroke="#b0aaa0" stroke-width="0.6"/>
+  <circle cx="229" cy="299" r="3"   fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="239" cy="303" r="3.5" fill="#d0cac0" stroke="#b4aea4" stroke-width="0.6"/>
+  <circle cx="249" cy="299" r="3"   fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="258" cy="302" r="3.5" fill="#ccc6bc" stroke="#b0aaa0" stroke-width="0.6"/>
+  <!-- Row y≈313 -->
+  <circle cx="192" cy="314" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="202" cy="311" r="3"   fill="#d0cac0" stroke="#b4aea4" stroke-width="0.6"/>
+  <circle cx="212" cy="314" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="222" cy="311" r="3"   fill="#ccc6bc" stroke="#b0aaa0" stroke-width="0.6"/>
+  <circle cx="232" cy="314" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+  <circle cx="242" cy="311" r="3"   fill="#d0cac0" stroke="#b4aea4" stroke-width="0.6"/>
+  <circle cx="252" cy="314" r="3.5" fill="#d5cfc5" stroke="#b8b2a8" stroke-width="0.6"/>
+
+  <!-- ── Eucalyptus pole (sits on gravel, extends up) ── -->
+  <!-- buried portion, dark green solid -->
+  <rect x="204" y="210" width="36" height="120" fill="#1a2e1a" rx="3"/>
+  <!-- above-ground portion continues to top -->
+  <rect x="204" y="46" width="36" height="164" fill="#1a2e1a" rx="3"/>
+
+  <!-- subtle grain lines on pole -->
+  <line x1="212" y1="46" x2="212" y2="330" stroke="#243e24" stroke-width="0.8"/>
+  <line x1="222" y1="46" x2="222" y2="330" stroke="#142414" stroke-width="0.8"/>
+  <line x1="232" y1="46" x2="232" y2="330" stroke="#243e24" stroke-width="0.8"/>
+
+  <!-- ── Plastic wrap (optional) — dashed blue line around buried pole ── -->
+  <!-- Left side of wrap -->
+  <line x1="202" y1="210" x2="202" y2="330"
+        stroke="#5588bb" stroke-width="2" stroke-dasharray="5,3" fill="none"/>
+  <!-- Right side of wrap -->
+  <line x1="242" y1="210" x2="242" y2="330"
+        stroke="#5588bb" stroke-width="2" stroke-dasharray="5,3" fill="none"/>
+  <!-- Bottom cap of wrap -->
+  <line x1="202" y1="330" x2="242" y2="330"
+        stroke="#5588bb" stroke-width="2" stroke-dasharray="3,3" fill="none"/>
+
+  <!-- ── Posthole walls (outline over earth) ── -->
+  <line x1="182" y1="210" x2="182" y2="330" stroke="#1a2e1a" stroke-width="1.5"/>
+  <line x1="262" y1="210" x2="262" y2="330" stroke="#1a2e1a" stroke-width="1.5"/>
+  <line x1="182" y1="330" x2="262" y2="330" stroke="#1a2e1a" stroke-width="1.5"/>
+
+  <!-- ── Ground surface line ── -->
+  <line x1="30" y1="210" x2="182" y2="210" stroke="#1a2e1a" stroke-width="2"/>
+  <line x1="262" y1="210" x2="470" y2="210" stroke="#1a2e1a" stroke-width="2"/>
+
+  <!-- ── Ground stake (rebar) — right side ── -->
+  <!-- rebar extends from y=150 (above ground) to y=390 (well below) -->
+  <!-- positioned at x=340, ground is at y=210 -->
+  <rect x="338" y="150" width="5" height="240" fill="#555" rx="1"/>
+  <!-- rebar top serration hint -->
+  <line x1="335" y1="155" x2="346" y2="158" stroke="#444" stroke-width="1"/>
+  <line x1="335" y1="163" x2="346" y2="166" stroke="#444" stroke-width="1"/>
+  <line x1="335" y1="171" x2="346" y2="174" stroke="#444" stroke-width="1"/>
+  <line x1="335" y1="179" x2="346" y2="182" stroke="#444" stroke-width="1"/>
+
+  <!-- ── Wire lash connecting pole to stake ── -->
+  <!-- A short wire line from right face of pole (x=240) to stake (x=338) at y≈180 -->
+  <path d="M240,180 Q285,176 338,182" stroke="#666" stroke-width="1.5" fill="none" stroke-dasharray="4,2"/>
+
+  <!-- ═══════════════════════════════════════════════
+       DIMENSION LINES
+       ═══════════════════════════════════════════════ -->
+
+  <!-- 30cm depth of posthole — right side of hole -->
+  <line x1="272" y1="210" x2="272" y2="330" class="dim-line" marker-start="url(#a-s)" marker-end="url(#a-e)"/>
+  <text x="278" y="274" class="dim">30cm</text>
+
+  <!-- 20cm width of posthole — below hole -->
+  <line x1="182" y1="342" x2="262" y2="342" class="dim-line" marker-start="url(#a-s)" marker-end="url(#a-e)"/>
+  <text x="222" y="356" text-anchor="middle" class="dim">20cm</text>
+
+  <!-- 20cm horizontal distance from pole to stake -->
+  <line x1="240" y1="197" x2="340" y2="197" class="dim-line" marker-start="url(#a-s)" marker-end="url(#a-e)"/>
+  <text x="290" y="193" text-anchor="middle" class="dim">20cm</text>
+
+  <!-- 60cm stake length — left of stake -->
+  <!-- stake runs y=150 to y=390 = 240px. At 4px/cm that's 60cm -->
+  <line x1="328" y1="150" x2="328" y2="390" class="dim-line" marker-start="url(#a-s)" marker-end="url(#a-e)"/>
+  <text x="322" y="272" text-anchor="end" class="dim">60cm</text>
+
+  <!-- ═══════════════════════════════════════════════
+       LABELS
+       ═══════════════════════════════════════════════ -->
+
+  <!-- "ground level" -->
+  <text x="32" y="207" class="label-sm" style="font-size:10px; fill:#1a2e1a; font-weight:600;">ground level</text>
+
+  <!-- "eucalyptus pole (8–10cm)" — right, pointing to pole above ground -->
+  <line x1="240" y1="120" x2="370" y2="100" stroke="#1a2e1a" stroke-width="0.8" opacity="0.5"/>
+  <text x="373" y="96" class="label" style="font-weight:600;">eucalyptus pole</text>
+  <text x="373" y="110" class="label-sm">(8–10cm)</text>
+
+  <!-- "gravel packing" — left, pointing into gravel fill -->
+  <line x1="182" y1="258" x2="110" y2="258" stroke="#1a2e1a" stroke-width="0.8" opacity="0.5"/>
+  <text x="108" y="255" text-anchor="end" class="label" style="font-weight:600;">gravel packing</text>
+
+  <!-- "flat bearing stone" — left, pointing to stone -->
+  <line x1="182" y1="326" x2="110" y2="316" stroke="#1a2e1a" stroke-width="0.8" opacity="0.5"/>
+  <text x="108" y="310" text-anchor="end" class="label" style="font-weight:600;">flat bearing</text>
+  <text x="108" y="324" text-anchor="end" class="label">stone</text>
+
+  <!-- "plastic bag wrap (optional)" — right, pointing to dashed blue line -->
+  <line x1="242" y1="270" x2="370" y2="270" stroke="#5588bb" stroke-width="0.8" opacity="0.7"/>
+  <text x="373" y="267" class="label-sm" style="fill:#5588bb;">plastic bag wrap</text>
+  <text x="373" y="281" class="label-sm" style="fill:#5588bb;">(optional)</text>
+
+  <!-- "ground stake (rebar)" — right -->
+  <line x1="343" y1="160" x2="400" y2="136" stroke="#555" stroke-width="0.8" opacity="0.6"/>
+  <text x="403" y="132" class="label" style="font-weight:600;">ground stake</text>
+  <text x="403" y="146" class="label-sm">(rebar)</text>
+
+  <!-- "wire lash" — right, pointing to wire -->
+  <line x1="290" y1="177" x2="403" y2="168" stroke="#666" stroke-width="0.8" opacity="0.6"/>
+  <text x="406" y="165" class="label-sm">wire lash</text>
+
+  <!-- Bottom caption -->
+  <text x="250" y="426" text-anchor="middle" class="label-sm" style="fill:#555;">Pole base embedded 30cm in gravel — no concrete needed.</text>
+  <text x="250" y="440" text-anchor="middle" class="label-sm" style="fill:#555;">Gravel drains freely; stake and wire lash prevent tipping.</text>
+
+</svg>
