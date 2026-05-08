@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 820">
+  <defs>
+    <style>
+      .label { font-family: -apple-system, system-ui, sans-serif; fill: #1a2e1a; font-size: 12px; }
+      .label-sm { font-family: -apple-system, system-ui, sans-serif; fill: #555; font-size: 11px; }
+      .dim { font-family: -apple-system, system-ui, sans-serif; fill: #c9a227; font-size: 12px; font-weight: 600; }
+      .dim-line { stroke: #c9a227; stroke-width: 1; fill: none; }
+      .pole { stroke: #5a3a1a; stroke-width: 5; fill: none; stroke-linecap: round; }
+      .ground { fill: #b89968; }
+      .ground-line { stroke: #5a3a1a; stroke-width: 2; }
+      .batten { stroke: #b89968; stroke-width: 3; fill: none; stroke-linecap: round; }
+    </style>
+    <marker id="arr-s" markerWidth="8" markerHeight="6" refX="0" refY="3" orient="auto">
+      <path d="M8,0 L0,3 L8,6" stroke="#c9a227" fill="none" stroke-width="1"/>
+    </marker>
+    <marker id="arr-e" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" stroke="#c9a227" fill="none" stroke-width="1"/>
+    </marker>
+    <marker id="hot-head" markerWidth="10" markerHeight="10" refX="5" refY="0" orient="auto">
+      <path d="M0,10 L5,0 L10,10 Z" fill="#c84a2a"/>
+    </marker>
+  </defs>
+
+  <text x="410" y="40" text-anchor="middle" class="label" style="font-size:15px; font-weight:700;">Twin-Sheet Drape with Continuous Ridge Vent</text>
+  <text x="410" y="62" text-anchor="middle" class="label-sm">End view — each 8m × 10m sheet covers one slope and lashes to its own ridge pole</text>
+
+  <!--
+    70px = 1m. Apex at (410, 265). Base at x=305 (left), x=515 (right). Ground at y=720.
+    Wall vertical from (305, 720) to (305, 650), then curve to apex.
+    More canvas margin to give labels room.
+  -->
+
+  <!-- Ground -->
+  <rect x="0" y="720" width="820" height="80" class="ground"/>
+  <line x1="0" y1="720" x2="820" y2="720" class="ground-line"/>
+
+  <!-- Pole — left -->
+  <path class="pole" d="M 305,752 L 305,650 C 305,490 350,320 410,265 L 430,253" />
+  <!-- Pole — right -->
+  <path class="pole" d="M 515,752 L 515,650 C 515,490 470,320 410,265 L 390,253" />
+
+  <!-- Posthole indications -->
+  <rect x="297" y="720" width="16" height="32" fill="#a08660" stroke="#5a3a1a" stroke-width="1"/>
+  <rect x="507" y="720" width="16" height="32" fill="#a08660" stroke="#5a3a1a" stroke-width="1"/>
+
+  <!-- Twin ridge poles (end-on) -->
+  <circle cx="392" cy="295" r="7" fill="#7a5a30" stroke="#3a2810" stroke-width="1.5"/>
+  <circle cx="428" cy="295" r="7" fill="#7a5a30" stroke="#3a2810" stroke-width="1.5"/>
+
+  <!-- Wire wrap at apex -->
+  <g stroke="#888" stroke-width="1.2" fill="none" opacity="0.85">
+    <ellipse cx="410" cy="265" rx="20" ry="9" transform="rotate(-15 410 265)"/>
+    <ellipse cx="410" cy="265" rx="20" ry="9" transform="rotate(15 410 265)"/>
+  </g>
+
+  <!-- Purlins (end-on) -->
+  <circle cx="300" cy="650" r="5" fill="#7a5a30" stroke="#3a2810" stroke-width="1"/>
+  <circle cx="305" cy="580" r="5" fill="#7a5a30" stroke="#3a2810" stroke-width="1"/>
+  <circle cx="350" cy="405" r="5" fill="#7a5a30" stroke="#3a2810" stroke-width="1"/>
+  <circle cx="520" cy="650" r="5" fill="#7a5a30" stroke="#3a2810" stroke-width="1"/>
+  <circle cx="515" cy="580" r="5" fill="#7a5a30" stroke="#3a2810" stroke-width="1"/>
+  <circle cx="470" cy="405" r="5" fill="#7a5a30" stroke="#3a2810" stroke-width="1"/>
+
+  <!-- West sheet envelope -->
+  <path d="M 200,720
+           L 200,705
+           Q 220,680 280,620
+           Q 290,530 330,400
+           Q 355,330 380,297
+           Q 386,300 392,302
+           L 382,290
+           L 378,282"
+        fill="none" stroke="#2563a8" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- East sheet envelope -->
+  <path d="M 620,720
+           L 620,705
+           Q 600,680 540,620
+           Q 530,530 490,400
+           Q 465,330 440,297
+           Q 434,300 428,302
+           L 438,290
+           L 442,282"
+        fill="none" stroke="#2563a8" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- Anchor stones -->
+  <ellipse cx="208" cy="718" rx="8" ry="4" fill="#5a5550" stroke="#1a1a1a" stroke-width="0.8"/>
+  <ellipse cx="226" cy="718" rx="6" ry="3" fill="#5a5550" stroke="#1a1a1a" stroke-width="0.8"/>
+  <ellipse cx="612" cy="718" rx="8" ry="4" fill="#5a5550" stroke="#1a1a1a" stroke-width="0.8"/>
+  <ellipse cx="594" cy="718" rx="6" ry="3" fill="#5a5550" stroke="#1a1a1a" stroke-width="0.8"/>
+
+  <!-- Roll-up battens -->
+  <circle cx="208" cy="710" r="4" fill="#a08660" stroke="#5a3a1a" stroke-width="1.2"/>
+  <circle cx="612" cy="710" r="4" fill="#a08660" stroke="#5a3a1a" stroke-width="1.2"/>
+
+  <!-- Battens at purlins -->
+  <line class="batten" x1="282" y1="658" x2="308" y2="646" />
+  <line class="batten" x1="280" y1="588" x2="312" y2="576" />
+  <line class="batten" x1="330" y1="415" x2="364" y2="405" />
+  <line class="batten" x1="538" y1="658" x2="512" y2="646" />
+  <line class="batten" x1="540" y1="588" x2="508" y2="576" />
+  <line class="batten" x1="490" y1="415" x2="456" y2="405" />
+
+  <!-- Vent cap propped open -->
+  <path d="M 386,290 Q 400,240 430,250"
+        fill="none" stroke="#2563a8" stroke-width="2.5"/>
+  <line x1="430" y1="250" x2="428" y2="295" stroke="#5a3a1a" stroke-width="2"/>
+
+  <!-- Vent cap closed (ghosted) -->
+  <path d="M 386,290 Q 410,276 434,290"
+        fill="none" stroke="#2563a8" stroke-width="2" stroke-dasharray="4,3" opacity="0.35"/>
+
+  <!-- Hot air arrow rising through vent -->
+  <path d="M 410,290 L 410,180" stroke="#c84a2a" stroke-width="2.5" fill="none" marker-end="url(#hot-head)"/>
+
+  <!-- Labels — distributed around the figure with clear leaders -->
+
+  <!-- West sheet label (left, well clear) -->
+  <g transform="translate(110, 460)">
+    <text x="0" y="0" text-anchor="middle" class="label-sm" style="fill:#2563a8; font-weight:700;">west sheet</text>
+    <text x="0" y="14" text-anchor="middle" class="label-sm" style="fill:#2563a8;">8m × 10m</text>
+    <text x="0" y="28" text-anchor="middle" class="label-sm" style="fill:#2563a8;">(8m drape)</text>
+  </g>
+
+  <!-- East sheet label (right, well clear) -->
+  <g transform="translate(710, 460)">
+    <text x="0" y="0" text-anchor="middle" class="label-sm" style="fill:#2563a8; font-weight:700;">east sheet</text>
+    <text x="0" y="14" text-anchor="middle" class="label-sm" style="fill:#2563a8;">8m × 10m</text>
+    <text x="0" y="28" text-anchor="middle" class="label-sm" style="fill:#2563a8;">(8m drape)</text>
+  </g>
+
+  <!-- Vent cap labels — top, with clear leaders -->
+  <text x="600" y="190" class="label-sm" style="fill:#2563a8; font-weight:700;">vent cap propped open</text>
+  <line x1="598" y1="194" x2="436" y2="245" stroke="#555" stroke-width="0.6"/>
+
+  <text x="220" y="190" class="label-sm" style="fill:#2563a8; opacity:0.65; font-style:italic;">vent cap closed (ghosted)</text>
+  <line x1="278" y1="196" x2="394" y2="282" stroke="#555" stroke-width="0.6" opacity="0.5"/>
+
+  <!-- Hot air rising label -->
+  <text x="410" y="160" text-anchor="middle" class="label-sm" style="fill:#c84a2a; font-weight:700;">hot air rises</text>
+
+  <!-- Roll-up labels at base -->
+  <text x="208" y="772" text-anchor="middle" class="label-sm" style="font-weight:600;">roll-up batten</text>
+  <text x="612" y="772" text-anchor="middle" class="label-sm" style="font-weight:600;">roll-up batten</text>
+
+  <!-- Twin ridge label -->
+  <text x="200" y="320" text-anchor="middle" class="label-sm" style="font-style:italic; fill:#7a5a30; font-weight:600;">twin ridge</text>
+  <text x="200" y="334" text-anchor="middle" class="label-sm" style="font-style:italic; fill:#7a5a30;">poles</text>
+  <line x1="234" y1="324" x2="386" y2="298" stroke="#555" stroke-width="0.6"/>
+
+  <!-- Dim — 3m base -->
+  <line x1="305" y1="752" x2="305" y2="790" stroke="#c9a227" stroke-width="0.5" stroke-dasharray="2,3"/>
+  <line x1="515" y1="752" x2="515" y2="790" stroke="#c9a227" stroke-width="0.5" stroke-dasharray="2,3"/>
+  <line x1="305" y1="787" x2="515" y2="787" class="dim-line" marker-start="url(#arr-s)" marker-end="url(#arr-e)"/>
+  <rect x="392" y="778" width="36" height="18" rx="2" fill="white" opacity="0.95"/>
+  <text x="410" y="791" text-anchor="middle" class="dim">3m</text>
+</svg>

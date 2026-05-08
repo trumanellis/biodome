@@ -43,6 +43,11 @@ export default defineConfig({
           autogenerate: { directory: 'greenhouse' },
         },
         {
+          label: 'Gothic Tunnel Greenhouse (30m², 6.5m tall)',
+          collapsed: true,
+          autogenerate: { directory: 'gothic-greenhouse' },
+        },
+        {
           label: 'Standard BioDome (28m²)',
           collapsed: true,
           autogenerate: { directory: 'standard-biodome' },
