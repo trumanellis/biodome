@@ -5,3 +5,5 @@ dist/
 .svelte-kit/
 .vite/
 .omc/
+.jj-workspaces/
+.DS_Store

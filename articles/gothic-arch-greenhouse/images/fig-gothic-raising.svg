@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540">
+  <defs>
+    <style>
+      .label { font-family: -apple-system, system-ui, sans-serif; fill: #1a2e1a; font-size: 12px; }
+      .label-sm { font-family: -apple-system, system-ui, sans-serif; fill: #555; font-size: 11px; }
+      .panel-title { font-family: -apple-system, system-ui, sans-serif; fill: #2d4a2d; font-size: 13px; font-weight: 700; }
+      .pole { stroke: #5a3a1a; stroke-width: 4; fill: none; stroke-linecap: round; }
+      .ridge { stroke: #7a5a30; stroke-width: 4; fill: none; stroke-linecap: round; }
+      .brace { stroke: #888; stroke-width: 2; fill: none; stroke-linecap: round; stroke-dasharray: 4,3; }
+      .ground-line { stroke: #5a3a1a; stroke-width: 1.5; }
+      .ground { fill: #b89968; }
+    </style>
+  </defs>
+
+  <text x="600" y="24" text-anchor="middle" class="label" style="font-size:15px; font-weight:700;">Tall Arch Raising Sequence — Three Stages</text>
+
+  <!--
+    Each panel ~400 wide, 460 tall.
+    50px = 1m for arch dims (smaller scale than section because the structure is tall).
+    Tunnel width 3m × 50 = 150px. Apex 6.5m × 50 = 325px.
+    Front face: base x = panel_x + 100 (left), panel_x + 250 (right). Apex at panel_x + 175, panel_y + 95.
+    Ground line at panel_y + 420.
+    Pole vertical from base up 1m × 50 = 50px → wall top at panel_y + 370. Then curve to apex.
+
+    Oblique projection: each subsequent arch offset (+30, -10).
+  -->
+
+  <!-- ============== PANEL 1 ============== -->
+  <g transform="translate(40, 60)">
+    <text x="200" y="0" text-anchor="middle" class="panel-title">1. First arch (gable end)</text>
+    <text x="200" y="14" text-anchor="middle" class="label-sm">Three people raise it; brace with diagonals — alone, it's unstable</text>
+
+    <!-- Ground -->
+    <rect x="20" y="420" width="380" height="40" class="ground"/>
+    <line x1="20" y1="420" x2="400" y2="420" class="ground-line"/>
+
+    <!-- First arch — base (100, 420) and (250, 420), apex at (175, 95) -->
+    <path class="pole" d="M 100,420 L 100,370 C 100,290 130,160 175,95 L 195,82" />
+    <path class="pole" d="M 250,420 L 250,370 C 250,290 220,160 175,95 L 155,82" />
+
+    <ellipse cx="175" cy="95" rx="14" ry="6" stroke="#888" stroke-width="1.2" fill="none"/>
+
+    <!-- Diagonal braces (long, anchored well out from base) -->
+    <line class="brace" x1="100" y1="370" x2="40" y2="420" />
+    <line class="brace" x1="250" y1="370" x2="310" y2="420" />
+
+    <!-- Brace label -->
+    <text x="40" y="445" class="label-sm" style="font-style:italic;">brace pole</text>
+
+    <!-- Arch label -->
+    <text x="175" y="220" text-anchor="middle" class="label-sm" style="font-weight:600; fill:#3D5A3D;">Arch 1</text>
+    <text x="175" y="234" text-anchor="middle" class="label-sm" style="font-style:italic;">~6.5m</text>
+  </g>
+
+  <!-- ============== PANEL 2 ============== -->
+  <g transform="translate(440, 60)">
+    <text x="200" y="0" text-anchor="middle" class="panel-title">2. Second arch + twin ridges</text>
+    <text x="200" y="14" text-anchor="middle" class="label-sm">Set Arch 2 at 2m, then lash both ridge poles — west and east of apex</text>
+
+    <!-- Ground -->
+    <rect x="20" y="420" width="380" height="40" class="ground"/>
+    <line x1="20" y1="420" x2="400" y2="420" class="ground-line"/>
+
+    <!-- Arch 2 (back, offset +40, -12) -->
+    <g opacity="0.85">
+      <path class="pole" d="M 140,408 L 140,358 C 140,278 170,148 215,83 L 235,70" />
+      <path class="pole" d="M 290,408 L 290,358 C 290,278 260,148 215,83 L 195,70" />
+      <ellipse cx="215" cy="83" rx="14" ry="6" stroke="#888" stroke-width="1.2" fill="none"/>
+    </g>
+
+    <!-- Arch 1 (front) -->
+    <path class="pole" d="M 100,420 L 100,370 C 100,290 130,160 175,95 L 195,82" />
+    <path class="pole" d="M 250,420 L 250,370 C 250,290 220,160 175,95 L 155,82" />
+    <ellipse cx="175" cy="95" rx="14" ry="6" stroke="#888" stroke-width="1.2" fill="none"/>
+
+    <!-- Twin ridges (one west of apex, one east of apex) -->
+    <!-- West ridge: connects west sides of both apex crossings, ~12px left of apex -->
+    <line class="ridge" x1="163" y1="108" x2="203" y2="96" />
+    <!-- East ridge: connects east sides, ~12px right of apex -->
+    <line class="ridge" x1="187" y1="108" x2="227" y2="96" />
+
+    <!-- Ridge labels -->
+    <text x="120" y="124" class="label-sm" style="font-style:italic; font-weight:600; fill:#7a5a30;">west ridge</text>
+    <line x1="146" y1="120" x2="166" y2="112" stroke="#555" stroke-width="0.6"/>
+    <text x="270" y="100" class="label-sm" style="font-style:italic; font-weight:600; fill:#7a5a30;">east ridge</text>
+    <line x1="268" y1="100" x2="226" y2="98" stroke="#555" stroke-width="0.6"/>
+
+    <!-- Note about gap -->
+    <text x="200" y="58" text-anchor="middle" class="label-sm" style="font-style:italic; fill:#c84a2a;">~30cm gap = ridge vent</text>
+
+    <!-- Arch labels -->
+    <text x="175" y="220" text-anchor="middle" class="label-sm" style="font-weight:600; fill:#3D5A3D;">A1</text>
+    <text x="215" y="208" text-anchor="middle" class="label-sm" style="font-weight:600; fill:#3D5A3D; opacity:0.85;">A2</text>
+
+    <!-- 2m spacing -->
+    <line x1="100" y1="438" x2="140" y2="426" stroke="#c9a227" stroke-width="0.8"/>
+    <text x="120" y="455" text-anchor="middle" class="label-sm" style="fill:#c9a227; font-weight:600;">2m</text>
+  </g>
+
+  <!-- ============== PANEL 3 ============== -->
+  <g transform="translate(840, 60)">
+    <text x="200" y="0" text-anchor="middle" class="panel-title">3. All six arches + twin ridges complete</text>
+    <text x="200" y="14" text-anchor="middle" class="label-sm">Each subsequent arch lashed to both ridge poles → ridge vent runs full 10m</text>
+
+    <!-- Ground -->
+    <rect x="0" y="420" width="400" height="40" class="ground"/>
+    <line x1="0" y1="420" x2="400" y2="420" class="ground-line"/>
+
+    <!--
+      6 arches at offsets (n*36, n*-10) — slightly compressed so they all fit.
+      Front arch: base (50, 420) and (200, 420), apex (125, 95).
+    -->
+    <!-- Arch 6 (back) -->
+    <g opacity="0.35">
+      <path class="pole" d="M 230,370 L 230,322 C 230,242 260,114 305,52" />
+      <path class="pole" d="M 380,370 L 380,322 C 380,242 350,114 305,52" />
+    </g>
+    <!-- Arch 5 -->
+    <g opacity="0.5">
+      <path class="pole" d="M 194,380 L 194,332 C 194,252 224,124 269,62" />
+      <path class="pole" d="M 344,380 L 344,332 C 344,252 314,124 269,62" />
+    </g>
+    <!-- Arch 4 -->
+    <g opacity="0.65">
+      <path class="pole" d="M 158,390 L 158,342 C 158,262 188,134 233,72" />
+      <path class="pole" d="M 308,390 L 308,342 C 308,262 278,134 233,72" />
+    </g>
+    <!-- Arch 3 -->
+    <g opacity="0.78">
+      <path class="pole" d="M 122,400 L 122,352 C 122,272 152,144 197,82" />
+      <path class="pole" d="M 272,400 L 272,352 C 272,272 242,144 197,82" />
+    </g>
+    <!-- Arch 2 -->
+    <g opacity="0.9">
+      <path class="pole" d="M 86,410 L 86,362 C 86,282 116,154 161,92" />
+      <path class="pole" d="M 236,410 L 236,362 C 236,282 206,154 161,92" />
+    </g>
+    <!-- Arch 1 (front) -->
+    <path class="pole" d="M 50,420 L 50,370 C 50,290 80,162 125,100" />
+    <path class="pole" d="M 200,420 L 200,290 C 200,290 170,162 125,100" />
+
+    <!-- Twin ridge poles — running through all 6 apex crossings -->
+    <!-- West ridge: through west-side of each apex crossing -->
+    <path class="ridge" d="M 113,113 L 149,103 L 185,93 L 221,83 L 257,73 L 293,63" />
+    <!-- East ridge: through east-side of each apex crossing -->
+    <path class="ridge" d="M 137,113 L 173,103 L 209,93 L 245,83 L 281,73 L 317,63" />
+
+    <!-- Wire wraps at apex crossings (small ellipses) -->
+    <ellipse cx="125" cy="100" rx="10" ry="5" stroke="#888" stroke-width="1.2" fill="none"/>
+    <ellipse cx="161" cy="92" rx="10" ry="5" stroke="#888" stroke-width="1.2" fill="none" opacity="0.9"/>
+    <ellipse cx="197" cy="82" rx="10" ry="5" stroke="#888" stroke-width="1.2" fill="none" opacity="0.78"/>
+    <ellipse cx="233" cy="72" rx="10" ry="5" stroke="#888" stroke-width="1.2" fill="none" opacity="0.65"/>
+    <ellipse cx="269" cy="62" rx="10" ry="5" stroke="#888" stroke-width="1.2" fill="none" opacity="0.5"/>
+    <ellipse cx="305" cy="52" rx="10" ry="5" stroke="#888" stroke-width="1.2" fill="none" opacity="0.35"/>
+
+    <!-- Labels -->
+    <text x="50" y="450" text-anchor="middle" class="label-sm" style="font-weight:600; fill:#3D5A3D;">A1</text>
+    <text x="86" y="442" text-anchor="middle" class="label-sm" style="font-weight:600; fill:#3D5A3D; opacity:0.9;">A2</text>
+    <text x="122" y="434" text-anchor="middle" class="label-sm" style="font-weight:600; fill:#3D5A3D; opacity:0.78;">A3</text>
+    <text x="158" y="426" text-anchor="middle" class="label-sm" style="font-weight:600; fill:#3D5A3D; opacity:0.65;">A4</text>
+    <text x="194" y="418" text-anchor="middle" class="label-sm" style="font-weight:600; fill:#3D5A3D; opacity:0.5;">A5</text>
+    <text x="230" y="410" text-anchor="middle" class="label-sm" style="font-weight:600; fill:#3D5A3D; opacity:0.35;">A6</text>
+
+    <!-- 10m total -->
+    <line x1="50" y1="430" x2="230" y2="404" stroke="#c9a227" stroke-width="0.8"/>
+    <text x="140" y="448" text-anchor="middle" class="label-sm" style="fill:#c9a227; font-weight:600;">10m total</text>
+
+    <!-- Ridge vent label -->
+    <text x="225" y="32" text-anchor="middle" class="label-sm" style="fill:#c84a2a; font-weight:700;">continuous ridge vent runs full length</text>
+  </g>
+</svg>

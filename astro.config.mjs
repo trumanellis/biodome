@@ -38,14 +38,14 @@ export default defineConfig({
           ],
         },
         {
-          label: 'Greenhouse BioDome (28m²)',
+          label: 'Gothic Tunnel Greenhouse (30m², 6.5m tall)',
           badge: { text: 'Start Here', variant: 'success' },
-          autogenerate: { directory: 'greenhouse' },
+          autogenerate: { directory: 'gothic-greenhouse' },
         },
         {
-          label: 'Gothic Tunnel Greenhouse (30m², 6.5m tall)',
+          label: 'Greenhouse BioDome (28m²)',
           collapsed: true,
-          autogenerate: { directory: 'gothic-greenhouse' },
+          autogenerate: { directory: 'greenhouse' },
         },
         {
           label: 'Standard BioDome (28m²)',

@@ -607,9 +607,13 @@ figcaption {
   color: var(--bd-mist);
 }
 
-[data-theme='dark'] .sidebar-content a:hover,
-[data-theme='dark'] .sidebar-content a[aria-current='page'] {
+[data-theme='dark'] .sidebar-content a:hover {
   color: var(--bd-glow);
+}
+
+[data-theme='dark'] .sidebar-content a[aria-current='page'] {
+  color: var(--bd-night);
+  font-weight: 600;
 }
 
 /* ============================================================

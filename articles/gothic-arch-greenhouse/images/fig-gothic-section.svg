@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 820">
+  <defs>
+    <style>
+      .label { font-family: -apple-system, system-ui, sans-serif; fill: #1a2e1a; font-size: 12px; }
+      .label-sm { font-family: -apple-system, system-ui, sans-serif; fill: #555; font-size: 11px; }
+      .dim { font-family: -apple-system, system-ui, sans-serif; fill: #c9a227; font-size: 12px; font-weight: 600; }
+      .dim-line { stroke: #c9a227; stroke-width: 1; fill: none; }
+      .pole { stroke: #5a3a1a; stroke-width: 6; fill: none; stroke-linecap: round; }
+      .ground { fill: #b89968; }
+      .ground-line { stroke: #5a3a1a; stroke-width: 2; }
+    </style>
+    <marker id="arr-s" markerWidth="8" markerHeight="6" refX="0" refY="3" orient="auto">
+      <path d="M8,0 L0,3 L8,6" stroke="#c9a227" fill="none" stroke-width="1"/>
+    </marker>
+    <marker id="arr-e" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" stroke="#c9a227" fill="none" stroke-width="1"/>
+    </marker>
+  </defs>
+
+  <!-- Title with breathing room -->
+  <text x="360" y="40" text-anchor="middle" class="label" style="font-size:15px; font-weight:700;">Tall Gothic Arch — Cross-Section</text>
+  <text x="360" y="62" text-anchor="middle" class="label-sm">3m base × 6.5m apex × 1m vertical wall, with twin ridge poles and a 30cm ridge vent gap</text>
+
+  <!--
+    70px = 1m. Ground at y=720.
+    Centre x=360.
+    Base postholes at x=255 (left) and x=465 (right). 3m apart.
+    Apex at (360, 265) — 6.5m above ground (455px).
+    Wall vertical from (255, 720) to (255, 650) — 1m wall.
+    Curve from (255, 650) to apex (360, 265).
+    Pole extension past apex ~30cm = 21px.
+  -->
+
+  <!-- Ground -->
+  <rect x="0" y="720" width="720" height="80" class="ground"/>
+  <line x1="0" y1="720" x2="720" y2="720" class="ground-line"/>
+
+  <!-- Posthole indications -->
+  <rect x="247" y="720" width="16" height="32" fill="#a08660" stroke="#5a3a1a" stroke-width="1"/>
+  <rect x="457" y="720" width="16" height="32" fill="#a08660" stroke="#5a3a1a" stroke-width="1"/>
+
+  <!-- Gravel dots -->
+  <circle cx="252" cy="730" r="1.5" fill="#5a3a1a" opacity="0.6"/>
+  <circle cx="258" cy="736" r="1.5" fill="#5a3a1a" opacity="0.6"/>
+  <circle cx="255" cy="744" r="1.5" fill="#5a3a1a" opacity="0.6"/>
+  <circle cx="462" cy="730" r="1.5" fill="#5a3a1a" opacity="0.6"/>
+  <circle cx="468" cy="736" r="1.5" fill="#5a3a1a" opacity="0.6"/>
+  <circle cx="465" cy="744" r="1.5" fill="#5a3a1a" opacity="0.6"/>
+
+  <!-- Left pole -->
+  <path class="pole" d="M 255,752 L 255,650 C 255,490 300,320 360,265 L 380,253" />
+  <!-- Right pole -->
+  <path class="pole" d="M 465,752 L 465,650 C 465,490 420,320 360,265 L 340,253" />
+
+  <!-- Wire wrap at apex -->
+  <g stroke="#888" stroke-width="1.2" fill="none" opacity="0.85">
+    <ellipse cx="360" cy="265" rx="22" ry="10" transform="rotate(-15 360 265)"/>
+    <ellipse cx="360" cy="265" rx="22" ry="10" transform="rotate(15 360 265)"/>
+  </g>
+
+  <!-- Twin ridge poles (end-on) — 30cm apart, just below apex -->
+  <circle cx="342" cy="295" r="7" fill="#7a5a30" stroke="#3a2810" stroke-width="1.5"/>
+  <circle cx="378" cy="295" r="7" fill="#7a5a30" stroke="#3a2810" stroke-width="1.5"/>
+
+  <!-- Ridge vent gap callout — clean, with leader -->
+  <text x="490" y="280" class="label-sm" style="fill:#c84a2a; font-weight:700;">~30cm ridge</text>
+  <text x="490" y="294" class="label-sm" style="fill:#c84a2a; font-weight:700;">vent gap</text>
+  <line x1="487" y1="290" x2="384" y2="295" stroke="#c84a2a" stroke-width="0.6"/>
+
+  <!-- Twin ridge label -->
+  <text x="490" y="320" class="label-sm" style="font-style:italic; fill:#7a5a30; font-weight:600;">twin ridge poles</text>
+  <text x="490" y="334" class="label-sm" style="font-style:italic; fill:#7a5a30;">(west + east)</text>
+  <line x1="487" y1="324" x2="384" y2="298" stroke="#555" stroke-width="0.6"/>
+
+  <!-- Apex callout (well to the right) -->
+  <text x="490" y="240" class="label-sm" style="font-style:italic;">apex crossing</text>
+  <text x="490" y="254" class="label-sm" style="font-style:italic;">(wire-lashed)</text>
+  <line x1="487" y1="244" x2="382" y2="262" stroke="#555" stroke-width="0.6"/>
+
+  <!-- Purlins (3 per side) -->
+  <!-- Low purlin at hip (~1m): on outside of vertical wall, y=650 -->
+  <circle cx="250" cy="650" r="5" fill="#7a5a30" stroke="#3a2810" stroke-width="1"/>
+  <circle cx="470" cy="650" r="5" fill="#7a5a30" stroke="#3a2810" stroke-width="1"/>
+  <!-- Mid purlin at ~2m: y=580, on early curve -->
+  <circle cx="255" cy="580" r="5" fill="#7a5a30" stroke="#3a2810" stroke-width="1"/>
+  <circle cx="465" cy="580" r="5" fill="#7a5a30" stroke="#3a2810" stroke-width="1"/>
+  <!-- High purlin at ~4.5m: y=405 -->
+  <circle cx="300" cy="405" r="5" fill="#7a5a30" stroke="#3a2810" stroke-width="1"/>
+  <circle cx="420" cy="405" r="5" fill="#7a5a30" stroke="#3a2810" stroke-width="1"/>
+
+  <!-- Purlin labels — left side, clean leaders -->
+  <text x="220" y="654" text-anchor="end" class="label-sm" style="font-style:italic;">low purlin</text>
+  <text x="220" y="668" text-anchor="end" class="label-sm" style="font-style:italic;">(~1m)</text>
+  <line x1="223" y1="652" x2="244" y2="652" stroke="#555" stroke-width="0.6"/>
+
+  <text x="220" y="582" text-anchor="end" class="label-sm" style="font-style:italic;">mid purlin</text>
+  <text x="220" y="596" text-anchor="end" class="label-sm" style="font-style:italic;">(~2m)</text>
+  <line x1="223" y1="582" x2="249" y2="582" stroke="#555" stroke-width="0.6"/>
+
+  <text x="220" y="408" text-anchor="end" class="label-sm" style="font-style:italic;">high purlin</text>
+  <text x="220" y="422" text-anchor="end" class="label-sm" style="font-style:italic;">(~4.5m)</text>
+  <line x1="223" y1="408" x2="294" y2="408" stroke="#555" stroke-width="0.6"/>
+
+  <!-- Pole base callout -->
+  <text x="600" y="740" class="label-sm" style="font-style:italic;">posthole + gravel</text>
+  <text x="600" y="752" class="label-sm" style="font-style:italic;">(40cm deep)</text>
+  <line x1="597" y1="744" x2="478" y2="740" stroke="#555" stroke-width="0.6"/>
+
+  <!-- Dimensions -->
+
+  <!-- 3m base width (well below ground) -->
+  <line x1="255" y1="752" x2="255" y2="790" stroke="#c9a227" stroke-width="0.5" stroke-dasharray="2,3"/>
+  <line x1="465" y1="752" x2="465" y2="790" stroke="#c9a227" stroke-width="0.5" stroke-dasharray="2,3"/>
+  <line x1="255" y1="787" x2="465" y2="787" class="dim-line" marker-start="url(#arr-s)" marker-end="url(#arr-e)"/>
+  <rect x="342" y="778" width="36" height="18" rx="2" fill="white" opacity="0.95"/>
+  <text x="360" y="791" text-anchor="middle" class="dim">3m</text>
+
+  <!-- 6.5m apex height (right side) -->
+  <line x1="360" y1="265" x2="660" y2="265" stroke="#c9a227" stroke-width="0.5" stroke-dasharray="2,3"/>
+  <line x1="360" y1="720" x2="660" y2="720" stroke="#c9a227" stroke-width="0.5" stroke-dasharray="2,3"/>
+  <line x1="655" y1="265" x2="655" y2="720" class="dim-line" marker-start="url(#arr-s)" marker-end="url(#arr-e)"/>
+  <rect x="664" y="486" width="48" height="18" rx="2" fill="white" opacity="0.95"/>
+  <text x="688" y="499" text-anchor="middle" class="dim">6.5m</text>
+
+  <!-- 1m wall height (left side) -->
+  <line x1="255" y1="650" x2="60" y2="650" stroke="#c9a227" stroke-width="0.5" stroke-dasharray="2,3"/>
+  <line x1="255" y1="720" x2="60" y2="720" stroke="#c9a227" stroke-width="0.5" stroke-dasharray="2,3"/>
+  <line x1="63" y1="650" x2="63" y2="720" class="dim-line" marker-start="url(#arr-s)" marker-end="url(#arr-e)"/>
+  <rect x="38" y="676" width="50" height="18" rx="2" fill="white" opacity="0.95"/>
+  <text x="63" y="689" text-anchor="middle" class="dim" style="font-size:11px;">1m wall</text>
+</svg>
