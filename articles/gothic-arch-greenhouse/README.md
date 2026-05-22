@@ -1,55 +1,48 @@
-# 🌿 Gothic Arch Greenhouse
+# The Silent Invasion
 
-### *A 30m² tunnel for citrus, banana, and papaya — woven from the eucalyptus that's drinking our hillsides dry.*
+### The Problem
+I know at least three people who have lost their homes to fire season in this part of Portugal.
 
-![A tall gothic-arched eucalyptus-pole greenhouse on a Portuguese hillside at golden hour — six gothic arches, twin parallel ridge poles, translucent plastic skin, gabion stone wall in the foreground](images/gothic-greenhouse-long-exterior.png)
-*The finished structure at Templo da Água Lila — six gothic arches, twin parallel ridge poles, two off-the-roll plastic sheets meeting at the apex with a 30cm slot of open sky along the spine.*
+It never used to be this way, but invasives have a way of becoming permanent additions to an ecosystem, and we’ve got to learn how to live in harmony with them.
 
----
-
-The problem with eucalyptus — or *fire trees*, as they're known in their native Australia — is that they have no natural predators here. Their resinous tissue repels all but the cuddly koala, and we've got none of those around to make a dent.
-
-This article walks you through one such greenhouse — a tall, pointed-arch tunnel I've designed for **Templo da Água Lila** in the *Montanhas Mágicas* of central Portugal. The goal: grow citrus, banana, and small fruit trees at altitude, in a place that frosts, using almost nothing but eucalyptus poles and two off-the-roll plastic sheets.
-
-The full build guide — every measurement, every Portuguese supplier, every diagram — lives at [**biodome.agualila.earth**](https://biodome.agualila.earth/gothic-greenhouse/01-build-guide/). What follows is the *why* and the *shape*, so you can decide if it belongs on your land.
-
----
-
-## The Trees That Drink the Springs Dry
-
-Eucalyptus spreads like wildfire in Portugal — and increasingly, *as* wildfire.
-
-I know at least three families in this part of the country who have lost their homes to fire season. It never used to be this way. But invasives have a way of becoming permanent additions to an ecosystem, and we have to learn how to live in harmony with what's here.
-
-The numbers are blunt. *Eucalyptus globulus* now occupies **26% of Portuguese forest cover** — over **800,000 hectares**. Each mature tree drinks 20–30 litres of water a day, stolen straight from the watershed. The leaves and bark are loaded with volatile oils that the species evolved to drop as kindling — fire is how it clears competition back home in Australia. Allelopathic chemicals leach out of the leaves and roots and poison everything that tries to grow underneath, which is why the ground beneath a eucalyptus stand is bare.
-
-Where there should be cork oaks, stone pines, strawberry trees humming with bees and birdsong, there is silence. A green silence. A monocrop pretending to be a forest.
-
-And every fire season, more homes turn to charred stone. Whole families end up living in cold campers through wet winters while they try to rebuild — usually with expensive industrial materials, on a timeline that can bankrupt them.
-
-This is the inheritance. There is no point pretending it isn't.
+The problem with eucalyptus — or _fire trees_, as they’re known in their native Australia — is that they have no natural predators here. Their resinous tissue repels all but the cuddly koala, and we’ve got none of those around to make a dent. About **26% of Portuguese forests** have been conquered by _Eucalyptus globulus_. The ground beneath them is bare. Nothing grows. Where there should be cork oaks, stone pines, and strawberry trees humming with life, there is silence. 
 
 ![Tall stand of Eucalyptus globulus on a Portuguese hillside](images/TallEucs.jpeg)
 *Tall* Eucalyptus globulus *on a Portuguese hillside. The species evolved in Australia to encourage fire — here, with no native predators and 26% of forest cover already taken, it's doing exactly that.*
 
+	The Eucalyptus Problem
+	- Drinks **20-30 liters of water per day** (stolen from the watershed)
+	- Releases allelopathic chemicals that poison other plants
+	- Drops volatile oil-rich bark that turns landscapes into tinderboxes
+	- Acidifies soil and destroys beneficial microbes
+	- Creates biological deserts where rich ecosystems once thrived
+
+Every fire season leaves behind charred stone ruins of homes that used to be, homes that need rebuilding. And the rebuilding of a charred home can quickly bankrupt a family. Where are they going to stay during the multi-year process? Whole families stuck together in a cold camper trying to survive wet winters while they rebuild with expensive and toxic manmade materials.
+
 ---
 
-## The Cure Is the Same Tree
+## Two Problems, One Dome
 
-The eucalyptus has to come down. That part is settled.
+But there’s another predator afoot with an insatiable appetite that just needs to develop a taste for eucalyptus flesh. The widespread fires are in part responsible for this herbivore’s arrival — every fire season creates demand for rebuilding.
 
-The interesting question is what we do with it once it's lying on the ground.
+If only we could solve two problems with one dome. How do we unleash the insatiable predator of home construction against the very trees that are destroying our homes? And how do we selectively target their young so that they stop coming back?
 
-A few years ago, my in-laws came to visit and taught my wife and me how to build a wattle fence around our garden to keep the wild boars out of the vegetables. We harvested invasive poles from our own land, drove them into the dirt as vertical stakes, wove thinner branches between them, and finished the whole thing in an afternoon for the cost of nothing. Then we interplanted it with wisteria and passion fruit — the idea being that the living vines would replace the wood as it rots out in five years.
+**The solution exists already in the heart of the problem.**
 
-That fence is still standing. The vines are climbing.
+We find a way to construct quick, easy, and cheap structures from young flexible eucalyptus poles — in a way that doesn’t resist the euc’s natural tendency to twist as it dries. Enter the **Regenerative BioDome Project**, a regenerative experiment happening at Agua Lila. 
 
-![Wattle fence at Água Lila built from invasive eucalyptus poles, with sunlight filtering through](images/wattle-fence-eucalyptus-sunlight.jpg)
-*Our wattle fence at Água Lila — built for free from locally-cleared invasive poles. The first time I'd seen what young eucalyptus actually wants to do.*
+	This Project Is
+	90% ecological restoration, 10% building project. 
+	You’re not just constructing a home. 
+	You’re healing a watershed, preventing wildfires, enabling native forest regeneration, and demonstrating that restoration can create real value.
 
-That fence also taught me what young eucalyptus actually wants to do. It's a remarkable building material: light, springy, willing to bend into a smooth curve and then dry in place under tension. Each pole twists slightly as it cures, but in a structure with enough give, those small movements get absorbed instead of accumulating.
+## What If Removal Created Value?
+What if the act of removing invasive species produced something valuable? What if watershed healing could be economically viable? What if “waste” biomass became functional architecture?
 
-The follow-on question wrote itself. *If a young, thin pole bends willingly into a wattle fence, what does an older, longer pole want to do?*
+![A tall gothic-arched eucalyptus-pole greenhouse on a Portuguese hillside at golden hour — six gothic arches, twin parallel ridge poles, translucent plastic skin, gabion stone wall in the foreground](images/gothic-greenhouse-long-exterior.png)
+*The intended structure at Templo da Água Lila — six gothic arches, twin parallel ridge poles, two off-the-roll plastic sheets meeting at the apex with a 30cm slot of open sky along the spine.*
+
+
 
 The answer — after a lot of sketches and a lot of math — is that it wants to bend into a tall, narrow gothic arch. Eight metres of pole, butt in a posthole, thin end pulled inward and upward to meet its partner at a sharp point 6.5 metres overhead. Six of those arches in a line, two parallel ridge poles along the apex, plastic over the whole thing, and you have a tunnel tall enough for citrus.
 
