@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640"><style>text{font:15px system-ui,sans-serif;fill:#233e2c}.title{font-size:23px;font-weight:700}.small{font-size:13px}.dim{fill:#906b20;font-weight:600}.lead{fill:none;stroke:#667263;stroke-width:1}.cage{fill:url(#stone);stroke:#627263;stroke-width:2}.water{fill:none;stroke:#2d7da4;stroke-width:3}.wood{fill:#c59a65;stroke:#76542d;stroke-width:2}.earth{fill:#e5d3b7}</style><defs><pattern id="stone" width="22" height="18" patternUnits="userSpaceOnUse"><rect width="22" height="18" fill="#d5d7cf"/><path d="M0 4L9 0 17 4 22 1M0 13L7 8 17 11 22 7M9 0L7 8 10 18M17 4L17 11 21 18" fill="none" stroke="#8c9588"/></pattern><pattern id="gravel" width="13" height="11" patternUnits="userSpaceOnUse"><rect width="13" height="11" fill="#ecece3"/><circle cx="4" cy="4" r="2" fill="#a5aaa0"/><circle cx="10" cy="9" r="2" fill="#a5aaa0"/></pattern></defs><rect width="100%" height="100%" fill="#fbfaf5"/><text x="480" y="34" text-anchor="middle" class="title">Buried pole foot beneath a continuous gabion cage</text>
+<text x="480" y="59" text-anchor="middle">All depths measured from terrace grade — not from the cage base</text>
+<rect x="30" y="310" width="900" height="250" class="earth"/>
+<rect x="310" y="130" width="160" height="180" class="cage"/>
+<rect x="340" y="310" width="100" height="160" fill="url(#gravel)"/>
+
+<rect x="349" y="450" width="82" height="15" rx="3" fill="#a6a08c" stroke="#6c695d"/>
+<path d="M350 112V450M430 112V450" stroke="#36434a" stroke-width="10" fill="none"/><path d="M345 112H365M415 112H435" stroke="#36434a" stroke-width="4"/><rect x="356" y="113" width="68" height="337" fill="#fbfaf5"/><rect x="370" y="83" width="40" height="367" class="wood"/>
+<path d="M310 287H370M410 287H470M370 278Q390 270 410 278" fill="none" stroke="#58615c" stroke-width="3"/>
+<path d="M30 310H307M473 310H930" stroke="#785e43" stroke-width="2"/>
+<text x="45" y="302" class="dim">Terrace grade / datum 0</text>
+<path d="M470 130L480 304 645 323" class="water"/>
+<path d="M462 78V125" stroke="#74a6be" stroke-width="5"/><circle cx="456" cy="126" r="7" fill="#ac8351"/>
+<text x="40" y="125">Pole slides inside permanent pipe</text><path d="M255 128L370 165" class="lead"/>
+<text x="40" y="213">Stone bracing above grade</text><path d="M260 216L345 241" class="lead"/>
+<text x="40" y="386">Backfill OUTSIDE sleeve</text><path d="M240 388L345 408" class="lead"/>
+<text x="40" y="441">Drained support: detail pending</text><path d="M230 443L352 454" class="lead"/>
+<text x="40" y="505" class="small">Permanent sleeve; no fabric shown</text><path d="M295 501L340 469" class="lead"/>
+<text x="600" y="107">Roll-up batten on cage cap</text><path d="M595 110L463 128" class="lead"/>
+<text x="600" y="185">Cage: 40cm wide × 45cm tall</text><text x="600" y="206" class="small">Entire cage above prepared ground</text>
+<text x="600" y="264">Removable restraint: detail pending</text><path d="M595 267L466 287" class="lead"/>
+<text x="600" y="353">Cage bottom: grade 0</text><path d="M595 356L470 310" class="lead"/>
+<text x="600" y="416" class="dim">Pole butt: about −35cm</text><path d="M595 419L410 450" class="lead"/>
+<text x="600" y="473" class="dim">Hole bottom: −40cm</text><path d="M595 476L440 470" class="lead"/>
+<path d="M340 534H440M340 527V541M440 527V541" class="lead"/><text x="390" y="555" text-anchor="middle" class="dim">Hole width: size to sleeve</text>
+<text x="480" y="593" text-anchor="middle" class="small">Pipe material, size, support, drainage and restraint require specification.</text>
+<text x="480" y="616" text-anchor="middle" class="small">Sleeve stays in place. No stone inside pipe; drained support detail to be resolved.</text></svg>

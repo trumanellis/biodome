@@ -1,0 +1,215 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-80 0 1000 720">
+  <defs>
+    <style>
+      .label { font-family: -apple-system, system-ui, sans-serif; fill: #1a2e1a; font-size: 12px; }
+      .label-sm { font-family: -apple-system, system-ui, sans-serif; fill: #555; font-size: 11px; }
+      .dim { font-family: -apple-system, system-ui, sans-serif; fill: #c9a227; font-size: 12px; font-weight: 600; }
+      .dim-line { stroke: #c9a227; stroke-width: 1; fill: none; }
+      .mesh { stroke: #8a8276; stroke-width: 0.8; fill: none; }
+      .stone { fill: #ccc; stroke: #999; stroke-width: 1; }
+      .flat-stone { fill: #b0a890; stroke: #8a7e60; stroke-width: 1; }
+      .ground-fill { fill: #e7dcc4; }
+      .pea { fill: #d9cfae; }
+      .pole { fill: #8b6914; stroke: #5a4510; stroke-width: 1.5; }
+      .stake { fill: #a07a2a; stroke: #5a4510; stroke-width: 1; }
+      .wire { stroke: #555; stroke-width: 2.5; fill: none; }
+      .geotextile { stroke: #6a9a6a; stroke-width: 2; stroke-dasharray: 6,3; fill: none; }
+      .plastic { stroke: #2563a8; stroke-width: 2.5; fill: none; }
+      .apron { stroke: #1d4f86; stroke-width: 3; fill: none; }
+      .water { stroke: #4a90d9; stroke-width: 1.4; fill: none; }
+      .leader { stroke: #1a2e1a; stroke-width: 0.8; opacity: 0.55; fill: none; }
+    </style>
+    <marker id="c-s" markerWidth="8" markerHeight="6" refX="0" refY="3" orient="auto">
+      <path d="M8,0 L0,3 L8,6" stroke="#c9a227" fill="none" stroke-width="1"/>
+    </marker>
+    <marker id="c-e" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" stroke="#c9a227" fill="none" stroke-width="1"/>
+    </marker>
+    <marker id="w-e" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" stroke="#4a90d9" fill="none" stroke-width="1.2"/>
+    </marker>
+    <pattern id="pea-dots" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#d9cfae"/>
+      <circle cx="2" cy="2" r="1.6" fill="#b9ad88"/>
+      <circle cx="6" cy="6" r="1.6" fill="#c4b893"/>
+    </pattern>
+  </defs>
+
+  <!-- Title -->
+  <text x="420" y="26" text-anchor="middle" class="label" style="font-size:15px; font-weight:700;">Posthole + Gabion Collar — Cross-Section Through One Pole Foot</text>
+  <text x="420" y="46" text-anchor="middle" class="label-sm">Pea gravel below grade, gathered stone above it, and a drip apron that throws the roof water clear of the hole</text>
+
+  <!-- Scale: 5px = 1cm. Pole centre x=300. Grade y=320. Collar 40×40cm = x 200–400, y 120–320.
+       Posthole 25cm wide × 40cm deep = x 237–363, y 320–520. Inside of greenhouse is to the left. -->
+
+  <!-- Earth -->
+  <rect x="-60" y="320" width="940" height="360" class="ground-fill"/>
+
+  <!-- Swale (shallow ditch) outside the apron -->
+  <path d="M690,320 Q735,352 780,320 Z" fill="#f4efe2"/>
+  <path d="M690,320 Q735,352 780,320" stroke="#1a2e1a" stroke-width="1.2" fill="none"/>
+
+  <!-- Grade line (broken at the swale) -->
+  <line x1="-60" y1="320" x2="690" y2="320" stroke="#1a2e1a" stroke-width="1.5"/>
+  <line x1="780" y1="320" x2="880" y2="320" stroke="#1a2e1a" stroke-width="1.5"/>
+  <text x="876" y="314" text-anchor="end" class="label-sm" style="font-size:10px;">grade</text>
+  <text x="196" y="110" text-anchor="end" class="label-sm" style="font-style:italic;">← inside</text>
+  <text x="876" y="290" text-anchor="end" class="label-sm" style="font-style:italic;">outside →</text>
+
+  <!-- Posthole: pea gravel fill -->
+  <rect x="237" y="320" width="126" height="200" fill="url(#pea-dots)"/>
+  <!-- Geotextile lining the hole -->
+  <path d="M239,320 L239,518 L361,518 L361,320" class="geotextile"/>
+  <!-- Flat bearing stone at the bottom of the hole -->
+  <rect x="245" y="500" width="110" height="18" rx="4" class="flat-stone"/>
+
+  <!-- Ground stake (80cm), driven in one outer corner of the collar footprint -->
+  <rect x="371" y="260" width="10" height="400" class="stake"/>
+
+  <!-- Geotextile square under the collar -->
+  <line x1="196" y1="322" x2="237" y2="322" class="geotextile"/>
+  <line x1="363" y1="322" x2="404" y2="322" class="geotextile"/>
+
+  <!-- Gabion collar cage -->
+  <rect x="200" y="120" width="200" height="200" fill="none" stroke="#1a2e1a" stroke-width="2"/>
+  <g class="mesh">
+    <line x1="250" y1="120" x2="250" y2="320"/>
+    <line x1="350" y1="120" x2="350" y2="320"/>
+    <line x1="200" y1="170" x2="400" y2="170"/>
+    <line x1="200" y1="220" x2="400" y2="220"/>
+    <line x1="200" y1="270" x2="400" y2="270"/>
+  </g>
+
+  <!-- Stone fill, packed against the pole -->
+  <g class="stone">
+    <rect x="204" y="128" width="40" height="34" rx="9"/>
+    <rect x="206" y="172" width="38" height="40" rx="10"/>
+    <rect x="204" y="222" width="42" height="40" rx="11"/>
+    <rect x="206" y="272" width="40" height="44" rx="10"/>
+    <rect x="248" y="130" width="24" height="38" rx="8"/>
+    <rect x="248" y="178" width="24" height="44" rx="8"/>
+    <rect x="248" y="230" width="24" height="40" rx="8"/>
+    <rect x="248" y="278" width="24" height="38" rx="8"/>
+    <rect x="328" y="130" width="24" height="40" rx="8"/>
+    <rect x="328" y="180" width="24" height="42" rx="8"/>
+    <rect x="328" y="230" width="24" height="40" rx="8"/>
+    <rect x="328" y="280" width="24" height="36" rx="8"/>
+    <rect x="356" y="128" width="40" height="38" rx="10"/>
+    <rect x="356" y="174" width="12" height="40" rx="5"/>
+    <rect x="384" y="176" width="13" height="40" rx="5"/>
+    <rect x="356" y="224" width="12" height="44" rx="5"/>
+    <rect x="384" y="226" width="13" height="42" rx="5"/>
+    <rect x="356" y="276" width="40" height="40" rx="10"/>
+  </g>
+
+  <!-- Pole (10cm dia), butt on the flat stone -->
+  <rect x="275" y="72" width="50" height="428" class="pole"/>
+
+  <!-- Rebar cross-tie through the collar near grade, lashed to the pole -->
+  <line x1="200" y1="300" x2="400" y2="300" stroke="#6b3d1f" stroke-width="4"/>
+  <path d="M275,292 L325,308 M275,308 L325,292" class="wire"/>
+  <!-- Lashing from pole to stake -->
+  <path d="M325,262 L371,268 M325,272 L371,278" class="wire"/>
+
+  <!-- Rail pole on the collar tops (6cm), lashed to the arch pole -->
+  <circle cx="341" cy="105" r="15" fill="#a07a2a" stroke="#5a4510" stroke-width="1.5"/>
+
+  <!-- Drip apron: tucked under the rail, over the collar's outer face, out to the swale -->
+  <path class="apron" d="M332,121 L400,121 L404,124 L404,318 L700,330 L716,336"/>
+
+  <!-- Roll-up wall: sheet comes down outside the pole and wraps the batten resting on the apron -->
+  <path class="plastic" d="M338,66 C342,74 352,80 360,88"/>
+  <circle cx="374" cy="106" r="12" fill="#c8b07a" stroke="#5a4510" stroke-width="1.2"/>
+  <path class="plastic" d="M360,88 C352,100 356,120 374,119 C392,118 390,94 374,94"/>
+
+  <!-- Water path: down the sheet, off the batten, down the apron, out to the swale -->
+  <path class="water" d="M326,70 L348,90" marker-end="url(#w-e)"/>
+  <path class="water" d="M392,112 L410,150" marker-end="url(#w-e)"/>
+  <path class="water" d="M412,200 L412,270" marker-end="url(#w-e)"/>
+  <path class="water" d="M440,312 L640,320" marker-end="url(#w-e)"/>
+  <path class="water" d="M700,320 L728,338" marker-end="url(#w-e)"/>
+
+  <!-- Labels (left side) -->
+  <path class="leader" d="M150,140 L206,145"/>
+  <text x="146" y="138" text-anchor="end" class="label" style="font-weight:600;">Gabion collar</text>
+  <text x="146" y="152" text-anchor="end" class="label-sm">40 × 40 × 40cm, on grade</text>
+  <text x="146" y="165" text-anchor="end" class="label-sm">gathered stone 100–200mm</text>
+
+  <path class="leader" d="M150,230 L250,250"/>
+  <text x="146" y="228" text-anchor="end" class="label" style="font-weight:600;">Stone packed tight</text>
+  <text x="146" y="242" text-anchor="end" class="label-sm">against the pole</text>
+
+  <path class="leader" d="M150,296 L205,300"/>
+  <text x="146" y="292" text-anchor="end" class="label" style="font-weight:600;">Rebar cross-tie</text>
+  <text x="146" y="306" text-anchor="end" class="label-sm">pole butt lashed to it</text>
+
+  <path class="leader" d="M150,350 L198,323"/>
+  <text x="146" y="350" text-anchor="end" class="label" style="font-weight:600;">Geotextile under collar</text>
+  <text x="146" y="364" text-anchor="end" class="label-sm">keeps soil out of the stone</text>
+
+  <path class="leader" d="M150,420 L250,420"/>
+  <text x="146" y="416" text-anchor="end" class="label" style="font-weight:600;">Pea gravel</text>
+  <text x="146" y="430" text-anchor="end" class="label-sm">tamped in 10cm layers</text>
+
+  <path class="leader" d="M150,470 L240,470"/>
+  <text x="146" y="466" text-anchor="end" class="label" style="font-weight:600;">Geotextile hole lining</text>
+  <text x="146" y="480" text-anchor="end" class="label-sm">stops fines clogging the gravel</text>
+
+  <path class="leader" d="M150,530 L250,512"/>
+  <text x="146" y="530" text-anchor="end" class="label" style="font-weight:600;">Flat bearing stone</text>
+  <text x="146" y="544" text-anchor="end" class="label-sm">pole butt rests on it</text>
+
+  <!-- Labels (right side) -->
+  <path class="leader" d="M470,76 L356,84"/>
+  <text x="476" y="74" class="label" style="font-weight:600; fill:#2563a8;">Roll-up wall</text>
+  <text x="476" y="88" class="label-sm">main sheet wrapped on a batten</text>
+
+  <path class="leader" d="M470,110 L357,106"/>
+  <text x="476" y="112" class="label" style="font-weight:600;">Rail pole (5–7cm)</text>
+  <text x="476" y="126" class="label-sm">lashed along the collar tops</text>
+
+  <path class="leader" d="M470,170 L406,190"/>
+  <text x="476" y="166" class="label" style="font-weight:600; fill:#1d4f86;">Drip apron</text>
+  <text x="476" y="180" class="label-sm">tucked under the rail, over the collar,</text>
+  <text x="476" y="194" class="label-sm">out 50–80cm past the pole line, 2–5% fall</text>
+
+  <path class="leader" d="M470,240 L382,282"/>
+  <text x="476" y="236" class="label" style="font-weight:600;">Ground stake (80cm)</text>
+  <text x="476" y="250" class="label-sm">driven first, in an outer corner</text>
+  <text x="476" y="264" class="label-sm">of the collar footprint</text>
+
+  <path class="leader" d="M760,380 L740,340"/>
+  <text x="760" y="394" text-anchor="middle" class="label" style="font-weight:600;">Swale</text>
+  <text x="760" y="408" text-anchor="middle" class="label-sm">runs to daylight downhill</text>
+
+  <!-- Dimensions -->
+  <!-- Hole depth 40cm -->
+  <line x1="363" y1="520" x2="430" y2="520" stroke="#c9a227" stroke-width="0.5" stroke-dasharray="2,3"/>
+  <line x1="427" y1="324" x2="427" y2="516" class="dim-line" marker-start="url(#c-s)" marker-end="url(#c-e)"/>
+  <rect x="434" y="410" width="74" height="18" rx="2" fill="white" opacity="0.95"/>
+  <text x="471" y="423" text-anchor="middle" class="dim">40cm deep</text>
+
+  <!-- Hole width 25cm -->
+  <line x1="237" y1="526" x2="237" y2="572" stroke="#c9a227" stroke-width="0.5" stroke-dasharray="2,3"/>
+  <line x1="363" y1="526" x2="363" y2="572" stroke="#c9a227" stroke-width="0.5" stroke-dasharray="2,3"/>
+  <line x1="241" y1="568" x2="359" y2="568" class="dim-line" marker-start="url(#c-s)" marker-end="url(#c-e)"/>
+  <rect x="266" y="574" width="68" height="18" rx="2" fill="white" opacity="0.95"/>
+  <text x="300" y="587" text-anchor="middle" class="dim">25cm wide</text>
+
+  <!-- Collar 40cm wide, shown along the bottom of the collar -->
+  <line x1="200" y1="610" x2="200" y2="640" stroke="#c9a227" stroke-width="0.5" stroke-dasharray="2,3"/>
+  <line x1="400" y1="610" x2="400" y2="640" stroke="#c9a227" stroke-width="0.5" stroke-dasharray="2,3"/>
+  <line x1="204" y1="636" x2="396" y2="636" class="dim-line" marker-start="url(#c-s)" marker-end="url(#c-e)"/>
+  <rect x="248" y="642" width="104" height="18" rx="2" fill="white" opacity="0.95"/>
+  <text x="300" y="655" text-anchor="middle" class="dim">collar 40cm wide</text>
+
+  <!-- Apron reach: pole line to apron edge ≥50cm -->
+  <line x1="300" y1="596" x2="300" y2="612" stroke="#c9a227" stroke-width="0.5" stroke-dasharray="2,3"/>
+  <line x1="700" y1="336" x2="700" y2="610" stroke="#c9a227" stroke-width="0.5" stroke-dasharray="2,3"/>
+  <line x1="304" y1="606" x2="696" y2="606" class="dim-line" marker-start="url(#c-s)" marker-end="url(#c-e)"/>
+  <rect x="470" y="612" width="190" height="18" rx="2" fill="white" opacity="0.95"/>
+  <text x="565" y="625" text-anchor="middle" class="dim">apron edge 50–80cm past the pole</text>
+
+  <!-- Scale note -->
+  <text x="880" y="700" text-anchor="end" class="label-sm" style="font-weight:600;">5px = 1cm</text>
+</svg>

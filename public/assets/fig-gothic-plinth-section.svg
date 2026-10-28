@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="565" viewBox="0 0 900 565">
+<style>text{font-family:system-ui,sans-serif;fill:#243c2a;font-size:15px}.title{font-size:23px;font-weight:700}.small{font-size:13px}.dim{fill:#8b6b20;font-weight:600}.wall{fill:url(#stone);stroke:#526052;stroke-width:2}.apron{fill:#dbeef6;stroke:#5683a0}.swale{fill:none;stroke:#468296;stroke-width:3;stroke-dasharray:9 5}.line{stroke:#8b6b20;stroke-width:1} </style>
+<defs><pattern id="stone" width="24" height="18" patternUnits="userSpaceOnUse"><rect width="24" height="18" fill="#dad9cf"/><path d="M0 4L9 0 18 4 24 1M0 13L7 8 18 11 24 7M9 0L7 8 10 18M18 4L18 11 22 18" fill="none" stroke="#8e9389" stroke-width="1"/></pattern></defs>
+<rect width="100%" height="100%" fill="#fbfaf5"/><text x="450" y="36" text-anchor="middle" class="title">Continuous gabion plinth — pole-foot section</text>
+<text x="450" y="61" text-anchor="middle">40cm wide • 65cm total height • timber butt at grade</text>
+<rect x="30" y="340" width="840" height="130" fill="#e4d3b9"/>
+<rect x="290" y="160" width="160" height="260" class="wall"/>
+<path d="M290 340V420H450V340" fill="none" stroke="#538657" stroke-width="4" stroke-dasharray="6 4"/>
+<rect x="333" y="340" width="74" height="14" rx="2" fill="#a8a28d" stroke="#64614e"/>
+<rect x="350" y="98" width="40" height="242" fill="#c39d6b" stroke="#76592f" stroke-width="2"/>
+<path d="M290 325H350M390 325H450M350 317Q370 306 390 317" fill="none" stroke="#50575a" stroke-width="3"/>
+<path d="M30 340H285M455 340H870" stroke="#735a40" stroke-width="2"/>
+<path d="M450 160L462 332 690 350 740 370" fill="none" stroke="#398ab1" stroke-width="4"/>
+<path d="M680 340Q740 405 795 340" fill="none" stroke="#735a40" stroke-width="3"/>
+<path d="M447 90V155" stroke="#70a4c0" stroke-width="5"/><circle cx="438" cy="156" r="8" fill="#a77c4a" stroke="#76592f"/>
+<text x="60" y="140">Arch pole continues upward</text><path d="M250 143L350 120" class="line"/>
+<text x="60" y="225">Stone braces lower 45cm</text><path d="M250 228L325 250" class="line"/>
+<text x="60" y="293">Wire tie to cage cross-tie</text><path d="M250 296L330 325" class="line"/>
+<text x="60" y="390">Bearing stone at grade</text><path d="M250 384L338 347" class="line"/>
+<text x="540" y="110">Roll-up batten on cap</text><text x="540" y="130" class="small">Main sheet laps over apron</text><path d="M536 135L446 155" class="line"/>
+<text x="540" y="225">Clear apron down outer face</text><text x="540" y="245" class="small">then 50–80cm outward to swale</text><path d="M536 249L462 280" class="line"/>
+<text x="560" y="444" class="small">Geotextile at soil-contact faces</text><path d="M555 433L449 411" class="line"/>
+<text x="737" y="400" text-anchor="middle" class="small">Swale / outlet</text>
+<path d="M490 160V340M482 160H498M482 340H498" class="line"/><text x="500" y="312" class="dim">45cm</text>
+<path d="M490 340V420M482 420H498" class="line"/><text x="500" y="390" class="dim">20cm</text>
+<path d="M290 478H450M290 470V486M450 470V486" class="line"/><text x="370" y="507" text-anchor="middle" class="dim">40cm</text>
+<text x="450" y="543" text-anchor="middle" class="small">Schematic detail: keep access to each pocket; no timber buried below grade, no separate base rail.</text></svg>

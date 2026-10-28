@@ -1,4 +1,5 @@
 # The Silent Invasion
+### *A 30m² tunnel for citrus, banana, and papaya — woven from the eucalyptus that's burning down Portugal.*
 
 ### The Problem
 I know at least three people who have lost their homes to fire season in this part of Portugal.
@@ -36,7 +37,8 @@ We find a way to construct quick, easy, and cheap structures from young flexible
 	You’re not just constructing a home. 
 	You’re healing a watershed, preventing wildfires, enabling native forest regeneration, and demonstrating that restoration can create real value.
 
-## What If Removal Created Value?
+
+## *A 30m² tunnel for citrus, banana, and papaya — woven from the eucalyptus that's burning down Portugal.*
 What if the act of removing invasive species produced something valuable? What if watershed healing could be economically viable? What if “waste” biomass became functional architecture?
 
 ![A tall gothic-arched eucalyptus-pole greenhouse on a Portuguese hillside at golden hour — six gothic arches, twin parallel ridge poles, translucent plastic skin, gabion stone wall in the foreground](images/gothic-greenhouse-long-exterior.png)
@@ -44,7 +46,7 @@ What if the act of removing invasive species produced something valuable? What i
 
 
 
-The answer — after a lot of sketches and a lot of math — is that it wants to bend into a tall, narrow gothic arch. Eight metres of pole, butt in a posthole, thin end pulled inward and upward to meet its partner at a sharp point 6.5 metres overhead. Six of those arches in a line, two parallel ridge poles along the apex, plastic over the whole thing, and you have a tunnel tall enough for citrus.
+The answer — after a lot of sketches and a lot of math — is that it wants to bend into a tall, narrow gothic arch. Eight metres of pole, butt standing in a pocket of dry stone, thin end pulled inward and upward to meet its partner at a sharp point 6.5 metres overhead. Six of those arches in a line, two parallel ridge poles along the apex, plastic over the whole thing, and you have a tunnel tall enough for citrus.
 
 That's the design I'm writing about today. The **Gothic Arch Greenhouse** — the first proof-of-concept structure we're raising at **Templo da Água Lila**, and the answer to a question I'd been carrying for a couple of years: *can we grow tropical fruit trees in the mountains of central Portugal?*
 
@@ -71,9 +73,9 @@ If you've spent time around old greenhouses, you've probably seen the cheaper ro
 
 ## What You're Actually Building
 
-Picture a rectangle on the ground, 3 metres wide and 10 metres long. Two parallel rows of six gravel-filled postholes, 2 metres apart along the length.
+Picture a rectangle on the ground, 3 metres wide and 10 metres long. Down each long side runs a low wall of stone-filled wire cages — a **gabion plinth** — sunk a little into the ground and built up knee-high. Set into the top of each wall, 2 metres apart, are six pole pockets.
 
-Out of each posthole rises one half of an arch — a long, freshly-harvested *Eucalyptus globulus* pole, 8 metres long, 9–11 cm thick at the base. There are six pairs total, six gothic arches, each one made of two poles meeting at a sharp point 6.5 metres overhead and overlapping by 30–40 cm.
+Out of each pole pocket rises one half of an arch — a long, freshly-harvested *Eucalyptus globulus* pole, 8 metres long, 9–11 cm thick at the base, its foot resting on a flat stone and packed around with the dry, free-draining rubble of the plinth. There are six pairs total, six gothic arches, each one made of two poles meeting at a sharp point 6.5 metres overhead and overlapping by 30–40 cm.
 
 Running the full length of the tunnel along the apex are *two* parallel ridge poles, lashed to the outsides of the arch crossings, separated by about 30 cm of vertical gap. That gap matters — it's the **continuous ridge vent**, and it runs the entire 10-metre length.
 
@@ -85,9 +87,9 @@ Then the skin: **two off-the-roll 8m × 10m sheets of 150-micron UV-stabilised p
 
 A separate **vent cap** — a 1m × 11m strip of plastic — is hinged to the west ridge pole and drapes over the gap. Weight its loose edge onto the east sheet to seal in winter. Prop it up with sticks to open in summer. Three climate modes fall out of this naturally: *sealed* (passive solar, vent shut, walls down — winter), *mild* (vent propped, walls rolled to first purlin, doors open — spring/autumn), and *hot* (vent fully open, walls fully raised, doors open — peak summer; the structure becomes essentially a shade roof on legs).
 
-That's the whole thing. Twelve postholes. Six arches. Two ridges. Six purlins. Two big sheets and a vent cap. A door at each end.
+That's the whole thing. Two stone plinth walls. Six arches. Two ridges. Six purlins. Two big sheets and a vent cap. A door at each end.
 
-It costs **€100–300** in bought materials if your eucalyptus is free — which, if you're clearing invasives off your own land, it is. It takes **three days to raise**, after one to two weeks of pole preparation. Two strong adults can do most of it; a third person is genuinely useful on raising day, because the long arches are at the limit of two-person handling.
+It costs **€250–700** in bought materials if your eucalyptus and your stone are both free — which, if you're clearing invasives and gathering granite off your own land, they are. (The plinth is most of that cost over a bare-earth foundation; what it buys is dry feet, a wall of thermal mass, and a structure that ages well — more on all three below. If your budget is tight you can still stand the poles in plain gravel postholes for a fraction of the price.) It takes **three to four days to raise**, after one to two weeks of pole preparation. Two strong adults can do most of it; a third person is genuinely useful on raising day, because the long arches are at the limit of two-person handling.
 
 ---
 
@@ -97,7 +99,7 @@ A small note for the engineering-minded among you, because this is one of the pa
 
 The whole tunnel is sized around the dimensions of a single off-the-roll plastic sheet: **8 metres by 10 metres**, the standard sheet you can walk into any *agro-pecuária* in Portugal and buy.
 
-- The **8-metre dimension** is the drape distance per side: ground anchor, up a 1m vertical wall, around the curve, over the ridge pole at the apex, with about 50 cm of slack for fold and anchor.
+- The **8-metre dimension** is the drape distance per side: from the top of the stone plinth, up the short wall, around the curve, over the ridge pole at the apex, with about 50 cm of slack for fold and anchor. (The plinth lifts the anchor point ~45 cm off the ground, so the sheet now reaches with room to spare — the geometry was originally drawn to drape all the way to the soil.)
 - The **10-metre dimension** is the tunnel length itself, gable to gable.
 
 Two sheets — one per slope — cover the entire structure with no waste, no seams along the slope, no patching. This is the cheapest way to get plastic over a structure, and the geometry of the tunnel was reverse-engineered from it.
@@ -116,56 +118,54 @@ The hard part isn't the construction. It's the pole preparation that comes befor
 
 Tall arches need *long, stiff* poles. You want older eucalyptus — 8 to 12 years old — with straight, larger trunks. The younger 5–8-year-old material that bends easily into a wattle fence is too whippy at 8 metres. You need fourteen arch poles (twelve, plus two spares), four ridge poles, twelve purlin poles, about a dozen smaller gable infill poles, and four door posts.
 
-The treatment recipe at Água Lila is deliberately simple, and worth a paragraph of its own.
+The treatment recipe at Água Lila is deliberately simple, and worth a paragraph of its own — but the most important longevity decision isn't a treatment at all. It's the *foundation*, and I'll come to it on Day 1.
 
-The conventional protocol for buried eucalyptus in Portugal is char + borax soak + linseed oil — that gets you 30–40 years of service life, and it's the right call for a permanent dwelling where the poles will be encased in cob and a living roof. But this is a *greenhouse*. The plastic skin lives on a 3–4 year cycle, the frame is fully accessible, and pole replacement at year 15 or 20 is tractable rather than catastrophic.
+Eucalyptus rots at the groundline: that narrow, 15-centimetre band straddling the soil surface where moisture, oxygen, and hungry fungi all overlap. Bury a pole and you hand it that wet band for life. The gabion plinth simply refuses to. The feet in this build never touch soil — they stand captured in dry, free-draining stone, knee-high above grade, with no wet groundline to rot through. Solve that with the foundation and you've solved most of the pole-life problem before any treatment touches the wood.
 
-So I've designed this build around what I'm calling the **Regenerative Default**: char the bases, skip the borax bath, seal everything with linseed oil. No industrial chemicals. No five-day soaking trough. Roughly 15–20 years of pole life from charring alone, with linseed oil reapplied every 5–10 years (easiest during a plastic re-skin year) doing the above-ground preservative work that the borax would have done from inside the wood. If your site has heavy termite or beetle pressure — lower elevation, coastal Portugal — or you simply want the longer service life, the Extended-Life Protocol with the borax soak is documented in the [Treatment Guide](https://biodome.agualila.earth/fundamentals/03-treatment/) on the official site. Choose accordingly.
+Which turns the treatment recipe into something almost embarrassingly light. The conventional protocol for *buried* eucalyptus in Portugal is char + borax soak + linseed oil — 30–40 years of service, and the right call for a permanent dwelling where the poles are encased in cob and a living roof. But these poles aren't buried and aren't encased. So I skip the borax bath entirely, char the bases only as optional belt-and-braces (and never in fire season, when open flame is banned), and seal everything above ground with linseed oil. No industrial chemicals. No five-day soaking trough. **The plinth does the foot, the linseed does the weather, and the eucalyptus does the rest** — call it the **Regenerative Default**, reapplying linseed every 5–10 years (easiest during a plastic re-skin year). If your site has heavy termite or beetle pressure — lower elevation, coastal Portugal — or you simply want the belt-and-braces, the char and the Extended-Life borax soak are documented in the [Treatment Guide](https://biodome.agualila.earth/fundamentals/03-treatment/) on the official site, and they stack right on top of the plinth. Choose accordingly.
 
 Once cut, every pole needs to be:
 
 1. **Debarked within 48 hours.** Bark left on traps moisture and accelerates rot. Strip with a drawknife or flat-blade scraper, working butt to thin end.
-2. **Charred at the base to 8–10 mm depth.** Torch the bottom 50 cm of every arch pole over a fire until the char layer reaches alligator-scale cracking — that's the visible signal you've gone deep enough. Brush off loose char with a stiff wire brush. The carbonised layer is your primary defence in the buried section: it carries no nutrient value for fungi or insects, and creates a hydrophobic barrier in the most rot-vulnerable zone of the pole. This is the step that does most of the work.
+2. **(Optional) Charred at the base to 8–10 mm depth.** On the plinth the feet live in dry stone rather than soil, so the char that used to be the primary buried-section defence is now just belt-and-braces — and in fire season you skip it without a second thought. If you do char (outside fire season), torch the bottom 50 cm of every arch pole over a fire until the char layer reaches alligator-scale cracking, then brush off the loose char with a stiff wire brush. It carries no nutrient value for fungi or insects and adds a hydrophobic skin — a bonus on top of the plinth, no longer the thing doing most of the work.
 3. **Scored along the bending zone.** Shallow cuts every 10 cm on the outer face of the upper half of each arch pole — the face that ends up on the outside of the curve. The scoring relieves tension in the outer fibres so the pole bends *smoothly* into shape rather than cracking.
-4. **Sorted and paired.** Sort all fourteen arch poles by butt diameter and pair them so each arch has two poles of similar size (six working pairs plus one spare). Both butts in each pair sit at ground level — one in the left row, one in the right — so taper matching across the apex matters for a balanced apex crossing.
+4. **Sorted and paired.** Sort all fourteen arch poles by butt diameter and pair them so each arch has two poles of similar size (six working pairs plus one spare). Both butts in each pair sit at grade — one in the left plinth wall, one in the right — so taper matching across the apex matters for a balanced apex crossing.
 
-By the time the first pole hits the first posthole, it's been changed: deeply charred at the base, scored and ready to flex. You're not just standing trees up. You're standing up trees that have been prepared for the work.
+By the time the first pole drops into its pocket in the stone, it's been changed: debarked, scored and ready to flex. You're not just standing trees up. You're standing up trees that have been prepared for the work.
 
 (The linseed oil sealing comes *after* the frame is up and dry — that's a Day 4 task, not a prep task. More on that at the end.)
 
-### Day 1 — Foundation
+### Day 1 — Foundation: the gabion plinth
 
-Mark a 3m × 10m rectangle on a roughly level patch. Check the diagonals — both should measure 10.44 metres. Adjust until they match.
+Day 1 isn't holes in the ground. It's two low stone walls.
 
-Run two strings between the corner stakes along the long sides. Mark each string at 0, 2, 4, 6, 8, and 10 metres. Twelve posthole positions, six in each row.
+Mark a 3m × 10m rectangle on a roughly level patch. Check the diagonals — both should measure 10.44 metres. Adjust until they match. Run two strings between the corner stakes along the long sides: those are the centrelines of the two plinth walls, 3 metres apart. Mark each at 0, 2, 4, 6, 8, and 10 metres — twelve pole positions, six per wall.
 
-Each hole goes **40 cm deep, 25 cm wide**. The taller arches transmit more horizontal kick at the base than a shorter structure would, so the holes are dug deeper than your usual fence post — and the gravel bed at the bottom matters. If your soil is clay-heavy or waterlogged, go to 50 cm with extra gravel.
+Under each string, dig a shallow, levelled trench — about 50 cm wide and 20 cm deep. Line it with non-woven geotextile, enough to wrap up the sides, so soil can't pump up into the stone and silt the drainage. Then build the cage. You can buy ready-made welded **gabion baskets** flat-packed from any builders' merchant — galvanised mesh with 10 × 10 cm openings, commonly in 2-metre lengths — and lace five of them end-to-end down each wall with the spiral binders they come with. Or fold your own from a roll of mesh, the way the [Standard BioDome foundation](https://biodome.agualila.earth/standard-biodome/02-foundation/) does it. Either way, weave in the internal cross-ties every half-metre so the faces don't bulge when the stone goes in.
 
-Drop a flat stone at the bottom of each hole, then 20 cm of gravel as a drainage bed. The pole butt sits on this; more gravel packs around it once the frame is up.
+The fill is the free part: local granite or schist, fist-to-melon sized, **bigger than the mesh openings** so nothing falls out. On a granite mountain, this is the one material you'll never run short of. Lay a base course, and at each of the six pole positions per wall bed a **flat bearing stone** level at about grade — that's the plate each pole butt will stand on. Above it, leave a **pole pocket**: a clear vertical slot, kept open with an upturned bucket as a former, ready to receive a pole on Day 2. Thread a length of rebar through the mesh across each pocket near grade — that's the tie-down the arch will be lashed to against wind uplift, the job the old ground stakes used to do. Then fill and pack the rest of the cage, fold the geotextile over the buried portion, and cap the top level with flat stones.
 
-At each gable end, set two vertical 9–11 cm posts into postholes 80 cm apart, lash a horizontal crosspiece at about 2.1 m height — that's your door frame.
+The gable ends don't ride the long walls, so give each door post its own small footing — a flat through-stone or a stub cage — set 80 cm apart, with a crosspiece lashed at about 2.1 m. That's your door frame.
 
-Drive a long ground stake (80 cm rebar or hardwood) vertically into the ground 25 cm outside each of the 12 arch postholes. These are the tie-down points the arches will eventually be wire-lashed to, against wind uplift.
+![Top-down plan view of the Gothic Arch greenhouse foundation showing two gabion plinth walls with six pole pockets each, gable doors at each end, and dimensions|697](images/fig-gothic-plan.svg)
+*Foundation plan: two gabion plinth walls — 3m apart across the width, 10m long — each carrying six pole pockets at 2m on-centre, with door frames at both gable ends.*
 
-![Top-down plan view of the Gothic Arch greenhouse foundation showing 12 postholes in two parallel rows, gable doors at each end, and dimensions|697](images/fig-gothic-plan.svg)
-*Foundation plan: 12 postholes in two parallel rows — 3m apart across the width, 2m on-centre along the 10m length — with door frames at both gable ends.*
-
-Day 1 ends with twelve points where the Earth has agreed to receive the structure, plus two doorways waiting for arches.
+By the time you let it settle — three to five days, because stone always sinks a little under its own weight before it's loaded — Day 1 ends not with holes but with two knee-high walls of stone: the dry foundation the feet will stand on, and the first nine tonnes of thermal mass this greenhouse will lean on through every cold night to come.
 
 ### Day 2 — The day the frame stands up
 
 This is the physical day. The arches are 8 metres long and they reach to 6.5 metres at the apex. You're going to be on a 3-metre stepladder. Plan for a full day. Make sure a third person is around.
 
-Take the first pair of poles. Set one butt into the corner posthole on the left row. Three people walk it up: two pushing it vertical from the base, a third pulling the thin end with a rope. Once it's vertical, you slowly bend the top third inward toward the centreline.
+Take the first pair of poles. Stand one butt in the corner pole pocket on the left wall, resting on its bearing stone. Three people walk it up: two pushing it vertical from the base, a third pulling the thin end with a rope. Once it's vertical, you slowly bend the top third inward toward the centreline.
 
-Take the second pole of the pair. Set its butt into the matching posthole on the right row, 3 metres across. Walk it up the same way. Bend it toward the first pole until the two thin ends meet at the apex, roughly 6.5 metres above the centreline of the rectangle, overlapping by 30–40 cm.
+Take the second pole of the pair. Stand its butt in the matching pocket on the right wall, 3 metres across. Walk it up the same way. Bend it toward the first pole until the two thin ends meet at the apex, roughly 6.5 metres above the centreline of the rectangle, overlapping by 30–40 cm. Once a pole is up and lashed, pack stone tight into its pocket around the lower foot and wire it down to the rebar tie-down — the foot is now gripped by dry rubble on all sides, not buried in earth.
 
 Lash the overlap tight with at least four full wraps of galvanised wire. Brace the arch with two diagonal props (any straight pole 4m+ long) wedged from the ground up to the wall–curve transition, about 1m up each side. Without bracing, a single tall arch is unstable.
 
 Move 2 metres down the tunnel and raise the second arch the same way.
 
 ![Three people raising the second pole of an arch on a Portuguese hillside — two at the base leaning the pole vertical, one on the ladder pulling the thin end inward with a rope](images/gothic-greenhouse-raising-arch.png)
-*Mid-morning on Day 2 — walking the second pole of an arch up out of its posthole, bending its top third inward toward its partner already waiting at the apex.*
+*Mid-morning on Day 2 — walking the second pole of an arch up out of its pocket in the plinth, bending its top third inward toward its partner already waiting at the apex.*
 
 ![Three-panel diagram showing the tall arch raising sequence — first arch braced with diagonal props, second arch added with twin ridge poles connecting them, then the remaining arches following with the ridges keeping everything aligned](images/fig-gothic-raising.svg)
 *Raising sequence: brace the first arch with diagonal props; set the second arch and connect with twin ridge poles; then add the remaining four arches with the ridges keeping the structure aligned along its length.*
@@ -214,7 +214,7 @@ Three days, and you have a 30-square-metre tunnel with a 6.5-metre apex standing
 
 ### Three weeks later — the linseed cure
 
-The poles you put in the ground are still wet. Wait two to three weeks for the structure to dry in place — the wood fibres lock into the curved shape as moisture content drops, and your lashings will need re-tightening as the eucalyptus shrinks 4–8% radially.
+The poles you set into the plinth are still wet. Wait two to three weeks for the structure to dry in place — the wood fibres lock into the curved shape as moisture content drops, and your lashings will need re-tightening as the eucalyptus shrinks 4–8% radially.
 
 Once the poles are dry (under 15% moisture if you have a meter), heat raw linseed oil to 60–70°C and brush it onto every above-ground pole surface. The oil hardens over a couple of days and waterproofs the wood while staying breathable. This step is doing real work on the Regenerative Default protocol — it's the *outside* preservative that the borax soak would have done from the *inside*. Reapply every 5–10 years; the easiest moment is during a plastic re-skin year, when the frame is fully exposed anyway.
 
@@ -264,13 +264,13 @@ It has every spec, every figure, the full bill of materials, the Pythagorean sca
 
 Three honest caveats before you start.
 
-**Wind.** Tall narrow tunnels catch a lot of wind on the broadside. Site this thing in a sheltered location, or behind a windbreak. Orient the long axis parallel to your prevailing wind so storms hit the gable end, not the broadside.
+**Wind.** Tall narrow tunnels catch a lot of wind on the broadside. Site this thing in a sheltered location, or behind a windbreak. Orient the long axis parallel to your prevailing wind so storms hit the gable end, not the broadside. (The plinth helps here in a way the old postholes never could: nine tonnes of stone sitting on the feet is a lot of ballast to lift.)
 
 **Plastic budget.** Two main sheets plus vent cap plus gable cladding works out to about €100–190 in plastic every 3–4 years. UV-stabilised polyethylene is good for that long in Portuguese sun, no longer. Replacement is a two-person, full-day job.
 
-**Pole replacement.** When an 8-metre arch pole eventually fails — roughly 15–20 years on the Regenerative Default protocol, 30–40 years on the Extended-Life Protocol — swapping it is a real undertaking. You'll likely have to lift one end of the tunnel to get the old pole out and the new one in. Char the bases properly *now* and don't let your linseed reapplications lapse, and that day stays as far out as possible.
+**Pole replacement.** On the plinth an arch pole's foot runs roughly 20–30 years before it tires — and when it does, swapping it is no longer the dreaded job it was over buried postholes. You unpack the stone from that one pole pocket, lift the tired pole off its bearing stone, stand a fresh one in its place, and re-pack — no jacking up the end of the tunnel. Keep your linseed reapplications current and that day stays as far out as possible.
 
-This is still a plastic-skinned greenhouse, not a four-season living space. Winter nights drop close to outdoor temperatures inside. It's a tropical fruit chamber and a season-extender, not a heated room.
+And the honest ceiling: this is still a plastic-skinned greenhouse, not a four-season living space. But it's a *better* one now — those nine tonnes of stone soak up the day's sun and bleed it back through the night, narrowing the swing and holding warmth into the evening the way a bare-pole tunnel never could. Deep-winter nights will still fall toward the outdoor temperature. It's a tropical fruit chamber and a real season-extender — just not yet a heated room.
 
 ---
 

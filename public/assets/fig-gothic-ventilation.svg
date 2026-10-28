@@ -62,10 +62,9 @@
   <line x1="560" y1="565" x2="560" y2="535" stroke="#2563a8" stroke-width="2"/>
   <circle cx="560" cy="531" r="4" fill="#a08660" stroke="#5a3a1a" stroke-width="1"/>
 
-  <!-- Vent cap propped open -->
+  <!-- Vent cap open; operating hardware omitted -->
   <path d="M 419,268 Q 440,220 462,265"
         fill="none" stroke="#2563a8" stroke-width="2.5"/>
-  <line x1="461" y1="265" x2="458" y2="271" stroke="#5a3a1a" stroke-width="2"/>
 
   <!-- Hot air rising arrows through vent -->
   <path d="M 440,265 L 440,160" class="hot-arrow" marker-end="url(#hot-head)"/>
@@ -94,7 +93,7 @@
   <line x1="657" y1="544" x2="564" y2="548" stroke="#555" stroke-width="0.6"/>
 
   <!-- Vent cap label -->
-  <text x="600" y="200" class="label-sm" style="fill:#2563a8; font-weight:700;">vent cap propped open</text>
+  <text x="600" y="200" class="label-sm" style="fill:#2563a8; font-weight:700;">vent cap open · controls omitted</text>
   <line x1="598" y1="204" x2="466" y2="225" stroke="#555" stroke-width="0.6"/>
 
   <!-- Apex label -->

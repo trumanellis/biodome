@@ -79,3 +79,36 @@ Prompts for ChatGPT/DALL-E and Midjourney to generate renders of the greenhouse 
 - Add `--no geodesic, triangles, metal frame, hub connectors` in Midjourney to avoid it defaulting to geodesic dome aesthetics
 - Emphasise "bent poles" and "catenary arch" to get the right smooth curved shape rather than faceted triangles
 - For ChatGPT, specify "not a geodesic dome — smooth curved arches from full-span bent poles" if it keeps generating triangulated structures
+
+---
+
+# Gothic Tunnel Greenhouse — Renders for the Build Guide
+
+## Canonical Design — Put This in Every Prompt
+
+> Photorealistic documentary photograph on a broad, flat agricultural terrace in central Portugal, ochre soil, olives, cork oaks and eucalyptus. Hand-built eucalyptus Gothic Tunnel Greenhouse: 3m wide by 10m pole grid, 6.5m pointed apex. Exactly SIX arches at 2m centres, five bays, two pale slender debarked poles per arch; thickness illustrative pending structural sizing. Two parallel ridge poles 30cm apart, three purlins per side at 1m, 2m and 4.5m. Wire-lashed joints, no concrete or metal timber brackets. TWO continuous stone-filled wire gabion cages, 40cm wide, 45cm total height, entirely above prepared ground, NO cage trench, 10.4m long. Six pole pockets per cage. Poles continue through cages into permanent pipe sleeves extending into individual postholes 40cm below terrace grade, butt on flat bearing stone about35cm below grade. No collars or gable stone walls. Long ridge EAST–WEST, long walls SOUTH/NORTH. Level ground on BOTH sides and beyond BOTH gables. Low old dry-stone boundary separate from cages, at least1m from OUTER cage face to nearer boundary-wall edge; show generous working strip. Boundary illustrated south, actual position and height unmeasured. No steep cliff or immediate mountain bank. Clear UV PE when installed, roll-up sides, twin ridge vent and cap, 80cm doorway with2.1m lintel. Drainage keeps access dry. No lettering or watermark.
+
+## Do not show
+
+Individual collars; missing or extra arches; feet ending in cages; concrete; metal timber brackets; cages on a retaining-wall cap; edge-flush siting; a 2–3m cliff beside the greenhouse; a mountain bank immediately beside it; a boundary returning across the rear gable; blocked gables; aggressive kerfs in structural poles. Show only the elements installed at each construction stage. Close details may crop the frame.
+
+## Workflow
+
+1. Read the guide step and canonical design.
+2. Combine the canonical block, scene and aspect ratio in `gothic-plinth-render-prompts.json`.
+3. Generate or edit with imagegen. Inspect six arch stations or six pockets per cage, buried feet, two continuous cages, stage and terrace clearance. Correct failures.
+4. Save new PNG assets using new filenames; preserve historical images. The current exteriors use `gothic-wide-terrace-`.
+5. Update figures, alt text, captions and shared hero in `src/content/docs/start-here/03-choose-your-design.mdx`. Keep plans, sections and access drawings consistent.
+6. Run `npm run build` and confirm `Complete!`.
+
+## Minimum-weight timber
+
+Use the lightest sound eucalyptus sections established by structural, connection and erection checks. No minimum safe diameter is approved; rendered thickness is illustrative.
+
+## Site dimensions
+
+The boundary clearance is at least1m measured from the outer gabion face, not pole centreline. Increase it for ground, wall, drainage and equipment requirements. The wall height is unmeasured. Illustrations are not construction surveys or scaffold designs.
+
+## Permanent sleeve revision
+
+Twelve permanent pipes are installed first in separate postholes; the above-ground cages are built and filled around their outsides. Poles slide into the pipes afterward. Show a visible sleeve mouth just above each cage cap. No geotextile, removable formers, direct stone packing against timber, or continuous cage trenches. Pipe material, size, support, drainage and removable restraint are pending specification; do not portray them as approved construction details.

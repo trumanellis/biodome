@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="650" viewBox="0 0 980 650"><style>text{font:15px system-ui,sans-serif;fill:#273e2a}.small{font-size:13px}.title{font-size:23px;font-weight:700}</style><rect width="980" height="650" fill="#fbfaf5"/>
+<text x="490" y="34" text-anchor="middle" class="title">Right-side covering — plan access before draping</text><text x="490" y="61" text-anchor="middle">Required work zones only: no scaffold, platform foundation or anchorage is designed here</text>
+<path d="M35 295L145 430H411V568H930V600H35Z" fill="#e3d3b8"/><path d="M35 295L145 430H411V568H930" fill="none" stroke="#77684f" stroke-width="3"/>
+<path d="M230 445V375Q230 230 315 105Q400 230 400 375V445" fill="none" stroke="#a17b44" stroke-width="6"/>
+<rect x="219" y="405" width="22" height="38" fill="#b9bdad" stroke="#62715a"/><rect x="389" y="405" width="22" height="38" fill="#b9bdad" stroke="#62715a"/>
+<path d="M411 430V568" stroke="#8b826c" stroke-width="10"/>
+<rect x="270" y="200" width="90" height="205" fill="#dae4dc" fill-opacity="0.45" stroke="#4f7b5e" stroke-width="2" stroke-dasharray="7 4"/>
+<rect x="440" y="128" width="75" height="430" fill="#e0e8ed" fill-opacity="0.4" stroke="#477d9b" stroke-width="2" stroke-dasharray="7 4"/>
+<text x="55" y="242" class="small">Rising mountain slope</text><text x="55" y="263" class="small">Check left-side clearance</text>
+<text x="555" y="149">Right exterior work zone</text><text x="555" y="172" class="small">All three batten lines, apron/channel,</text><text x="555" y="193" class="small">base restraint and gable corners</text><path d="M550 201L515 230" stroke="#477d9b"/>
+<text x="555" y="255">Guarded access selected by provider</text><text x="555" y="279" class="small">Check lower-ground bearing, reach,</text><text x="555" y="300" class="small">support, wind and wall surcharge.</text>
+<text x="555" y="355">Ridge task: 6.5m above terrace</text><text x="555" y="379" class="small">About 8.5–9.5m above lower ground</text><text x="555" y="400" class="small">This does not specify platform height.</text>
+<text x="55" y="493" class="small">Interior access zone for ridge work</text><path d="M275 480L285 405" stroke="#4f7b5e"/>
+<text x="555" y="478">No standing or ladder at cage lip</text><text x="555" y="501" class="small">No frame climbing or improvised tie-offs</text>
+<text x="490" y="630" text-anchor="middle" class="small">Prepare sheets on the terrace; install drop-side sheet first; retain exterior access until every fixing is complete.</text></svg>

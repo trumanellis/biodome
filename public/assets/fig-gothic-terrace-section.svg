@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="645" viewBox="0 0 1020 645"><style>text{font:15px system-ui,sans-serif;fill:#233e2c}.title{font-size:23px;font-weight:700}.small{font-size:13px}.dim{fill:#906b20;font-weight:600}.lead{fill:none;stroke:#667263;stroke-width:1}.cage{fill:url(#stone);stroke:#627263;stroke-width:2}.water{fill:none;stroke:#2d7da4;stroke-width:3}.wood{fill:#c59a65;stroke:#76542d;stroke-width:2}.earth{fill:#e5d3b7}</style><defs><pattern id="stone" width="22" height="18" patternUnits="userSpaceOnUse"><rect width="22" height="18" fill="#d5d7cf"/><path d="M0 4L9 0 17 4 22 1M0 13L7 8 17 11 22 7M9 0L7 8 10 18M17 4L17 11 21 18" fill="none" stroke="#8c9588"/></pattern><pattern id="gravel" width="13" height="11" patternUnits="userSpaceOnUse"><rect width="13" height="11" fill="#ecece3"/><circle cx="4" cy="4" r="2" fill="#a5aaa0"/><circle cx="10" cy="9" r="2" fill="#a5aaa0"/></pattern><pattern id="drystone" width="40" height="26" patternUnits="userSpaceOnUse"><rect width="40" height="26" fill="#c4beac"/><path d="M0 7L13 1 26 5 40 0M0 20L10 13 26 17 40 11M13 1L10 13 17 26M26 5L26 17 35 26" fill="none" stroke="#756f60" stroke-width="2"/></pattern></defs><rect width="100%" height="100%" fill="#fbfaf5"/><text x="510" y="35" text-anchor="middle" class="title">Terrace site — right-hand drop beside the greenhouse</text>
+<text x="510" y="61" text-anchor="middle">View from entrance gable • schematic only • intended placement directly at edge; foundation support unresolved</text>
+<path d="M35 410H375V571H930V640H35Z" class="earth"/>
+<path d="M35 270L150 410H375V571H930" stroke="#6c614e" stroke-width="3" fill="none"/>
+
+<path d="M35 270L150 410H35Z" class="earth"/><text x="55" y="230" class="small">Left: rising mountain slope</text><path d="M367 410H375V571H367Z" fill="url(#drystone)"/><rect x="205" y="387.5" width="20" height="32.5" class="cage"/><rect x="355" y="387.5" width="20" height="32.5" class="cage"/>
+<rect x="209" y="410" width="12.5" height="20" fill="url(#gravel)"/><rect x="359" y="410" width="12.5" height="20" fill="url(#gravel)"/>
+<path d="M215 427.5V360Q215 243 290 85Q365 243 365 360V427.5" fill="none" stroke="#97733d" stroke-width="6"/>
+<path d="M206 340H224M356 340H374M219 285H237M343 285H361M250 185H266M314 185H330" stroke="#97733d" stroke-width="6"/>
+<circle cx="284" cy="94" r="4" fill="#97733d"/><circle cx="296" cy="94" r="4" fill="#97733d"/>
+<path d="M295 400H365L374 402" class="water"/>
+<path d="M367 400Q372 408 377 400" class="water"/>
+<circle cx="372" cy="402" r="5" fill="#2d7da4"/><path d="M381 410L500 451" fill="none" stroke="#2d7da4" stroke-dasharray="4 4"/>
+<text x="510" y="465" class="small">Channel runs out of section, along side to checked outlet</text>
+<path d="M375 375H510" class="lead"/><text x="550" y="349" text-anchor="middle" class="dim">Right cage outer face flush with terrace lip</text>
+<text x="655" y="157">Existing dry-stone retaining wall</text><text x="655" y="180" class="small">footing, condition and capacity unverified</text><path d="M655 187L375 465" class="lead"/>
+<text x="655" y="246">Drop at front: at least 2m</text><text x="655" y="270">Drop at rear: about 3m</text><text x="655" y="294" class="small">Lower ground falls along the wall</text>
+<path d="M670 418V566M663 418H677M663 566H677" class="lead"/>
+<text x="60" y="463" class="small">Both pole feet continue below cage</text><text x="60" y="484" class="small">into lined gravel postholes.</text><path d="M250 464L216 427" class="lead"/>
+<text x="65" y="535" class="small">Mesh cage is distinct from the tall terrace face.</text><text x="65" y="556" class="small">Support at this edge is not designed by this drawing.</text>
+<text x="510" y="613" text-anchor="middle" class="small">Confirm surcharge, ground stability, excavation sequence, drainage and edge protection before construction.</text></svg>

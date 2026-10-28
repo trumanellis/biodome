@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 540">
+  <defs>
+    <style>
+      .label { font-family: -apple-system, system-ui, sans-serif; fill: #1a2e1a; font-size: 12px; }
+      .label-sm { font-family: -apple-system, system-ui, sans-serif; fill: #555; font-size: 11px; }
+      .dim { font-family: -apple-system, system-ui, sans-serif; fill: #c9a227; font-size: 12px; font-weight: 600; }
+      .dim-line { stroke: #c9a227; stroke-width: 1; fill: none; }
+      .mesh { stroke: #8a8276; stroke-width: 0.8; fill: none; }
+      .stone { fill: #ccc; stroke: #999; stroke-width: 1; }
+      .flat-stone { fill: #b0a890; stroke: #8a7e60; stroke-width: 1; }
+      .ground-fill { fill: #e7dcc4; }
+      .pole { fill: #8b6914; stroke: #5a4510; stroke-width: 1.5; }
+      .wire { stroke: #555; stroke-width: 2.5; fill: none; }
+      .geotextile { stroke: #6a9a6a; stroke-width: 2; stroke-dasharray: 6,3; fill: none; }
+      .plastic { stroke: #2563a8; stroke-width: 2.5; fill: none; }
+      .lash { stroke: #666; stroke-width: 1.2; fill: none; stroke-dasharray: 4,2; }
+      .leader { stroke-width: 0.8; opacity: 0.55; }
+    </style>
+    <marker id="a-s" markerWidth="8" markerHeight="6" refX="0" refY="3" orient="auto">
+      <path d="M8,0 L0,3 L8,6" stroke="#c9a227" fill="none" stroke-width="1"/>
+    </marker>
+    <marker id="a-e" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" stroke="#c9a227" fill="none" stroke-width="1"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="440" y="26" text-anchor="middle" class="label" style="font-size:15px; font-weight:700;">Gabion Plinth — Cross-Section Through One Wall</text>
+  <text x="440" y="46" text-anchor="middle" class="label-sm">Pole foot captured in dry stone at grade — no buried zone, no wet groundline, a kneewall of thermal mass</text>
+
+  <!-- Scale: 5px = 1cm. Cage 40cm wide = 200px (x 260–460). Grade y=300. Above grade 45cm; embedded 20cm. -->
+
+  <!-- Earth background + trench -->
+  <rect x="40" y="300" width="800" height="160" class="ground-fill"/>
+  <rect x="250" y="300" width="220" height="100" fill="#efe7d4"/>
+
+  <!-- Grade line -->
+  <line x1="40" y1="300" x2="260" y2="300" stroke="#1a2e1a" stroke-width="1.5"/>
+  <line x1="460" y1="300" x2="840" y2="300" stroke="#1a2e1a" stroke-width="1.5"/>
+  <text x="44" y="294" class="label-sm" style="font-size:10px;">grade</text>
+
+  <!-- Geotextile liner (buried portion only) -->
+  <path d="M262,300 L262,396 L458,396 L458,300" class="geotextile"/>
+
+  <!-- Gabion cage outline (65cm tall = 325px, y=75 to y=400) -->
+  <rect x="260" y="75" width="200" height="325" fill="none" stroke="#1a2e1a" stroke-width="2"/>
+
+  <!-- Wire mesh pattern -->
+  <line x1="290" y1="75" x2="290" y2="400" class="mesh"/>
+  <line x1="320" y1="75" x2="320" y2="400" class="mesh"/>
+  <line x1="400" y1="75" x2="400" y2="400" class="mesh"/>
+  <line x1="430" y1="75" x2="430" y2="400" class="mesh"/>
+  <line x1="260" y1="125" x2="460" y2="125" class="mesh"/>
+  <line x1="260" y1="175" x2="460" y2="175" class="mesh"/>
+  <line x1="260" y1="225" x2="460" y2="225" class="mesh"/>
+  <line x1="260" y1="350" x2="460" y2="350" class="mesh"/>
+
+  <!-- Stone fill — buried portion -->
+  <ellipse cx="285" cy="375" rx="13" ry="10" class="stone"/>
+  <ellipse cx="320" cy="370" rx="14" ry="10" class="stone"/>
+  <ellipse cx="358" cy="378" rx="13" ry="10" class="stone"/>
+  <ellipse cx="398" cy="372" rx="14" ry="10" class="stone"/>
+  <ellipse cx="435" cy="376" rx="13" ry="9" class="stone"/>
+  <ellipse cx="300" cy="345" rx="14" ry="10" class="stone"/>
+  <ellipse cx="338" cy="340" rx="13" ry="10" class="stone"/>
+  <ellipse cx="378" cy="346" rx="14" ry="10" class="stone"/>
+  <ellipse cx="418" cy="342" rx="13" ry="10" class="stone"/>
+  <ellipse cx="285" cy="318" rx="12" ry="9" class="stone"/>
+  <ellipse cx="322" cy="322" rx="14" ry="10" class="stone"/>
+  <ellipse cx="360" cy="316" rx="13" ry="10" class="stone"/>
+  <ellipse cx="400" cy="320" rx="14" ry="10" class="stone"/>
+  <ellipse cx="436" cy="318" rx="12" ry="9" class="stone"/>
+
+  <!-- Stone packed around the captured pole (pocket: x 338–382) -->
+  <ellipse cx="300" cy="285" rx="13" ry="10" class="stone"/>
+  <ellipse cx="305" cy="255" rx="13" ry="10" class="stone"/>
+  <ellipse cx="300" cy="225" rx="12" ry="10" class="stone"/>
+  <ellipse cx="305" cy="195" rx="13" ry="10" class="stone"/>
+  <ellipse cx="300" cy="165" rx="12" ry="9" class="stone"/>
+  <ellipse cx="305" cy="135" rx="13" ry="10" class="stone"/>
+  <ellipse cx="300" cy="108" rx="12" ry="9" class="stone"/>
+  <ellipse cx="328" cy="270" rx="11" ry="9" class="stone"/>
+  <ellipse cx="330" cy="210" rx="11" ry="9" class="stone"/>
+  <ellipse cx="328" cy="150" rx="11" ry="9" class="stone"/>
+  <ellipse cx="330" cy="110" rx="10" ry="8" class="stone"/>
+  <ellipse cx="435" cy="285" rx="13" ry="10" class="stone"/>
+  <ellipse cx="430" cy="255" rx="13" ry="10" class="stone"/>
+  <ellipse cx="435" cy="225" rx="12" ry="10" class="stone"/>
+  <ellipse cx="430" cy="195" rx="13" ry="10" class="stone"/>
+  <ellipse cx="435" cy="165" rx="12" ry="9" class="stone"/>
+  <ellipse cx="430" cy="135" rx="13" ry="10" class="stone"/>
+  <ellipse cx="435" cy="108" rx="12" ry="9" class="stone"/>
+  <ellipse cx="408" cy="270" rx="11" ry="9" class="stone"/>
+  <ellipse cx="406" cy="210" rx="11" ry="9" class="stone"/>
+  <ellipse cx="408" cy="150" rx="11" ry="9" class="stone"/>
+  <ellipse cx="406" cy="110" rx="10" ry="8" class="stone"/>
+
+  <!-- Flat bearing stone at grade -->
+  <rect x="322" y="300" width="76" height="15" rx="2" class="flat-stone"/>
+
+  <!-- Captured pole (butt on bearing stone at grade, rising out of the cage top) -->
+  <rect x="338" y="56" width="44" height="244" rx="6" class="pole"/>
+
+  <!-- Rebar tie-down near grade, passing behind pole -->
+  <line x1="256" y1="290" x2="338" y2="290" class="wire"/>
+  <line x1="382" y1="290" x2="464" y2="290" class="wire"/>
+  <path d="M338,288 C 332,288 330,292 332,295" class="lash"/>
+  <path d="M382,288 C 388,288 390,292 388,295" class="lash"/>
+
+  <!-- Flat capstones along the kneewall top (flank the pole) -->
+  <rect x="260" y="64" width="74" height="16" rx="2" class="flat-stone"/>
+  <rect x="386" y="64" width="74" height="16" rx="2" class="flat-stone"/>
+
+  <!-- Plastic skin anchoring at the kneewall top, on a roll-up batten -->
+  <path d="M470,118 C 432,96 402,80 322,70" class="plastic"/>
+  <circle cx="306" cy="66" r="7" fill="#7a5a30" stroke="#3a2810" stroke-width="1.5"/>
+  <ellipse cx="289" cy="60" rx="10" ry="7" class="stone"/>
+
+  <!-- ===== Left-side labels ===== -->
+  <text x="92" y="150" class="label" style="font-weight:600;">Pole foot captured</text>
+  <text x="92" y="164" class="label-sm">lower ~45cm packed in dry,</text>
+  <text x="92" y="178" class="label-sm">free-draining stone</text>
+  <line x1="92" y1="183" x2="298" y2="225" stroke="#1a2e1a" class="leader"/>
+
+  <text x="92" y="246" class="label" style="font-weight:600;">Stone fill = thermal mass</text>
+  <text x="92" y="260" class="label-sm">two 10m walls ≈ 9 tonnes of granite</text>
+  <text x="92" y="274" class="label-sm">100–200mm, bigger than the mesh</text>
+  <line x1="180" y1="250" x2="284" y2="345" stroke="#1a2e1a" class="leader"/>
+
+  <text x="92" y="360" class="label" style="font-weight:600;">Wire cage</text>
+  <text x="92" y="374" class="label-sm">3mm galv., 10×10cm</text>
+  <line x1="160" y1="364" x2="260" y2="360" stroke="#1a2e1a" class="leader"/>
+
+  <!-- ===== Right-side labels (right-anchored at x=860) ===== -->
+  <text x="860" y="92" text-anchor="end" class="label" style="fill:#8b6914; font-weight:600;">Pole rises to form the arch ↑</text>
+  <line x1="700" y1="88" x2="384" y2="62" stroke="#8b6914" class="leader"/>
+
+  <text x="860" y="148" text-anchor="end" class="label" style="font-weight:600; fill:#2563a8;">Plastic anchors here</text>
+  <text x="860" y="162" text-anchor="end" class="label-sm" style="fill:#2563a8;">roll-up wall rolls up from the kneewall top</text>
+  <line x1="612" y1="150" x2="320" y2="70" stroke="#2563a8" class="leader"/>
+
+  <text x="860" y="256" text-anchor="end" class="label" style="font-weight:600;">Rebar tie-down</text>
+  <text x="860" y="270" text-anchor="end" class="label-sm">uplift anchor, woven through the mesh</text>
+  <line x1="650" y1="258" x2="466" y2="290" stroke="#555" class="leader"/>
+
+  <text x="860" y="324" text-anchor="end" class="label" style="font-weight:600;">Flat bearing stone</text>
+  <text x="860" y="338" text-anchor="end" class="label-sm">pole butt rests at grade, never below</text>
+  <line x1="690" y1="326" x2="400" y2="307" stroke="#1a2e1a" class="leader"/>
+
+  <text x="860" y="408" text-anchor="end" class="label" style="font-weight:600; fill:#6a9a6a;">Geotextile</text>
+  <text x="860" y="422" text-anchor="end" class="label-sm" style="fill:#6a9a6a;">lines the buried portion only</text>
+  <line x1="700" y1="410" x2="460" y2="392" stroke="#6a9a6a" class="leader"/>
+
+  <!-- ===== Dimensions ===== -->
+  <!-- Width 40cm -->
+  <line x1="260" y1="435" x2="460" y2="435" class="dim-line" marker-start="url(#a-s)" marker-end="url(#a-e)"/>
+  <rect x="342" y="426" width="36" height="18" rx="2" fill="white" opacity="0.95"/>
+  <text x="360" y="439" text-anchor="middle" class="dim">40cm</text>
+
+  <!-- Above grade 45cm -->
+  <line x1="540" y1="75" x2="540" y2="300" class="dim-line" marker-start="url(#a-s)" marker-end="url(#a-e)"/>
+  <rect x="502" y="178" width="76" height="32" rx="2" fill="white" opacity="0.92"/>
+  <text x="540" y="192" text-anchor="middle" class="dim">45cm</text>
+  <text x="540" y="206" text-anchor="middle" class="label-sm">above grade</text>
+
+  <!-- Below grade 20cm -->
+  <line x1="540" y1="300" x2="540" y2="400" class="dim-line" marker-start="url(#a-s)" marker-end="url(#a-e)"/>
+  <rect x="502" y="338" width="76" height="32" rx="2" fill="white" opacity="0.92"/>
+  <text x="540" y="352" text-anchor="middle" class="dim">20cm</text>
+  <text x="540" y="366" text-anchor="middle" class="label-sm">embedded</text>
+
+  <!-- Bottom note -->
+  <text x="440" y="492" text-anchor="middle" class="label" style="font-weight:600;">The wood's rot-prone groundline band now sits in airy stone, not soil — no fire, no chemicals needed.</text>
+  <text x="440" y="510" text-anchor="middle" class="label-sm">Scale: 5px = 1cm</text>
+</svg>
